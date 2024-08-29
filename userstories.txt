@@ -1,0 +1,19 @@
+"As a teacher, I want to be able to add a textbook to my class so my students can read it"
+
+"As a teacher, I want to assign a section of the textbook to my students so I can track their progress"
+
+"As a teacher, I want to see which of my students have completed a reading, and which have not so I can grade them accordingly"
+
+"As a teacher, I want to add new units so I can teach new classes"
+
+"As a teacher, I want to view all students in my class so I can remove any as needed"
+
+"As a student I want to view all students in my class, so I can work out who I can study with"
+
+"As a student, I want to view all my assignments so I can plan my study"
+
+"As a student, I want to join new units so I can meet course requirements"
+
+"As a student, I want my readings to be marked complete when I have finished them so I recieve a grade"
+
+"As a student, I want to veiw all my units so I can plan my study"
