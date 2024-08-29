@@ -8,6 +8,7 @@ public class Student extends User {
     public Student(String Name, String Password) {
         super(Name, Password);
         unitsEnrolled = new ArrayList<Unit>();
-
     }
+
+    private void completeAssignment(){}
 }

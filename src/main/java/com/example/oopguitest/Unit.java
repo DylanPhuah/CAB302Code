@@ -23,4 +23,19 @@ public class Unit {
         unitID=  random.nextInt(max - min + 1) + min;
     }
 
+    public Teacher getUnitCoordinator() {
+        return unitCoordinator;
+    }
+
+    public ArrayList<Student> getStudentsEnrolled() {
+        return studentsEnrolled;
+    }
+
+    public ArrayList<Textbook> getUnitTextbooks() {
+        return unitTextbooks;
+    }
+
+    public ArrayList<Textbook> getUnitAssignments() {
+        return unitAssignments;
+    }
 }

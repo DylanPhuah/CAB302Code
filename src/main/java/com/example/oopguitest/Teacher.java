@@ -10,4 +10,15 @@ public class Teacher extends User {
         super(Name,Password);
         unitsTaught = new ArrayList<Unit>();
     }
+
+
+    private void makeNewUnit(){}
+
+    private void makeAssignment(){}
+
+    private void addTextbook(){}
+
+    private void assignAssignment(){}
+
+
 }

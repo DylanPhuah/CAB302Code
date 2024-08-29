@@ -18,4 +18,6 @@ public class Textbook {
         int max = (int) Math.pow(10, 10) - 1;
         textbookID=  random.nextInt(max - min + 1) + min;
     }
+
+    private void readAloud(){}
 }
