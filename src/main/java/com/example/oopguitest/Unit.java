@@ -10,17 +10,22 @@ public class Unit {
     private Teacher unitCoordinator;
     private ArrayList<Student> studentsEnrolled;
     private ArrayList<Textbook> unitTextbooks;
-    private ArrayList<Assignment> unitAssignments;
-    private HashMap<Assignment,HashMap<Student,Boolean>> Assignments;
+    private HashMap<Student,ArrayList<Assignment>> Assignments;
 
-
+    public ArrayList<Textbook> getTextbooks()
+    {
+        return this.unitTextbooks;
+    }
+    public void addTextbook(Textbook textbook)
+    {
+        this.unitTextbooks.add((textbook));
+    }
 
     public Unit(String unitName, Teacher unitCoordinator,ArrayList<Student> students) {
         this.unitName = unitName;
         this.studentsEnrolled = students;
         this.unitCoordinator = unitCoordinator;
         this.studentsEnrolled = new ArrayList<Student>();
-        this.unitAssignments = new ArrayList<Assignment>();
 
         Random random  = new Random(); //Implement checking and generation for a unique unit ID that isnt taken in the database
         int min = (int) Math.pow(10, 10 - 1);
@@ -30,7 +35,11 @@ public class Unit {
 
     public void AddAssignment(Assignment assignment)
     {
-        this.unitAssignments.add(assignment);
+        for (Student student : studentsEnrolled)
+        {
+            student.addAssignment(assignment);
+            Assignments.get(student).add(assignment);
+        }
     }
 
     public Teacher getUnitCoordinator() {
@@ -45,7 +54,5 @@ public class Unit {
         return unitTextbooks;
     }
 
-    public ArrayList<Assignment> getUnitAssignments() {
-        return unitAssignments;
-    }
+
 }

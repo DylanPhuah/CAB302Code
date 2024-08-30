@@ -12,6 +12,27 @@ public class Assignment {
     private ArrayList<Student> studentsInProgress;
     private ArrayList<Student> studentsComplete;
     private int pageNumbers;
+    private int pageNumbersRead;
+
+    public boolean isComplete() {
+        return complete;
+    }
+    public boolean readPage()
+    {
+        if(this.pageNumbersRead != this.pageNumbers)
+        {
+            this.pageNumbersRead++;
+            return true;
+        }
+        else
+        {
+            this.complete = true;
+            return false;
+        }
+
+    }
+
+    private boolean complete;
 
     public Assignment(String assignmentName, String assignmentDueDate, Textbook assignmentTextbook, Teacher creator, int pageNumbers, Unit unit) {
         this.assignmentName = assignmentName;
@@ -22,5 +43,9 @@ public class Assignment {
         this.creator = creator;
         this.studentsComplete = new ArrayList<Student>();;
         this.studentsInProgress = new ArrayList<Student>();
+        this.complete = false;
+        this.pageNumbersRead = 0;
     }
+
+
 }

@@ -11,7 +11,6 @@ public class Teacher extends User {
         unitsTaught = new ArrayList<Unit>();
     }
 
-
     private void makeNewUnit(String name,ArrayList<Student> students)
     {
         Unit newUnit = new Unit(name,this,students);
@@ -24,18 +23,12 @@ public class Teacher extends User {
         unit.AddAssignment(newAssignment);
     }
 
-    private void addTextbook()
+    private void addTextbook(Unit unit, String name, String content)
     {
-
+        Textbook newTextbook = new Textbook(name, content);
+        unit.addTextbook(newTextbook);
     }
 
-    private void assignAssignment(ArrayList<Student> students,Assignment assignment)
-    {
-        for (Student student : students)
-        {
-            student.a
-        }
-    }
 
 
 }
