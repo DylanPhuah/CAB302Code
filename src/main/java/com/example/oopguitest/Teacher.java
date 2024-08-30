@@ -12,13 +12,30 @@ public class Teacher extends User {
     }
 
 
-    private void makeNewUnit(){}
+    private void makeNewUnit(String name,ArrayList<Student> students)
+    {
+        Unit newUnit = new Unit(name,this,students);
+        unitsTaught.add((newUnit));
+    }
 
-    private void makeAssignment(){}
+    private void makeAssignment(String name, String dueDate, Textbook book, int pageNumber,Unit unit)
+    {
+        Assignment newAssignment = new Assignment(name,dueDate,book,this,pageNumber,unit);
+        unit.AddAssignment(newAssignment);
+    }
 
-    private void addTextbook(){}
+    private void addTextbook()
+    {
 
-    private void assignAssignment(){}
+    }
+
+    private void assignAssignment(ArrayList<Student> students,Assignment assignment)
+    {
+        for (Student student : students)
+        {
+            student.a
+        }
+    }
 
 
 }
