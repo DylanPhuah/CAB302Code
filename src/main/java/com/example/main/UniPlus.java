@@ -21,5 +21,10 @@ public class UniPlus extends Application {
     public static void main(String[] args) {
         // Launch the login window
         launch();
+        // Connect to the database and create a new table of users if none exists
+        UserDAO userDAO = new UserDAO();
+        userDAO.createTable();
+        // Close the database
+        userDAO.close();
     }
 }
