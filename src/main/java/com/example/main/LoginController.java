@@ -17,7 +17,6 @@ public class LoginController {
     protected void onLoginButtonClick() throws IOException {
         UserDAO userDAO = new UserDAO();
         User eUser = userDAO.getByUser(username.getText());
-
         if (username.getText() == null || username.getText().isEmpty()) {
             statusLabel.setText("please enter a username");
         }
@@ -34,6 +33,9 @@ public class LoginController {
             else {
                 statusLabel.setText("username or password is incorrect");
             }
+        }
+        else {
+            statusLabel.setText("username or password is incorrect");
         }
     }
 

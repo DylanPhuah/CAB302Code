@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added DatabaseConnection, User, and UserDAO classes for modelling users and basic database integration" />
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Adjusted login logic to check for empty inputs, adjusted element spacing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/users.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +138,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725091755468</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented basic login and register checking, including a main-view placeholder with its own MainController class for a 'back' button">
+      <option name="closed" value="true" />
+      <created>1725102336335</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725102336335</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adjusted login logic to check for empty inputs, adjusted element spacing">
+      <option name="closed" value="true" />
+      <created>1725174508643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725174508643</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +198,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added classes for app, login view, and login controller. Login view contains medium fidelity login screen" />
     <MESSAGE value="Added DatabaseConnection, User, and UserDAO classes for modelling users and basic database integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DatabaseConnection, User, and UserDAO classes for modelling users and basic database integration" />
+    <MESSAGE value="Implemented basic login and register checking, including a main-view placeholder with its own MainController class for a 'back' button" />
+    <MESSAGE value="Adjusted login logic to check for empty inputs, adjusted element spacing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted login logic to check for empty inputs, adjusted element spacing" />
   </component>
 </project>

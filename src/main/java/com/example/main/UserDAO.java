@@ -17,8 +17,9 @@ public class UserDAO {
             createTable.execute("CREATE TABLE IF NOT EXISTS users ("
                     + "username VARCHAR PRIMARY KEY, "
                     + "password VARCHAR NOT NULL, "
-                    + "isTeacher BOOLEAN DEFAULT 0"
-                    + ")" );
+                    + "fName VARCHAR NOT NULL, "
+                    + "lName VARCHAR NOT NULL, "
+                    + "isTeacher BOOLEAN DEFAULT 0)" );
         } catch (SQLException ex) {
             System.err.println(ex);
         }
@@ -27,10 +28,13 @@ public class UserDAO {
     public void insert(User user) {
         try {
             PreparedStatement insertAccount = connection.prepareStatement(
-                    "INSERT OR IGNORE INTO users (username, password, isTeacher) VALUES (?, ?, ?)" );
+                    "INSERT OR IGNORE INTO users (username, password, fName, lName, isTeacher) " +
+                            "VALUES (?, ?, ?, ?, ?)" );
             insertAccount.setString(1, user.username);
             insertAccount.setString(2, user.password);
-            insertAccount.setBoolean(3, user.isTeacher);
+            insertAccount.setString(3, user.fName);
+            insertAccount.setString(4, user.lName);
+            insertAccount.setBoolean(5, user.isTeacher);
             insertAccount.execute();
         } catch (SQLException ex) {
             System.err.println(ex);
@@ -43,11 +47,11 @@ public class UserDAO {
             Statement getAll = connection.createStatement();
             ResultSet rs = getAll.executeQuery("SELECT * FROM users");
             while (rs.next()) {
-                users.add(
-                        new User(rs.getString("username"),
-                                rs.getString("password"),
-                                rs.getBoolean("isTeacher")
-                        )
+                users.add(new User(rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("fName"),
+                        rs.getString("lName"),
+                        rs.getBoolean("isTeacher"))
                 );
             }
         } catch (SQLException ex) {
@@ -65,6 +69,8 @@ public class UserDAO {
             if (rs.next()) {
                 return new User(rs.getString("username"),
                         rs.getString("password"),
+                        rs.getString("fName"),
+                        rs.getString("lName"),
                         rs.getBoolean("isTeacher"));
             }
         } catch (SQLException ex) {
