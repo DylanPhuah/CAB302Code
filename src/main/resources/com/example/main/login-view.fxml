@@ -10,7 +10,7 @@
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
   </padding>
 
-  <VBox alignment="CENTER" spacing="50.0" xmlns:fx="http://javafx.com/fxml">
+  <VBox alignment="CENTER" spacing="40.0" xmlns:fx="http://javafx.com/fxml">
     <HBox spacing="10.0" alignment="CENTER">
       <Label text="Username:"/>
       <TextField fx:id="username"/>

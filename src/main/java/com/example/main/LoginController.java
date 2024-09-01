@@ -18,38 +18,30 @@ public class LoginController {
         UserDAO userDAO = new UserDAO();
         User eUser = userDAO.getByUser(username.getText());
 
-        if(eUser != null) {
-            if (username.getText().equals(eUser.username) && password.getText().equals(eUser.password)) {
-                Stage stage = (Stage) loginButton.getScene().getWindow();
-                FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 720, 480);
-                stage.setScene(scene);
-            } else {
-                statusLabel.setText("username or password is incorrect");
-            }
-        }
-    }
-
-    @FXML
-    protected void onRegisterButtonClick() {
-        UserDAO userDAO = new UserDAO();
-
         if (username.getText() == null || username.getText().isEmpty()) {
             statusLabel.setText("please enter a username");
         }
         else if (password.getText() == null || password.getText().isEmpty()) {
             statusLabel.setText("please enter a password");
         }
-        else {
-            User eUser = userDAO.getByUser(username.getText());
-            if (eUser != null) {
-                statusLabel.setText("username is already taken");
+        else if (eUser != null) {
+            if (username.getText().equals(eUser.username) && password.getText().equals(eUser.password)) {
+                Stage stage = (Stage) loginButton.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 720, 480);
+                stage.setScene(scene);
             }
             else {
-                userDAO.insert(new User(username.getText(), password.getText(), false));
-                statusLabel.setText("new user created");
+                statusLabel.setText("username or password is incorrect");
             }
         }
+    }
 
+    @FXML
+    protected void onRegisterButtonClick() throws IOException {
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("register-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 720, 480);
+        stage.setScene(scene);
     }
 }
