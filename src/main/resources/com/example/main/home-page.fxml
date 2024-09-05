@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.geometry.Pos?>
 
 <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.main.HomePageController"
-      spacing="10" alignment="TOP_LEFT" style="-fx-padding: 20;">
+      spacing="20" alignment="TOP_LEFT" style="-fx-padding: 20; -fx-font-size: 20;">
 
-    <!-- Welcome label -->
-    <Label fx:id="welcomeLabel" text="Welcome, username" />
+    <!-- Top bar -->
+    <HBox spacing="20" alignment="CENTER_LEFT">
+        <!-- Welcome message on the left -->
+        <Label fx:id="welcomeLabel" text="Hello, username" />
 
-    <!-- Label for classes -->
-    <Label fx:id="classLabel" text="Classes:" />
+        <!-- Log out button on the right -->
+        <Button fx:id="logoutButton" text="Log Out" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 18;" alignment="CENTER_RIGHT"/>
+    </HBox>
 
-    <!-- List of classes -->
-    <ListView fx:id="classListView" />
-
+    <!-- TilePane to hold clickable class areas -->
+    <TilePane fx:id="classTilePane" hgap="20" vgap="20" alignment="CENTER" style="-fx-padding: 20;">
+        <!-- Class buttons will be added dynamically -->
+    </TilePane>
 </VBox>

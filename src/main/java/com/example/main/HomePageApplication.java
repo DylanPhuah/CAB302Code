@@ -5,12 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.example.main.HomePageController;
 
 public class HomePageApplication extends Application {
 
     private String username = "person1";
-    private boolean isTeacher = true; // Set to true for teacher, false for student
+    private boolean isTeacher = false; // Set to true for teacher, false for student
 
     public static void main(String[] args) {
         launch(args);
@@ -28,7 +27,7 @@ public class HomePageApplication extends Application {
 
         // Set up the scene and stage
         primaryStage.setTitle("Home Page");
-        primaryStage.setScene(new Scene(root, 400, 300));
+        primaryStage.setScene(new Scene(root, 800, 300));
         primaryStage.show();
     }
 }
