@@ -1,22 +1,16 @@
-package com.example.jfxpdfreader;
+package com.example.PdfReader;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.text.Text;
 
-import java.io.IOException;
-
-
-public class HelloController {
+public class PdfReaderController {
     @FXML
     private Button backButton;
 
-    PdfReader pdfReader =  new PdfReader();
-
     @FXML
-    protected void onBackButtonClick() throws IOException {
+    protected void onBackButtonClick() {
         backButton.setText("Return");
     }
 
