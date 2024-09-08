@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Implemented new register screen with fName, lName, and option to create teacher/student account. Expanded user and userDAO classes for fName and lName details">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/StudentHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/student-home-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725177903163</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins">
+      <option name="closed" value="true" />
+      <created>1725178463902</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725178463902</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +214,7 @@
     <MESSAGE value="Implemented basic login and register checking, including a main-view placeholder with its own MainController class for a 'back' button" />
     <MESSAGE value="Adjusted login logic to check for empty inputs, adjusted element spacing" />
     <MESSAGE value="Implemented new register screen with fName, lName, and option to create teacher/student account. Expanded user and userDAO classes for fName and lName details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented new register screen with fName, lName, and option to create teacher/student account. Expanded user and userDAO classes for fName and lName details" />
+    <MESSAGE value="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins" />
   </component>
 </project>

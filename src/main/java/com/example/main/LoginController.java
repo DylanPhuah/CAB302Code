@@ -26,8 +26,7 @@ public class LoginController {
         else if (eUser != null) {
             if (username.getText().equals(eUser.username) && password.getText().equals(eUser.password)) {
                 Stage stage = (Stage) loginButton.getScene().getWindow();
-                FXMLLoader fxmlLoader = (eUser.isTeacher) ? new FXMLLoader(UniPlus.class.getResource("teacher-home-view.fxml"))
-                        : new FXMLLoader(UniPlus.class.getResource("student-home-view.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 720, 480);
                 stage.setScene(scene);
             }

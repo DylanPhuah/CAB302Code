@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TeacherHomeController {
+public class MainController {
     @FXML private Button backButton;
 
     @FXML
