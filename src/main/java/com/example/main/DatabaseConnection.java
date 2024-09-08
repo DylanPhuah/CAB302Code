@@ -8,7 +8,7 @@ public class DatabaseConnection {
     private static Connection instance = null;
 
     private DatabaseConnection() {
-        String url = "jdbc:sqlite:users.db";
+        String url = "jdbc:sqlite:UniPlus.db";
         try {
             instance = DriverManager.getConnection(url);
         } catch (SQLException sqlEx) {

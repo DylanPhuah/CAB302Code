@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-    private Connection connection;
+    private final Connection connection;
 
     public UserDAO() {
         connection = DatabaseConnection.getInstance();
@@ -15,29 +15,29 @@ public class UserDAO {
         try {
             Statement createTable = connection.createStatement();
             createTable.execute("CREATE TABLE IF NOT EXISTS users ("
-                    + "username VARCHAR PRIMARY KEY, "
-                    + "password VARCHAR NOT NULL, "
-                    + "fName VARCHAR NOT NULL, "
-                    + "lName VARCHAR NOT NULL, "
-                    + "isTeacher BOOLEAN DEFAULT 0)" );
+                                  + "username VARCHAR PRIMARY KEY, "
+                                  + "password VARCHAR NOT NULL, "
+                                  + "fName VARCHAR NOT NULL, "
+                                  + "lName VARCHAR NOT NULL, "
+                                  + "isTeacher BOOLEAN DEFAULT 0)" );
         } catch (SQLException ex) {
-            System.err.println(ex);
+            System.err.println("user table creation error");
         }
     }
 
     public void insert(User user) {
         try {
-            PreparedStatement insertAccount = connection.prepareStatement(
+            PreparedStatement insertUser = connection.prepareStatement(
                     "INSERT OR IGNORE INTO users (username, password, fName, lName, isTeacher) " +
                             "VALUES (?, ?, ?, ?, ?)" );
-            insertAccount.setString(1, user.username);
-            insertAccount.setString(2, user.password);
-            insertAccount.setString(3, user.fName);
-            insertAccount.setString(4, user.lName);
-            insertAccount.setBoolean(5, user.isTeacher);
-            insertAccount.execute();
+            insertUser.setString(1, user.username);
+            insertUser.setString(2, user.password);
+            insertUser.setString(3, user.fName);
+            insertUser.setString(4, user.lName);
+            insertUser.setBoolean(5, user.isTeacher);
+            insertUser.execute();
         } catch (SQLException ex) {
-            System.err.println(ex);
+            System.err.println("user insertion error");
         }
     }
 
@@ -55,7 +55,7 @@ public class UserDAO {
                 );
             }
         } catch (SQLException ex) {
-            System.err.println(ex);
+            System.err.println("user get all error");
         }
         return users;
     }
@@ -74,7 +74,7 @@ public class UserDAO {
                         rs.getBoolean("isTeacher"));
             }
         } catch (SQLException ex) {
-            System.err.println(ex);
+            System.err.println("user get by user error");
         }
         return null;
     }
@@ -83,7 +83,7 @@ public class UserDAO {
         try {
             connection.close();
         } catch (SQLException ex) {
-            System.err.println(ex);
+            System.err.println("user connection close error");
         }
     }
 }
