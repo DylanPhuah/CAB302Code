@@ -19,9 +19,7 @@ public class UniPlus extends Application {
     }
 
     public static void main(String[] args) {
-        // Launch the login window
-        launch();
-        // Connect to the database and initialise each table if it doesn't already exist
+        // Connect to the database by each table and initialise if any do not already exist
         UserDAO userDAO = new UserDAO();
         userDAO.createTable();
         EnrolmentDAO enrolmentDAO = new EnrolmentDAO();
@@ -30,5 +28,7 @@ public class UniPlus extends Application {
         textbookDAO.createTable();
         // Close the database connection
         userDAO.close();
+        // Launch the login window
+        launch();
     }
 }
