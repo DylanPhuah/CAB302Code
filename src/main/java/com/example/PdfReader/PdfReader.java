@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class PdfReader {
+
     public String[] readPdf(String filePath) throws IOException{
         // Loads a document from the chosen directory
         File file = new File(filePath);

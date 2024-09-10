@@ -18,7 +18,7 @@ public class PdfReaderApplication extends Application {
     public void start(Stage stage) throws IOException {
         // Load FXML file and set the stage
         FXMLLoader fxmlLoader = new FXMLLoader(PdfReaderApplication.class.getResource("pdf-reader-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),1415, 1000);
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
         stage.setTitle("Textbook Reader");
         stage.setScene(scene);
         stage.show();
@@ -26,7 +26,7 @@ public class PdfReaderApplication extends Application {
         PdfReaderController controller = fxmlLoader.getController();
 
         // Stores the name of pdf file and its content into an array
-        String[] pdfContent = pdfReader.readPdf("C:/Users/Juan/IdeaProjects/untitled1/pdf/testPDF.pdf");
+        String[] pdfContent = pdfReader.readPdf("C:/Users/user/OneDrive - Queensland University of Technology/uni/cab302/L/pdf/test.pdf");
         controller.getHeaderText().setText(pdfContent[0]); // Sets header to pdf file name
         controller.getTextArea().setText(pdfContent[1]); // Sets text area to the contents of the pdf file
 
