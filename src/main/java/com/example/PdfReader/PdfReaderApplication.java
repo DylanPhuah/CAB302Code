@@ -26,7 +26,7 @@ public class PdfReaderApplication extends Application {
         PdfReaderController controller = fxmlLoader.getController();
 
         // Stores the name of pdf file and its content into an array
-        String[] pdfContent = pdfReader.readPdf("C:/Users/user/OneDrive - Queensland University of Technology/uni/cab302/L/pdf/test.pdf");
+        String[] pdfContent = pdfReader.readPdf("src/pdFile/test.pdf");
         controller.getHeaderText().setText(pdfContent[0]); // Sets header to pdf file name
         controller.getTextArea().setText(pdfContent[1]); // Sets text area to the contents of the pdf file
 
