@@ -6,6 +6,8 @@ import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
+import java.nio.file.InvalidPathException;
+import java.nio.file.Paths;
 import java.io.File;
 import java.io.IOException;
 
@@ -13,7 +15,9 @@ public class PdfReader {
 
     public String[] readPdf(String filePath) throws IOException{
         //Checks that the file path is valid
-
+        if (!IsFilePathValid(filePath)){
+            throw new IOException("File path does not exist: " + filePath);
+        }
 
         // Loads a document from the chosen directory
         File file = new File(filePath);
@@ -39,6 +43,16 @@ public class PdfReader {
         return new String[]{fileName, text};
     }
 
+    public Boolean IsFilePathValid(String filePath){
+        try {
+            Paths.get(filePath);
+        } catch (InvalidPathException | NullPointerException ex){
+            return false;
+        }
+        return true;
+    }
 
 }
+
+
 
