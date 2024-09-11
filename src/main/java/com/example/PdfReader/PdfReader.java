@@ -12,6 +12,9 @@ import java.io.IOException;
 public class PdfReader {
 
     public String[] readPdf(String filePath) throws IOException{
+        //Checks that the file path is valid
+
+
         // Loads a document from the chosen directory
         File file = new File(filePath);
         PDDocument document = Loader.loadPDF(file);
