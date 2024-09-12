@@ -21,6 +21,8 @@ public class PdfReader {
             //Checks that the file path is valid
             if (!IsFilePathValid(filePath)) {
                 throw new IOException("File path does not exist: " + filePath);
+            }  else if (!IsFileTypeValid(filePath)){
+                throw new IOException("The file is not a PDF: " + filePath);
             }
 
             // Loads a document from the chosen directory
@@ -46,9 +48,16 @@ public class PdfReader {
 
             result[0] = fileName;
             result[1] = text;
+
+            // Handles any exceptions thrown by the method
         } catch (IOException e) {
-            // Handles the invalid file path exception and displays a popup for the user
-            ExceptionPopUp.exceptionPopUp("File path does not exist: " + filePath, "Error");
+            if (!IsFilePathValid(filePath)) {
+                // Displays an error popup for an invalid file path
+                ExceptionPopUp.exceptionPopUp("File path does not exist: " + filePath, "Error");
+            } else if (!IsFileTypeValid(filePath)) {
+                // Displays an error popup for an invalid file type
+                ExceptionPopUp.exceptionPopUp("The file is not a PDF: " + filePath, "Error");
+            }
             throw e;
         } catch (Exception e){
             // Handles unexpected exceptions and displays a popup for the user
@@ -67,6 +76,10 @@ public class PdfReader {
             return false;
         }
         return true;
+    }
+
+    public Boolean IsFileTypeValid(String filePath){
+        return filePath.endsWith(".pdf");
     }
 
 }
