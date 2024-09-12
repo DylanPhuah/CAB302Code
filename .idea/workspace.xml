@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Reordered main method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Database",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -171,7 +167,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725178463902</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented Textbook and Enrolment classes, and their database access objects">
+      <option name="closed" value="true" />
+      <created>1725783132380</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725783132380</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Reordered main method">
+      <option name="closed" value="true" />
+      <created>1725783278616</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725783278616</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +231,8 @@
     <MESSAGE value="Adjusted login logic to check for empty inputs, adjusted element spacing" />
     <MESSAGE value="Implemented new register screen with fName, lName, and option to create teacher/student account. Expanded user and userDAO classes for fName and lName details" />
     <MESSAGE value="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins" />
+    <MESSAGE value="Implemented Textbook and Enrolment classes, and their database access objects" />
+    <MESSAGE value="Reordered main method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reordered main method" />
   </component>
 </project>
