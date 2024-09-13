@@ -9,6 +9,7 @@
 
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.Group?>
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.PdfReader.PdfReaderController">
     <!-- Top section of stage -->
     <top>
@@ -38,12 +39,14 @@
         <VBox alignment="TOP_CENTER" spacing="10.0"  BorderPane.alignment="CENTER">
 
             <HBox spacing="10.0" alignment="TOP_LEFT" >
-                <Button text="-" />
+                <Button fx:id="zoomOut" text="-" />
                 <Label text="Zoom"/>
-                <Button text="+" />
+                <Button fx:id="zoomIn" text="+" />
             </HBox>
             <ScrollPane VBox.vgrow="ALWAYS" fitToHeight="true" fitToWidth="true" stylesheets="@styles.css">
-                <TextArea fx:id="textArea" wrapText="true" VBox.vgrow="ALWAYS" editable="false" />
+                <Group fx:id="scrollPaneContent">
+                    <TextArea fx:id="textArea" wrapText="true" VBox.vgrow="ALWAYS" editable="false" />
+                </Group>
             </ScrollPane>
 
         </VBox>
