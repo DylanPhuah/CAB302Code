@@ -1,3 +1,3 @@
-.scroll-pane {
-    -fx-font-size : 18px;
+.text-area {
+    -fx-font-size: 14pt; /* Font size for TextArea in ScrollPane */
 }
