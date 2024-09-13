@@ -30,6 +30,7 @@ public class EnrolmentDAO {
                             "VALUES (?, ?)" );
             insertAccount.setString(1, enrolment.username);
             insertAccount.setString(2, enrolment.unitCode);
+            insertAccount.execute();
         } catch (SQLException ex) {
             System.err.println("enrolment insertion error");
         }

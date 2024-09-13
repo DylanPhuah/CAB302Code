@@ -60,6 +60,33 @@ public class UserDAO {
         return users;
     }
 
+    public void ChangeName(User user, String NewName)
+    {
+        String updateQuery = "UPDATE users SET fName = ? WHERE username = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
+            preparedStatement.setString(1, NewName);
+            preparedStatement.setString(2, user.username);
+            int rowsAffected = preparedStatement.executeUpdate();
+            System.out.println("Rows updated: " + rowsAffected);
+        } catch (SQLException e) {
+            System.err.println("First name update failure");
+        }
+    }
+    public void deleteUser(User user)
+    {
+        String deleteQuery = "DELETE FROM users WHERE username = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+            preparedStatement.setString(1, user.username);  // The ID or condition for deletion
+
+            int rowsDeleted = preparedStatement.executeUpdate();
+            System.out.println("Rows deleted: " + rowsDeleted);
+        } catch (SQLException e) {
+            System.err.println("User delete failure");
+        }
+    }
+
+
+
     public User getByUser(String user) {
         try {
             String sql = "SELECT * FROM users WHERE username = ?";
