@@ -1,6 +1,6 @@
 package com.example.PdfReader;
 
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.IOException;
 
