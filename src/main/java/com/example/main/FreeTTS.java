@@ -2,15 +2,12 @@ package com.example.main;
 
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
-import javax.speech.EngineException;
 import javax.speech.EngineStateError;
-import javax.speech.AudioException;
 
 public class FreeTTS {
     public FreeTTS(String text) {
         Voice voice = null;
         try {
-            // Set system property for voice directory
             try {
                 System.setProperty("freetts.voices",
                         "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
@@ -19,7 +16,6 @@ public class FreeTTS {
                 e.printStackTrace();
             }
 
-            // Get the VoiceManager instance
             VoiceManager vm = null;
             try {
                 vm = VoiceManager.getInstance();
@@ -32,8 +28,6 @@ public class FreeTTS {
             if (vm == null) {
                 throw new IllegalStateException("Cannot get VoiceManager instance.");
             }
-
-            // Get the voice named "kevin16"
             try {
                 voice = vm.getVoice("kevin16");
             } catch (Exception e) {
@@ -45,8 +39,6 @@ public class FreeTTS {
             if (voice == null) {
                 throw new IllegalStateException("Voice 'kevin16' not found.");
             }
-
-            // Allocate the voice
             try {
                 voice.allocate();
             } catch (EngineStateError e) {
@@ -54,7 +46,6 @@ public class FreeTTS {
                 e.printStackTrace();
                 return;
             }
-
             // Speak the text
             try {
                 voice.speak(text);
@@ -62,7 +53,6 @@ public class FreeTTS {
                 System.out.println("EngineStateError during speaking: " + e.getMessage());
                 e.printStackTrace();
             }
-
         } catch (IllegalArgumentException e) {
             System.out.println("Invalid argument: " + e.getMessage());
             e.printStackTrace();
@@ -73,7 +63,6 @@ public class FreeTTS {
             System.out.println("An unexpected error occurred: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Deallocate the voice
             if (voice != null) {
                 try {
                     voice.deallocate();
