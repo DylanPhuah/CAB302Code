@@ -8,11 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added SQLite JDBC driver dependency via Maven">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/TextToSpeech.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/FreeTTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/FreeTTS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +39,12 @@
     &quot;assignee&quot;: &quot;zgennerz3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DylanPhuah/CAB302Code&quot;,
-    &quot;accountId&quot;: &quot;b87efb8b-2eb6-4313-9561-227eae59c7fc&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DylanPhuah/CAB302Code.git",
+    "accountId": "9185721a-7d30-4417-922a-e4acdfc08b33"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -64,29 +61,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TextToSpeech.executor": "Run",
-    "Application.UniPlus.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.DBTest.executor": "Run",
-    "JUnit.UserTest.executor": "Run",
-    "Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor": "Run",
-    "Maven.main [package].executor": "Run",
-    "Maven.main [test].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "texttospeech",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.29310346"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TextToSpeech.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UniPlus.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.DBTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [test].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;texttospeech&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\src" />
@@ -96,7 +93,20 @@
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus\src\Main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TestFreeTTS">
+    <configuration name="TestFreeTTS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.main.TestFreeTTS" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TextToSpeech" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.main.TextToSpeech" />
       <module name="main" />
@@ -125,6 +135,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestFreeTTS" />
         <item itemvalue="Application.TextToSpeech" />
       </list>
     </recent_temporary>
