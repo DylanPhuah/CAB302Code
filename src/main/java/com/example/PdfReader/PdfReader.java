@@ -2,6 +2,8 @@
 ---------------------------------------------- pdfbox class to read pdf files ----------------------------------------------------------------
  */
 package com.example.PdfReader;
+import com.example.main.Textbook;
+import com.example.main.TextbookDAO;
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -13,6 +15,8 @@ import java.io.IOException;
 
 
 public class PdfReader {
+
+    TextbookDAO textbookDAO = new TextbookDAO();
 
     public String[] readPdf(String filePath) throws IOException{
         String[] result = new String[2];
@@ -65,6 +69,8 @@ public class PdfReader {
             throw e;
         }
 
+        Textbook textbook = new Textbook(result[0], "302", result[1]);
+        textbookDAO.insert(textbook);
         return result;
 
     }

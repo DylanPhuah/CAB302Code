@@ -7,8 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added SQLite JDBC driver dependency via Maven">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Changed version of Junit while merging the latest branch of main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +40,12 @@
     &quot;assignee&quot;: &quot;zgennerz3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DylanPhuah/CAB302Code&quot;,
-    &quot;accountId&quot;: &quot;885732d3-7ea1-4a55-93d8-7ab560892342&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DylanPhuah/CAB302Code.git",
+    "accountId": "85df6fa2-c9ab-48d2-b90d-2bc49c2d5a11"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -60,28 +62,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.PdfReaderApplication.executor": "Run",
-    "Application.UniPlus.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.DBTest.executor": "Run",
-    "JUnit.UserTest.executor": "Run",
-    "Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor": "Run",
-    "Maven.main [package].executor": "Run",
-    "Maven.main [test].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Pdf-Reading",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.29310346"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.PdfReaderApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UniPlus.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.DBTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PdfReaderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [test].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Pdf-Reading&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\src" />
@@ -187,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726113911768</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changed version of Junit while merging the latest branch of main">
+      <option name="closed" value="true" />
+      <created>1726214970236</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726214970236</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +249,7 @@
     <MESSAGE value="Implemented Textbook and Enrolment classes, and their database access objects" />
     <MESSAGE value="Reordered main method" />
     <MESSAGE value="Added SQLite JDBC driver dependency via Maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added SQLite JDBC driver dependency via Maven" />
+    <MESSAGE value="Changed version of Junit while merging the latest branch of main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed version of Junit while merging the latest branch of main" />
   </component>
 </project>
