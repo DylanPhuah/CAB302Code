@@ -4,8 +4,8 @@ import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import javax.speech.EngineStateError;
 
-public class FreeTTS {
-    public FreeTTS(String text) {
+public class TextToSpeech {
+    public TextToSpeech(String text) {
         Voice voice = null;
         try {
             try {
