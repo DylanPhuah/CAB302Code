@@ -70,4 +70,12 @@ public class EnrolmentDAO {
         }
         return enrolments;
     }
+
+    public void close() {
+        try {
+            connection.close();
+        } catch (SQLException ex) {
+            System.err.println("user connection close error");
+        }
+    }
 }
