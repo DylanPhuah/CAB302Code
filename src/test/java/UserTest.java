@@ -2,11 +2,10 @@ import com.example.main.*;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class UserTest {
     private User tUser;
-    private UserDAO UserDao;
+    private UserDAO userDao;
     private EnrolmentDAO enrolmentDAO;
     private Enrolment tEnrolment;
     private TextbookDAO textbookDAO;
@@ -19,19 +18,46 @@ public class UserTest {
         tTextbook = new Textbook("The adventures of Zane","EGB101","A healthy sacrifice to the tree and crocodile gods can be a good thing.");
         tEnrolment = new Enrolment("a","EGB101");
 
-        UserDao = new UserDAO();
-        UserDao.createTable();
+        userDao = new UserDAO();
+        userDao.createTable();
         enrolmentDAO = new EnrolmentDAO();
         enrolmentDAO.createTable();
         textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
     }
+
+    @Test
+    @Order(0)
+    void testUser() {
+        assertEquals(tTextbook.GetTitle(),"The adventures of Zane");
+        assertEquals(tTextbook.GetUnitCode(),"EGB101");
+        assertEquals(tTextbook.GetText(),"A healthy sacrifice to the tree and crocodile gods can be a good thing.");
+    }
+
+    @Test
+    @Order(0)
+    void testEnrolment() {
+        assertEquals(tEnrolment.GetUsername(), "a");
+        assertEquals(tEnrolment.GetUnitCode(), "EGB101");
+    }
+
+    @Test
+    @Order(0)
+    void testTextbook() {
+        {
+            assertEquals(tUser.GetFName(), "a");
+            assertEquals(tUser.GetUsername(),"b");
+            assertEquals(tUser.GetPassword(),"c"); //very secure
+            assertEquals(tUser.GetLName(),"d");
+            assertEquals(tUser.GetIsTeacher(),false);
+        }
+    }
+
     @Test
     @Order(1)
     void testUserInsert()
     {
-        UserDao.insert(tUser);
-
+        userDao.insert(tUser);
     }
 //    @Test
 //    @Order(1)
@@ -54,7 +80,7 @@ public class UserTest {
     @Order(2)
     void testUserRetrieve()
     {
-        User retrieval = UserDao.getByUser(tUser.GetUsername());
+        User retrieval = userDao.getByUser(tUser.GetUsername());
         assertEquals(tUser.GetFName(),retrieval.GetFName());
         assertEquals(tUser.GetUsername(),retrieval.GetUsername());
         assertEquals(tUser.GetPassword(),retrieval.GetPassword()); //very secure
@@ -81,8 +107,8 @@ public class UserTest {
     @Order(3)
     void testUserUpdate()
     {
-        UserDao.changeName(tUser,"Harvardson");
-        User retrieval = UserDao.getByUser(tUser.GetUsername());
+        userDao.changeName(tUser,"Harvardson");
+        User retrieval = userDao.getByUser(tUser.GetUsername());
         assertEquals(retrieval.GetFName(),"Harvardson");
     }
 
@@ -110,8 +136,8 @@ public class UserTest {
     @Order(4)
     void testUserDelete()
     {
-        UserDao.deleteUser(tUser);
-        User retrieval = UserDao.getByUser(tUser.GetUsername());
+        userDao.deleteUser(tUser);
+        User retrieval = userDao.getByUser(tUser.GetUsername());
         assertNull(retrieval);
 
     }
