@@ -2,16 +2,20 @@ package com.example.PdfReader;
 /*
 --------------------------------------------Stage for Textbook Reader Page ----------------------------------------------------------------
  */
+import com.example.main.Textbook;
+import com.example.main.TextbookDAO;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class PdfReaderApplication extends Application {
 
+    private final TextbookDAO textbookDAO = new TextbookDAO();
     PdfReader pdfReader = new PdfReader();
 
     @Override
@@ -25,13 +29,28 @@ public class PdfReaderApplication extends Application {
 
         PdfReaderController controller = fxmlLoader.getController();
 
-        // Stores the name of pdf file and its content into an array
-        String[] pdfContent = pdfReader.readPdf("src/pdFile/test.pdf");
-        controller.getHeaderText().setText(pdfContent[0]); // Sets header to pdf file name
-        controller.getTextArea().setText(pdfContent[1]); // Sets text area to the contents of the pdf file
+        // Stores the name of pdf file and its content into the database -- to be polished later
+        pdfReader.readPdf("src/pdFile/test.pdf");
 
+        // Placeholder unitCode used to select specific textbook
+        String unitCode = "EGB101";
 
+        // Retrieves textbooks from database
+        List<Textbook> textbooks = textbookDAO.getAllByUnit(unitCode);
 
+        if (!textbooks.isEmpty()) {
+            Textbook textbook = textbooks.getFirst(); // Assuming you want the first result
+            // Sets Header and text of the stage
+            controller.getHeaderText().setText(textbook.GetTitle());
+            controller.getTextArea().setText(textbook.GetText());
+        } else {
+            // Handle case where no textbooks are found
+            controller.getHeaderText().setText("No textbook found");
+            controller.getTextArea().setText("No content available.");
+        }
+
+        // Close the DAO connection
+        textbookDAO.close();
 
     }
 

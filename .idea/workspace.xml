@@ -7,10 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Adapted the PdfReaderApplication to the database changes in the pdfReader class. The application now pulls the textbook from the database and displays it.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReaderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReaderApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726214970236</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed a few issues caused after merging with main">
+      <option name="closed" value="true" />
+      <created>1726755199164</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726755199164</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +260,8 @@
     <MESSAGE value="Refactored information classes and their DAOs" />
     <MESSAGE value="Refactored information class unit tests, added comments" />
     <MESSAGE value="Added unit tests for information class creation and field validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added unit tests for information class creation and field validation" />
+    <MESSAGE value="Fixed a few issues caused after merging with main" />
+    <MESSAGE value="Adapted the PdfReaderApplication to the database changes in the pdfReader class. The application now pulls the textbook from the database and displays it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adapted the PdfReaderApplication to the database changes in the pdfReader class. The application now pulls the textbook from the database and displays it." />
   </component>
 </project>
