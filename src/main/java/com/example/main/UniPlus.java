@@ -28,6 +28,8 @@ public class UniPlus extends Application {
         textbookDAO.createTable();
         // Close the database connection
         userDAO.close();
+        enrolmentDAO.close();
+        textbookDAO.close();
         // Launch the login window
         launch();
     }

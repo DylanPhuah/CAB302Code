@@ -24,7 +24,7 @@ public class LoginController {
             statusLabel.setText("please enter a password");
         }
         else if (eUser != null) {
-            if (username.getText().equals(eUser.username) && password.getText().equals(eUser.password)) {
+            if (username.getText().equals(eUser.GetUsername()) && password.getText().equals(eUser.GetPassword())) {
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 720, 480);

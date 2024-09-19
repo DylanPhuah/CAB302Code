@@ -1,17 +1,40 @@
 package com.example.main;
 
-/**
- * A simple object to represent a user and their data
- */
+/** A user with a registered account on the UniPlus platform, and their associated data */
 public class User {
-    public String username;
-    public String password;
-    public String fName;
-    public String lName;
-    public Boolean isTeacher;
+    /** The user's chosen username */
+    private String username;
+    /** The user's chosen password */
+    private String password;
+    /** The user's given (first) name */
+    private String fName;
+    /** The user's sur- (last) name */
+    private String lName;
+    /** Whether the user is a teacher, false for student users */
+    private Boolean isTeacher;
+
+    public String GetUsername() {
+        return username;
+    }
+
+    public String GetPassword() {
+        return password;
+    }
+
+    public String GetFName() {
+        return fName;
+    }
+
+    public String GetLName() {
+        return lName;
+    }
+
+    public Boolean GetIsTeacher() {
+        return isTeacher;
+    }
 
     /**
-     *
+     * Instantiates a user with the given data
      * @param Username The username chosen by the user
      * @param Password The password chosen by the user
      * @param FName The first-name provided by the user
