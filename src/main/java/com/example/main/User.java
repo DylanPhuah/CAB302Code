@@ -1,13 +1,16 @@
 package com.example.main;
 
-/**
- * A simple object to represent a user and their data
- */
+/** A user with a registered account on the UniPlus platform, and their associated data */
 public class User {
+    /** The user's chosen username */
     private String username;
+    /** The user's chosen password */
     private String password;
+    /** The user's given (first) name */
     private String fName;
+    /** The user's sur- (last) name */
     private String lName;
+    /** Whether the user is a teacher, false for student users */
     private Boolean isTeacher;
 
     public String GetUsername() {
@@ -31,7 +34,7 @@ public class User {
     }
 
     /**
-     *
+     * Instantiates a user with the given data
      * @param Username The username chosen by the user
      * @param Password The password chosen by the user
      * @param FName The first-name provided by the user

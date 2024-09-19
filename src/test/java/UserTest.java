@@ -1,8 +1,6 @@
 import com.example.main.*;
 import org.junit.jupiter.api.*;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
@@ -56,12 +54,12 @@ public class UserTest {
     @Order(2)
     void testUserRetrieve()
     {
-        User retrieval = UserDao.getByUser(tUser.username);
-        assertEquals(tUser.fName,retrieval.fName);
-        assertEquals(tUser.username,retrieval.username);
-        assertEquals(tUser.password,retrieval.password); //very secure
-        assertEquals(tUser.lName,retrieval.lName);
-        assertEquals(tUser.isTeacher,retrieval.isTeacher);
+        User retrieval = UserDao.getByUser(tUser.GetUsername());
+        assertEquals(tUser.GetFName(),retrieval.GetFName());
+        assertEquals(tUser.GetUsername(),retrieval.GetUsername());
+        assertEquals(tUser.GetPassword(),retrieval.GetPassword()); //very secure
+        assertEquals(tUser.GetLName(),retrieval.GetLName());
+        assertEquals(tUser.GetIsTeacher(),retrieval.GetIsTeacher());
     }
 //    @Test
 //    @Order(2)
@@ -83,9 +81,9 @@ public class UserTest {
     @Order(3)
     void testUserUpdate()
     {
-        UserDao.ChangeName(tUser,"Harvardson");
-        User retrieval = UserDao.getByUser(tUser.username);
-        assertEquals(retrieval.fName,"Harvardson");
+        UserDao.changeName(tUser,"Harvardson");
+        User retrieval = UserDao.getByUser(tUser.GetUsername());
+        assertEquals(retrieval.GetFName(),"Harvardson");
     }
 
 //    @Test
@@ -113,7 +111,7 @@ public class UserTest {
     void testUserDelete()
     {
         UserDao.deleteUser(tUser);
-        User retrieval = UserDao.getByUser(tUser.username);
+        User retrieval = UserDao.getByUser(tUser.GetUsername());
         assertNull(retrieval);
 
     }

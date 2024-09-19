@@ -7,7 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Turned TTS class from a test into a constructor and added a bunch of exception handling." />
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Refactored information classes and their DAOs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,30 +62,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TestFreeTTS.executor": "Run",
-    "Application.TextToSpeech.executor": "Run",
-    "Application.UniPlus.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.DBTest.executor": "Run",
-    "JUnit.UserTest.executor": "Run",
-    "Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor": "Run",
-    "Maven.main [package].executor": "Run",
-    "Maven.main [test].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.29310346"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TestFreeTTS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TextToSpeech.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UniPlus.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.DBTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [test].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\src" />
@@ -227,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726620667741</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactored information classes and their DAOs">
+      <option name="closed" value="true" />
+      <created>1726729952957</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726729952957</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,6 +291,7 @@
     <MESSAGE value="Reordered main method" />
     <MESSAGE value="Added SQLite JDBC driver dependency via Maven" />
     <MESSAGE value="Turned TTS class from a test into a constructor and added a bunch of exception handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Turned TTS class from a test into a constructor and added a bunch of exception handling." />
+    <MESSAGE value="Refactored information classes and their DAOs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored information classes and their DAOs" />
   </component>
 </project>

@@ -4,13 +4,16 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/** A database access object for the users table */
 public class UserDAO {
     private final Connection connection;
 
+    /** Instantiates a database access object for the users table */
     public UserDAO() {
         connection = DatabaseConnection.getInstance();
     }
 
+    /** Creates the users table in the database if it does not already exist */
     public void createTable() {
         try {
             Statement createTable = connection.createStatement();
@@ -25,6 +28,10 @@ public class UserDAO {
         }
     }
 
+    /**
+     * Inserts a given user into the database
+     * @param user The user to be inserted
+     */
     public void insert(User user) {
         try {
             PreparedStatement insertUser = connection.prepareStatement(
@@ -41,6 +48,10 @@ public class UserDAO {
         }
     }
 
+    /**
+     * Retrieves all users from the database
+     * @return A list of all users in the database
+     */
     public List<User> getAll() {
         List<User> users = new ArrayList<>();
         try {
@@ -60,7 +71,7 @@ public class UserDAO {
         return users;
     }
 
-    public void ChangeName(User user, String NewName)
+    public void changeName(User user, String NewName)
     {
         String updateQuery = "UPDATE users SET fName = ? WHERE username = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
@@ -85,8 +96,11 @@ public class UserDAO {
         }
     }
 
-
-
+    /**
+     * Retrieves a user matching the given username
+     * @param user The username to be matched
+     * @return The user with the given username
+     */
     public User getByUser(String user) {
         try {
             String sql = "SELECT * FROM users WHERE username = ?";
@@ -106,6 +120,7 @@ public class UserDAO {
         return null;
     }
 
+    /** Closes the database connection */
     public void close() {
         try {
             connection.close();

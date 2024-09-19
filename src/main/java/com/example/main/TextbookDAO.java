@@ -4,13 +4,16 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/** A database access object for the textbooks table */
 public class TextbookDAO {
     private final Connection connection;
 
+    /** Instantiates a database access object for the textbooks table */
     public TextbookDAO() {
         connection = DatabaseConnection.getInstance();
     }
 
+    /** Creates the textbooks table in the database if it does not already exist */
     public void createTable() {
         try {
             Statement createTable = connection.createStatement();
@@ -24,6 +27,10 @@ public class TextbookDAO {
         }
     }
 
+    /**
+     * Inserts a given textbook into the database
+     * @param textbook The textbook to be inserted
+     */
     public void insert(Textbook textbook) {
         try {
             PreparedStatement insertTextbook = connection.prepareStatement(
@@ -38,6 +45,11 @@ public class TextbookDAO {
         }
     }
 
+    /**
+     * Retrieves a list of textbooks matching the given unit code
+     * @param unitCode The unit code to match
+     * @return A list of textbooks with the given unit code
+     */
     public List<Textbook> getAllByUnit(String unitCode) {
         List<Textbook> textbooks = new ArrayList<>();
         try {
@@ -57,6 +69,7 @@ public class TextbookDAO {
         return textbooks;
     }
 
+    /** Closes the database connection */
     public void close() {
         try {
             connection.close();
