@@ -4,11 +4,31 @@ package com.example.main;
  * A simple object to represent a user and their data
  */
 public class User {
-    public String username;
-    public String password;
-    public String fName;
-    public String lName;
-    public Boolean isTeacher;
+    private String username;
+    private String password;
+    private String fName;
+    private String lName;
+    private Boolean isTeacher;
+
+    public String GetUsername() {
+        return username;
+    }
+
+    public String GetPassword() {
+        return password;
+    }
+
+    public String GetFName() {
+        return fName;
+    }
+
+    public String GetLName() {
+        return lName;
+    }
+
+    public Boolean GetIsTeacher() {
+        return isTeacher;
+    }
 
     /**
      *

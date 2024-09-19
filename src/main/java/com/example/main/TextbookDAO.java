@@ -29,9 +29,9 @@ public class TextbookDAO {
             PreparedStatement insertTextbook = connection.prepareStatement(
                     "INSERT OR IGNORE INTO textbooks (title, unitCode, text) "
                       + "VALUES (?, ?, ?)" );
-            insertTextbook.setString(1, textbook.title);
-            insertTextbook.setString(2, textbook.unitCode);
-            insertTextbook.setString(3, textbook.text);
+            insertTextbook.setString(1, textbook.GetTitle());
+            insertTextbook.setString(2, textbook.GetUnitCode());
+            insertTextbook.setString(3, textbook.GetText());
             insertTextbook.execute();
         } catch (SQLException ex) {
             System.err.println("textbook insertion error");

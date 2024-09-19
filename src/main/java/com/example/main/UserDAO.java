@@ -30,11 +30,11 @@ public class UserDAO {
             PreparedStatement insertUser = connection.prepareStatement(
                     "INSERT OR IGNORE INTO users (username, password, fName, lName, isTeacher) " +
                             "VALUES (?, ?, ?, ?, ?)" );
-            insertUser.setString(1, user.username);
-            insertUser.setString(2, user.password);
-            insertUser.setString(3, user.fName);
-            insertUser.setString(4, user.lName);
-            insertUser.setBoolean(5, user.isTeacher);
+            insertUser.setString(1, user.GetUsername());
+            insertUser.setString(2, user.GetPassword());
+            insertUser.setString(3, user.GetFName());
+            insertUser.setString(4, user.GetLName());
+            insertUser.setBoolean(5, user.GetIsTeacher());
             insertUser.execute();
         } catch (SQLException ex) {
             System.err.println("user insertion error");
@@ -65,7 +65,7 @@ public class UserDAO {
         String updateQuery = "UPDATE users SET fName = ? WHERE username = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
             preparedStatement.setString(1, NewName);
-            preparedStatement.setString(2, user.username);
+            preparedStatement.setString(2, user.GetUsername());
             int rowsAffected = preparedStatement.executeUpdate();
             System.out.println("Rows updated: " + rowsAffected);
         } catch (SQLException e) {
@@ -76,7 +76,7 @@ public class UserDAO {
     {
         String deleteQuery = "DELETE FROM users WHERE username = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
-            preparedStatement.setString(1, user.username);  // The ID or condition for deletion
+            preparedStatement.setString(1, user.GetUsername());  // The ID or condition for deletion
 
             int rowsDeleted = preparedStatement.executeUpdate();
             System.out.println("Rows deleted: " + rowsDeleted);

@@ -28,8 +28,8 @@ public class EnrolmentDAO {
             PreparedStatement insertAccount = connection.prepareStatement(
                     "INSERT OR IGNORE INTO enrolments (username, unitCode) " +
                             "VALUES (?, ?)" );
-            insertAccount.setString(1, enrolment.username);
-            insertAccount.setString(2, enrolment.unitCode);
+            insertAccount.setString(1, enrolment.GetUsername());
+            insertAccount.setString(2, enrolment.GetUnitCode());
             insertAccount.execute();
         } catch (SQLException ex) {
             System.err.println("enrolment insertion error");
