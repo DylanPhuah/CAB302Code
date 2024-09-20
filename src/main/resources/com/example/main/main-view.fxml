@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="homepageAnchorPane" prefHeight="817.0" prefWidth="1031.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.MainController">
+<AnchorPane fx:id="homepageAnchorPane" prefHeight="817.0" prefWidth="1031.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.MainController">
     <children>
         <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="1201.0">
             <left>
@@ -131,11 +131,11 @@
                                                                         <Insets left="40.0" />
                                                                     </padding>
                                                                     <children>
-                                                                        <Button mnemonicParsing="false" onAction="#onContentSwitch" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" stylesheets="@Button-Style.css">
+                                                                        <Button mnemonicParsing="false" onAction="#onContentSwitch" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" >
                                                                             <graphic>
                                                                                 <ImageView fx:id="contentImageView" fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
                                                                             </graphic></Button>
-                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" stylesheets="@Button-Style.css" />
+                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;"/>
                                                                     </children>
                                                                 </HBox>
                                                                 <HBox prefHeight="20.0" prefWidth="616.0">
@@ -156,8 +156,8 @@
                                                                         <Insets left="40.0" />
                                                                     </padding>
                                                                     <children>
-                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" stylesheets="@Button-Style.css" />
-                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" stylesheets="@Button-Style.css" />
+                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" />
+                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" />
                                                                     </children>
                                                                 </HBox>
                                                             </children>
