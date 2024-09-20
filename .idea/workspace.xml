@@ -7,7 +7,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation" />
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/configs/api_config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/configs/digits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/configs/hocr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/eng.traineddata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/osd.traineddata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/pdf.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/pdf.ttx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/ContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/RecognizeText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/RecognizeText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/content-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/content-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="UnitTests" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,14 +96,13 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources" />
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\src" />
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus" />
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus\src" />
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus\src\Main\java\com\login" />
-      <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus\src\Main\java" />
     </key>
   </component>
-
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

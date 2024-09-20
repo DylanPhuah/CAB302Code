@@ -11,12 +11,12 @@ import static org.opencv.imgproc.Imgproc.*;
 
 
 public class RecognizeText {
-    static String SRC_PATH = "C:/java_text/";
+    static String SRC_PATH = "../../resources/images";
     static Tesseract tesseract = new Tesseract();
     static{
-        // System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         nu.pattern.OpenCV.loadLocally();
-        tesseract.setDatapath("C:/Users/Lachlan/Downloads/Tess4J-3.4.8-src/Tess4J/tessdata");
+        tesseract.setDatapath("../../resources/tessdata");
     }
 
     String extractString(Mat inputMat) {
