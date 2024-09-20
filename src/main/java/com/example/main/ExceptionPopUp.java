@@ -1,4 +1,4 @@
-package com.example.PdfReader;
+package com.example.main;
 
 import javax.swing.JOptionPane;
 

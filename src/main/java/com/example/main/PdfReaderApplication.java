@@ -1,9 +1,7 @@
-package com.example.PdfReader;
+package com.example.main;
 /*
 --------------------------------------------Stage for Textbook Reader Page ----------------------------------------------------------------
  */
-import com.example.main.Textbook;
-import com.example.main.TextbookDAO;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

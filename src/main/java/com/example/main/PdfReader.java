@@ -1,9 +1,7 @@
 /*
 ---------------------------------------------- pdfbox class to read pdf files ----------------------------------------------------------------
  */
-package com.example.PdfReader;
-import com.example.main.Textbook;
-import com.example.main.TextbookDAO;
+package com.example.main;
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;

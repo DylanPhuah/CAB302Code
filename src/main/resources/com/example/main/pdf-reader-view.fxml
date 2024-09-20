@@ -10,7 +10,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.StackPane?>
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.PdfReader.PdfReaderController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.main.PdfReaderController">
     <!-- Top section of stage -->
     <top>
         <HBox spacing="20" alignment="CENTER" style="-fx-padding: 20 10 20 10;">
