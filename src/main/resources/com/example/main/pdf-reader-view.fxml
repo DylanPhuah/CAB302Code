@@ -15,7 +15,7 @@
     <top>
         <HBox spacing="20" alignment="CENTER" style="-fx-padding: 20 10 20 10;">
             <VBox spacing="20" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" BorderPane.alignment="CENTER_LEFT" style="-fx-padding: 20 10 20 10;" >
-                <Button fx:id="backButton" text = "Back" VBox.vgrow="ALWAYS"/>
+                <Button fx:id="backButton" onAction="#onBackButtonClick" text = "Back" VBox.vgrow="ALWAYS"/>
             </VBox>
             <VBox spacing="20" alignment="CENTER" HBox.hgrow="ALWAYS" BorderPane.alignment="CENTER" style="-fx-padding: 20 10 20 10;" >
                 <Label fx:id="headerText" text="Textbook" style="-fx-font-size: 28px;" VBox.vgrow="ALWAYS"  alignment="CENTER"/>
