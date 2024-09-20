@@ -13,6 +13,10 @@ public class LoginController {
     @FXML private Label statusLabel;
     @FXML private Button loginButton;
 
+    /**
+     * Performs sanity checks on user-entered login data, and logs the user in if valid
+     * @throws IOException
+     */
     @FXML
     protected void onLoginButtonClick() throws IOException {
         UserDAO userDAO = new UserDAO();
@@ -39,6 +43,10 @@ public class LoginController {
         }
     }
 
+    /**
+     * Takes the user to the registration screen
+     * @throws IOException
+     */
     @FXML
     protected void onRegisterButtonClick() throws IOException {
         Stage stage = (Stage) loginButton.getScene().getWindow();

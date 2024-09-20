@@ -16,6 +16,10 @@ public class RegisterController {
     @FXML private Button registerButton;
     @FXML private Label statusLabel;
 
+    /**
+     * Performs sanity checks on user-entered register data and adds the user if valid
+     * @throws IOException
+     */
     @FXML
     protected void onRegisterButtonClick() throws IOException {
         UserDAO userDAO = new UserDAO();
