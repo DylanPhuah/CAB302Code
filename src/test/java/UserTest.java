@@ -37,8 +37,6 @@ public class UserTest {
     @BeforeEach
     void setUp()
     {
-
-
         tUser = new User(userName, userPassword, userFirstName, userLastName, false);
         tTextbook = new Textbook(textBookTitle,textBookUnitCode,textBookText);
         tEnrolment = new Enrolment(enrolmentUserName,enrolmentUnitCode);
@@ -50,6 +48,7 @@ public class UserTest {
         textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
     }
+
     @Test
     @Order(0)
     void testUser() {
