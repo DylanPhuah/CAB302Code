@@ -67,7 +67,9 @@ public class PdfReader {
             throw e;
         }
 
+        // Creates a new texbook with the provided details
         Textbook textbook = new Textbook(result[0], "302", result[1]);
+        //Inserts the textbook into the database
         textbookDAO.insert(textbook);
         return result;
 

@@ -7,18 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/ExceptionPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/ExceptionPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReaderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/PdfReader/pdf-reader-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/pdf-reader-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/PdfReader/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/PdfReader/PdfReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/PdfReader/PdfReaderTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +74,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Pdf-Reading",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Libraries",
@@ -247,7 +236,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Login" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
