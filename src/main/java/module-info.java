@@ -6,6 +6,7 @@ module com.example.main {
     requires opencv;
     requires tess4j;
     requires java.desktop;
+    requires org.apache.pdfbox;
 
 
     opens com.example.main to javafx.fxml;
