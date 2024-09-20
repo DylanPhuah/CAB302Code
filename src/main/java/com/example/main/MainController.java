@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 public class MainController {
@@ -31,6 +32,9 @@ public class MainController {
     private ImageView contentImageView;
 
     @FXML
+    private ImageView textbookView;
+
+    @FXML
     void initialize() {
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/2.png")));
         contentImageView.setImage(image);
@@ -43,5 +47,13 @@ public class MainController {
         homepageAnchorPane.getChildren().removeAll();
         homepageAnchorPane.getChildren().setAll(nextAnchorPane);
     }
+
+    @FXML
+    void onTextbookSwitch(ActionEvent event) throws IOException {
+        Stage stage = (Stage) textbookView.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+        stage.setScene(scene);
+        }
 }
 

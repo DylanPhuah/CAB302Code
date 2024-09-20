@@ -27,9 +27,9 @@ public class ContentController {
 
     @FXML
     void initialize() {
-        result = new RecognizeText().tempMethod();
-        contentTextArea.setText(result);
-        contentTextArea.setWrapText(true);
+        //result = new RecognizeText().tempMethod();
+        //contentTextArea.setText(result);
+        //contentTextArea.setWrapText(true);
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/2.png")));
         contentImageView.setImage(image);
 

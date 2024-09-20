@@ -39,8 +39,7 @@ public class UserDAO {
         }
         try {
             PreparedStatement insertUser = connection.prepareStatement(
-                    "INSERT OR IGNORE INTO users (username, password, fName, lName, isTeacher) " +
-                            "VALUES (?, ?, ?, ?, ?)" );
+                    "INSERT OR IGNORE INTO users VALUES (?, ?, ?, ?, ?)" );
             insertUser.setString(1, user.GetUsername());
             insertUser.setString(2, user.GetPassword());
             insertUser.setString(3, user.GetFName());

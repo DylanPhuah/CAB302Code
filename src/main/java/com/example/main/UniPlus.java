@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class UniPlus extends Application {
     // Initialise parameters for the login window
@@ -18,7 +19,7 @@ public class UniPlus extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Connect to the database by each table and initialise if any do not already exist
         UserDAO userDAO = new UserDAO();
         userDAO.createTable();
@@ -27,9 +28,14 @@ public class UniPlus extends Application {
         TextbookDAO textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
         // Close the database connection
-        userDAO.close();
-        enrolmentDAO.close();
-        textbookDAO.close();
+        //userDAO.close();
+        //enrolmentDAO.close();
+        //textbookDAO.close();
+
+        // Stores the name of pdf file and its content into the database -- to be polished later
+        PdfReader pdfReader = new PdfReader();
+        pdfReader.readPdf("src/pdFile/test.pdf");
+
         // Launch the login window
         launch();
     }

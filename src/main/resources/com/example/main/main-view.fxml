@@ -135,7 +135,10 @@
                                                                             <graphic>
                                                                                 <ImageView fx:id="contentImageView" fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
                                                                             </graphic></Button>
-                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;"/>
+                                                                        <Button mnemonicParsing="false" onAction="#onTextbookSwitch" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;">
+                                                                            <graphic>
+                                                                                <ImageView fx:id="textbookView"  fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                                                                            </graphic></Button>
                                                                     </children>
                                                                 </HBox>
                                                                 <HBox prefHeight="20.0" prefWidth="616.0">

@@ -9,15 +9,15 @@
   <component name="ChangeListManager">
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/ExceptionPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/ExceptionPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReaderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PdfReader/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/ContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/PdfReader/pdf-reader-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/pdf-reader-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/PdfReader/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/PdfReader/PdfReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/PdfReader/PdfReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,8 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/zaneg/OneDrive/Documents/Uni Stuff/CAB302/UniPlus Assignment/src/logback-classic-1.2.3.jar",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.29310346"
   }
