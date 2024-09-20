@@ -26,6 +26,18 @@ public class TextbookDAO {
             System.err.println("textbook table creation error");
         }
     }
+    public void deleteTextbook(Textbook textbook)
+    {
+        String deleteQuery = "DELETE FROM textbooks WHERE title = ? AND unitCode = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+            preparedStatement.setString(1, textbook.GetTitle());  // The ID or condition for deletion
+            preparedStatement.setString(2, textbook.GetUnitCode());  // The ID or condition for deletion
+            int rowsDeleted = preparedStatement.executeUpdate();
+            System.out.println("Rows deleted: " + rowsDeleted);
+        } catch (SQLException e) {
+            System.err.println("User delete failure");
+        }
+    }
 
     /**
      * Inserts a given textbook into the database

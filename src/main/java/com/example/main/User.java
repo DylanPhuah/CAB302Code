@@ -33,6 +33,15 @@ public class User {
         return isTeacher;
     }
 
+    public void ChangeFirstName(String newName)
+    {
+        this.fName = newName;
+    }
+    public void ChangeLastName(String newName)
+    {
+        this.lName = newName;
+    }
+
     /**
      * Instantiates a user with the given data
      * @param Username The username chosen by the user
