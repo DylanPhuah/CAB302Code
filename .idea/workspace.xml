@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation" />
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added unit tests for information class creation and field validation">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/ContentController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,12 +38,12 @@
     &quot;assignee&quot;: &quot;zgennerz3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DylanPhuah/CAB302Code.git&quot;,
-    &quot;accountId&quot;: &quot;9185721a-7d30-4417-922a-e4acdfc08b33&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DylanPhuah/CAB302Code.git",
+    "accountId": "a49da498-e858-4931-862d-8314a822ba08"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
