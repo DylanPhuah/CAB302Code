@@ -1,0 +1,53 @@
+.button{
+    -fx-background-color: #1e1e1e;
+    -fx-background-radius: 0em;
+}
+
+.button:hover{
+    -fx-background-color: #6393E7;
+}
+
+.button:pressed{
+    -fx-background-color: #165DDB;
+}
+
+.button:focused{
+    -fx-background-color: #165DDB;
+    -fx-border-color: #165DDB;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #282828;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 0, 1 2 1 1, 2 3 1 2;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #282828;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #1E1E1E;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
