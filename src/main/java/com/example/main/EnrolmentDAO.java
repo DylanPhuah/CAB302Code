@@ -67,6 +67,19 @@ public class EnrolmentDAO {
         return enrolments;
     }
 
+    public void deleteEnrolment(Enrolment enrolment)
+    {
+        String deleteQuery = "DELETE FROM enrolments WHERE username = ? AND unitCode = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+            preparedStatement.setString(1, enrolment.GetUsername());  // The ID or condition for deletion
+            preparedStatement.setString(2, enrolment.GetUnitCode());  // The ID or condition for deletion
+            int rowsDeleted = preparedStatement.executeUpdate();
+            System.out.println("Rows deleted: " + rowsDeleted);
+        } catch (SQLException e) {
+            System.err.println("User delete failure");
+        }
+    }
+
     /**
      * Retrieves all enrolments matching the given username from the database
      * @param username The username to be matched

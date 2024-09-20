@@ -33,6 +33,10 @@ public class UserDAO {
      * @param user The user to be inserted
      */
     public void insert(User user) {
+        if(getByUser(user.GetUsername()) != null)
+        {
+            System.err.println("Username is already taken!");
+        }
         try {
             PreparedStatement insertUser = connection.prepareStatement(
                     "INSERT OR IGNORE INTO users (username, password, fName, lName, isTeacher) " +
@@ -73,6 +77,7 @@ public class UserDAO {
 
     public void changeName(User user, String NewName)
     {
+        user.ChangeFirstName(NewName);
         String updateQuery = "UPDATE users SET fName = ? WHERE username = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
             preparedStatement.setString(1, NewName);

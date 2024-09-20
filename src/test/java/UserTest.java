@@ -1,6 +1,10 @@
 import com.example.main.*;
 import org.junit.jupiter.api.*;
 
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTest {
@@ -10,13 +14,34 @@ public class UserTest {
     private Enrolment tEnrolment;
     private TextbookDAO textbookDAO;
     private Textbook tTextbook;
+    String userName = getRandomString(5);
+    String userPassword = getRandomString(5);
+    String userFirstName = getRandomString(5);
+    String userLastName = getRandomString(5);
+    String textBookTitle = getRandomString(5);
+    String textBookUnitCode = getRandomString(5);
+    String textBookText = getRandomString(5);
+    String enrolmentUserName = getRandomString(5);
+    String enrolmentUnitCode = getRandomString(5);
+
+    public static String getRandomString(int length) { //Random string generator for tests
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+
+        return random.ints(length, 0, characters.length())
+                .mapToObj(characters::charAt)
+                .map(Object::toString)
+                .collect(Collectors.joining());
+    }
 
     @BeforeEach
     void setUp()
     {
-        tUser = new User("a", "b", "c", "d", false);
-        tTextbook = new Textbook("The adventures of Zane","EGB101","A healthy sacrifice to the tree and crocodile gods can be a good thing.");
-        tEnrolment = new Enrolment("a","EGB101");
+
+
+        tUser = new User(userName, userPassword, userFirstName, userLastName, false);
+        tTextbook = new Textbook(textBookTitle,textBookUnitCode,textBookText);
+        tEnrolment = new Enrolment(enrolmentUserName,enrolmentUnitCode);
 
         userDao = new UserDAO();
         userDao.createTable();
@@ -25,32 +50,31 @@ public class UserTest {
         textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
     }
-
     @Test
     @Order(0)
     void testUser() {
-        assertEquals(tTextbook.GetTitle(),"The adventures of Zane");
-        assertEquals(tTextbook.GetUnitCode(),"EGB101");
-        assertEquals(tTextbook.GetText(),"A healthy sacrifice to the tree and crocodile gods can be a good thing.");
-    }
-
-    @Test
-    @Order(0)
-    void testEnrolment() {
-        assertEquals(tEnrolment.GetUsername(), "a");
-        assertEquals(tEnrolment.GetUnitCode(), "EGB101");
+        {
+            assertEquals(tUser.GetFName(), userFirstName);
+            assertEquals(tUser.GetUsername(),userName);
+            assertEquals(tUser.GetPassword(),userPassword); //very secure
+            assertEquals(tUser.GetLName(),userLastName);
+            assertEquals(tUser.GetIsTeacher(),false);
+        }
     }
 
     @Test
     @Order(0)
     void testTextbook() {
-        {
-            assertEquals(tUser.GetFName(), "a");
-            assertEquals(tUser.GetUsername(),"b");
-            assertEquals(tUser.GetPassword(),"c"); //very secure
-            assertEquals(tUser.GetLName(),"d");
-            assertEquals(tUser.GetIsTeacher(),false);
-        }
+        assertEquals(tTextbook.GetTitle(),textBookTitle);
+        assertEquals(tTextbook.GetUnitCode(),textBookUnitCode);
+        assertEquals(tTextbook.GetText(),textBookText);
+    }
+
+    @Test
+    @Order(0)
+    void testEnrolment() {
+        assertEquals(tEnrolment.GetUsername(), enrolmentUserName);
+        assertEquals(tEnrolment.GetUnitCode(), enrolmentUnitCode);
     }
 
     @Test
@@ -59,22 +83,20 @@ public class UserTest {
     {
         userDao.insert(tUser);
     }
-//    @Test
-//    @Order(1)
-//    void testTextBookInsert()
-//    {
-//        textbookDAO.insert(tTextbook);
-//
-//    }
-//    @Test
-//    @Order(1)
-//    void testEnrolmentInsert()
-//    {
-//        enrolmentDAO.insert(tEnrolment);
-//
-//    }
+    @Test
+    @Order(1)
+    void testTextBookInsert()
+    {
+        textbookDAO.insert(tTextbook);
 
+    }
+    @Test
+    @Order(1)
+    void testEnrolmentInsert()
+    {
+        enrolmentDAO.insert(tEnrolment);
 
+    }
 
     @Test
     @Order(2)
@@ -87,21 +109,29 @@ public class UserTest {
         assertEquals(tUser.GetLName(),retrieval.GetLName());
         assertEquals(tUser.GetIsTeacher(),retrieval.GetIsTeacher());
     }
-//    @Test
-//    @Order(2)
-//    void testEnrolmentRetrieve()
-//    {
-//        List<Enrolment> retrieval = enrolmentDAO.getAllByUnit("EGB101");
-//        assertNotEquals(retrieval.size(),0);
-//    }
-//
-//    @Test
-//    @Order(2)
-//    void testTextBookRetrieve()
-//    {
-//        List<Enrolment> retrieval = enrolmentDAO.getAllByUnit("EGB101");
-//        assertNotEquals(retrieval.size(),0);
-//    }
+    @Test
+    @Order(2)
+    void testEnrolmentRetrieve()
+    {
+        List<Enrolment> retrieval = enrolmentDAO.getAllByUnit(enrolmentUnitCode);
+        assertEquals(retrieval.size(),1);
+        Enrolment RetrievedEnrolment = retrieval.getFirst();
+        assertEquals(RetrievedEnrolment.GetUnitCode(),enrolmentUnitCode);
+        assertEquals(RetrievedEnrolment.GetUsername(),enrolmentUserName);
+    }
+
+    @Test
+    @Order(2)
+    void testTextBookRetrieve()
+    {
+        List<Textbook> retrieval = textbookDAO.getAllByUnit(textBookUnitCode);
+        assertEquals(retrieval.size(),1);
+        Textbook RetrievedTextBook = retrieval.getFirst();
+        assertEquals(RetrievedTextBook.GetText(),textBookText);
+        assertEquals(RetrievedTextBook.GetTitle(),textBookTitle);
+        assertEquals(RetrievedTextBook.GetUnitCode(),textBookUnitCode);
+
+    }
 
     @Test
     @Order(3)
@@ -142,23 +172,23 @@ public class UserTest {
 
     }
 
-//    @Test
-//    @Order(4)
-//    void testEnrolmentDelete()
-//    {
-//        enrolmentDAO.insert(tEnrolment);
-//        List<Enrolment> retrieval = enrolmentDAO.getAllByUnit("EGB101");
-//        assertNotEquals(retrieval.size(),0);
-//    }
-//
-//
-//
-//    @Test
-//    @Order(4)
-//    void testTextBookDelete()
-//    {
-//        enrolmentDAO.insert(tEnrolment);
-//        List<Enrolment> retrieval = enrolmentDAO.getAllByUnit("EGB101");
-//        assertNotEquals(retrieval.size(),0);
-//    }
+    @Test
+    @Order(4)
+    void testEnrolmentDelete()
+    {
+        enrolmentDAO.deleteEnrolment(tEnrolment);
+        List<Enrolment> retrieval = enrolmentDAO.getAllByUnit(enrolmentUnitCode);
+        assertTrue(retrieval.isEmpty());
+    }
+
+
+
+    @Test
+    @Order(4)
+    void testTextBookDelete()
+    {
+        textbookDAO.deleteTextbook(tTextbook);
+        List<Textbook> retrieval = textbookDAO.getAllByUnit(textBookUnitCode);
+        assertTrue(retrieval.isEmpty());
+    }
 }

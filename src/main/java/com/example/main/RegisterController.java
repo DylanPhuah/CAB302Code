@@ -33,6 +33,7 @@ public class RegisterController {
         else {
             User eUser = userDAO.getByUser(username.getText());
             if (eUser != null) {
+                System.out.println("user already taken");
                 statusLabel.setText("username is already taken");
             }
             else {
