@@ -15,6 +15,8 @@ import java.util.List;
 
 public class PdfReaderController {
 
+    private String result;
+
     private double fontSize = 14; // Default font size
 
     @FXML
@@ -69,6 +71,7 @@ public class PdfReaderController {
             // Sets Header and text of the stage
             getHeaderText().setText(textbook.GetTitle());
             getTextArea().setText(textbook.GetText());
+            result = textbook.GetText();
         } else {
             // Handle case where no textbooks are found
             getHeaderText().setText("No textbook found");
@@ -81,6 +84,11 @@ public class PdfReaderController {
         fontSize += delta;
         if (fontSize < 4) fontSize = 4; // Minimum font size
         textArea.setStyle("-fx-font-size: " + fontSize + "pt;");
+    }
+
+    @FXML
+    void onTextToSpeech() {
+        TextToSpeech text = new TextToSpeech(result);
     }
 }
 
