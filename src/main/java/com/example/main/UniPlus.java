@@ -13,7 +13,7 @@ public class UniPlus extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
+        Scene scene = new Scene(fxmlLoader.load(), 625, 353);
         stage.setTitle("Login Screen");
         stage.setScene(scene);
         stage.show();
