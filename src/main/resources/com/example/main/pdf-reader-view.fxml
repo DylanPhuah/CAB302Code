@@ -21,7 +21,7 @@
                 <Label fx:id="headerText" text="Textbook" style="-fx-font-size: 28px;" VBox.vgrow="ALWAYS"  alignment="CENTER"/>
             </VBox>
             <VBox spacing="20" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS" BorderPane.alignment="CENTER" style="-fx-padding: 20 10 20 10;">
-                <Button fx:id="textToSpeech" text="Narrate" VBox.vgrow="ALWAYS" alignment="CENTER"/>
+                <Button fx:id="textToSpeech" onAction="#onTextToSpeech" text="Narrate" VBox.vgrow="ALWAYS" alignment="CENTER"/>
             </VBox>
         </HBox>
     </top>
