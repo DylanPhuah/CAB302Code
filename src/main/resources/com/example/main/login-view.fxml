@@ -42,10 +42,10 @@
 
   <VBox alignment="CENTER" spacing="25.0" xmlns:fx="http://javafx.com/fxml">
     <HBox alignment="CENTER" spacing="10.0">
-      <TextField fx:id="username" prefHeight="39.0" prefWidth="362.0" promptText="Username" style="-fx-background-color: #282828;" />
+      <TextField fx:id="username" prefHeight="39.0" prefWidth="362.0" promptText="Username" style="-fx-background-color: #282828;" stylesheets="@Styling.css" />
     </HBox>
     <HBox alignment="CENTER" spacing="10.0">
-      <PasswordField fx:id="password" prefHeight="39.0" prefWidth="362.0" promptText="Password" style="-fx-background-color: #282828;" />
+      <PasswordField fx:id="password" prefHeight="39.0" prefWidth="362.0" promptText="Password" style="-fx-background-color: #282828;" stylesheets="@Styling.css" />
     </HBox>
   </VBox>
 
