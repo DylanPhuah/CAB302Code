@@ -19,7 +19,7 @@
     <children>
         <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="1201.0">
             <left>
-                <VBox alignment="TOP_CENTER" prefHeight="726.0" prefWidth="264.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+                <VBox alignment="TOP_CENTER" fx:id = "UnitList" prefHeight="726.0" prefWidth="264.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 5;" BorderPane.alignment="CENTER">
                     <children>
                         <Label prefHeight="18.0" prefWidth="302.0" text="Courses" textFill="WHITE">
                             <font>

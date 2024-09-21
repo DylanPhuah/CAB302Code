@@ -32,4 +32,10 @@ public class Textbook {
         unitCode = UnitCode;
         text = Text;
     }
+
+    @Override
+    public String toString() {
+        return title + "for unit" + unitCode;
+    }
 }
+

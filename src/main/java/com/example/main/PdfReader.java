@@ -16,7 +16,7 @@ public class PdfReader {
 
     TextbookDAO textbookDAO = new TextbookDAO();
 
-    public String[] readPdf(String filePath) throws IOException{
+    public void readPdf(String filePath) throws IOException{
         String[] result = new String[2];
 
         try {
@@ -69,7 +69,6 @@ public class PdfReader {
 
         Textbook textbook = new Textbook(result[0], "302", result[1]);
         textbookDAO.insert(textbook);
-        return result;
 
     }
 

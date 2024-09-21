@@ -25,6 +25,7 @@ public class PdfReaderController {
         Stage stage = (Stage) backButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
+        stage.setScene(scene);
     }
 
     @FXML
