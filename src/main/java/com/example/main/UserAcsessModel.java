@@ -14,6 +14,7 @@ public class UserAcsessModel {
     }
 
     private  HashMap<Enrolment,List<Textbook>> UnitTextBooks;
+    private Textbook requested = null;
 
     public UserAcsessModel(User user) {
         if(instance != null)
@@ -33,7 +34,14 @@ public class UserAcsessModel {
         }
     }
 
+    public void RequestTextBookView(Textbook textbook)
+    {
+        requested = textbook;
+    }
 
+    public Textbook getRequested() {
+        return requested;
+    }
 
     public static UserAcsessModel getInstance() {
         if (instance == null) {

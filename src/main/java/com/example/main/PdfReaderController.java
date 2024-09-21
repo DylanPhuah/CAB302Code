@@ -63,12 +63,12 @@ public class PdfReaderController {
 
         // Retrieves textbooks from database
         List<Textbook> textbooks = textbookDAO.getAllByUnit(unitCode);
+        Textbook display = UserAcsessModel.getInstance().getRequested();
 
-        if (!textbooks.isEmpty()) {
-            Textbook textbook = textbooks.getFirst(); // Assuming you want the first result
+        if (display != null) {
             // Sets Header and text of the stage
-            getHeaderText().setText(textbook.GetTitle());
-            getTextArea().setText(textbook.GetText());
+            getHeaderText().setText(display.GetTitle());
+            getTextArea().setText(display.GetText());
         } else {
             // Handle case where no textbooks are found
             getHeaderText().setText("No textbook found");
