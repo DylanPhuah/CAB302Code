@@ -20,7 +20,7 @@
                 <Label fx:id="headerText" alignment="CENTER" style="-fx-font-size: 28px;" text="Textbook" textFill="WHITE" VBox.vgrow="ALWAYS" />
             </VBox>
             <VBox alignment="CENTER_RIGHT" spacing="20" style="-fx-padding: 20 10 20 10;" BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS">
-                <Button fx:id="textToSpeech" alignment="CENTER" style="-fx-background-color: #165DDB;" text="Narrate" textFill="WHITE" VBox.vgrow="ALWAYS" />
+                <Button fx:id="textToSpeech" onAction="#onTextToSpeech" alignment="CENTER" style="-fx-background-color: #165DDB;" text="Narrate" textFill="WHITE" VBox.vgrow="ALWAYS" />
             </VBox>
         </HBox>
     </top>
