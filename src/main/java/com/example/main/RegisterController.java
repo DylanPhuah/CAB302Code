@@ -42,7 +42,7 @@ public class RegisterController {
             }
             else {
                 userDAO.insert(new User(username.getText(), password.getText(),
-                        fName.getText(), lName.getText(), isTeacherCheck.isSelected()));
+                        fName.getText(), lName.getText(), isTeacherCheck.isSelected(), 14));
                 Stage stage = (Stage) registerButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 720, 480);

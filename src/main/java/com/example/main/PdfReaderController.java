@@ -80,7 +80,7 @@ public class PdfReaderController {
     }
 
     @FXML
-    private void adjustFontSize(double delta) {
+    private void adjustFontSize(int delta) {
         fontSize += delta;
         if (fontSize < 4) fontSize = 4; // Minimum font size
         textArea.setStyle("-fx-font-size: " + fontSize + "pt;");
