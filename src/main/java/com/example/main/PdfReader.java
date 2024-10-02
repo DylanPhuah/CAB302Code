@@ -16,7 +16,7 @@ public class PdfReader {
 
     TextbookDAO textbookDAO = new TextbookDAO();
 
-    public void readPdf(String filePath) throws IOException{
+    public void readPdf(String filePath, String unitCode) throws IOException{
         String[] result = new String[2];
 
         try {
@@ -26,7 +26,9 @@ public class PdfReader {
             }  else if (!IsFileTypeValid(filePath)){
                 throw new IOException("The file is not a PDF: " + filePath);
             }
-
+            if (!IsUnitCodeValid(unitCode)){
+                throw new IOException("Invalid unit code: " + unitCode);
+            }
             // Loads a document from the chosen directory
             File file = new File(filePath);
             PDDocument document = Loader.loadPDF(file);
@@ -60,6 +62,10 @@ public class PdfReader {
                 // Displays an error popup for an invalid file type
                 ExceptionPopUp.exceptionPopUp("The file is not a PDF: " + filePath, "Error");
             }
+            else if (!IsUnitCodeValid(unitCode)){
+                // Displays an error popup for an invalid unit code
+                ExceptionPopUp.exceptionPopUp("The unit code is invalid: " + unitCode, "Error");
+            }
             throw e;
         } catch (Exception e){
             // Handles unexpected exceptions and displays a popup for the user
@@ -68,7 +74,7 @@ public class PdfReader {
         }
 
         // Creates a new texbook with the provided details
-        Textbook textbook = new Textbook(result[0], "302", result[1]);
+        Textbook textbook = new Textbook(result[0], unitCode, result[1]);
         //Inserts the textbook into the database
         textbookDAO.insert(textbook);
 
@@ -81,6 +87,10 @@ public class PdfReader {
             return false;
         }
         return true;
+    }
+
+    public Boolean IsUnitCodeValid(String unitCode){
+        return unitCode.length() == 3 && unitCode.matches("\\d{3}");
     }
 
     public Boolean IsFileTypeValid(String filePath){

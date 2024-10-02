@@ -7,9 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Text to speech working on PDF Viewer page.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/FilePathPopUp.java" afterDir="false" />
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/FilePathPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfPathPopUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726819045355</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage.">
+      <option name="closed" value="true" />
+      <created>1727857973520</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1727857973520</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +258,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Login" />
+                        <option value="origin/Pdf-Reading" />
                       </list>
                     </value>
                   </entry>
@@ -276,7 +285,8 @@
     <MESSAGE value="Refactored information class unit tests, added comments" />
     <MESSAGE value="Added unit tests for information class creation and field validation" />
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to the back button in the pdf-reader-view" />
+    <MESSAGE value="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

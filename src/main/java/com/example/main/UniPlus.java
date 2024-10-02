@@ -12,11 +12,15 @@ public class UniPlus extends Application {
     // Initialise parameters for the login window
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 625, 353);
         stage.setTitle("Login Screen");
         stage.setScene(scene);
         stage.show();
+
+        PdfPathPopUp pdfPathPopUp = new PdfPathPopUp();
+        pdfPathPopUp.displayPopup();
+
     }
 
     public static void main(String[] args) throws IOException {
@@ -33,8 +37,8 @@ public class UniPlus extends Application {
         //textbookDAO.close();
 
         // Stores the name of pdf file and its content into the database -- to be polished later
-        PdfReader pdfReader = new PdfReader();
-        pdfReader.readPdf("src/pdFile/test.pdf");
+        //PdfReader pdfReader = new PdfReader();
+        //pdfReader.readPdf("src/pdFile/test.pdf");
 
         // Launch the login window
         launch();
