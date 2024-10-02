@@ -22,7 +22,8 @@ public class UserDAO {
                                   + "password VARCHAR NOT NULL, "
                                   + "fName VARCHAR NOT NULL, "
                                   + "lName VARCHAR NOT NULL, "
-                                  + "isTeacher BOOLEAN DEFAULT 0)" );
+                                  + "isTeacher BOOLEAN DEFAULT 0, "
+                                  + "textPreference INT DEFAULT 14)" );
         } catch (SQLException ex) {
             System.err.println("user table creation error");
         }
@@ -39,8 +40,7 @@ public class UserDAO {
         }
         try {
             PreparedStatement insertUser = connection.prepareStatement(
-                    "INSERT OR IGNORE INTO users (username, password, fName, lName, isTeacher) " +
-                            "VALUES (?, ?, ?, ?, ?)" );
+                    "INSERT OR IGNORE INTO users VALUES (?, ?, ?, ?, ?, 14)" );
             insertUser.setString(1, user.GetUsername());
             insertUser.setString(2, user.GetPassword());
             insertUser.setString(3, user.GetFName());
@@ -66,7 +66,8 @@ public class UserDAO {
                         rs.getString("password"),
                         rs.getString("fName"),
                         rs.getString("lName"),
-                        rs.getBoolean("isTeacher"))
+                        rs.getBoolean("isTeacher"),
+                        rs.getInt("textPreference"))
                 );
             }
         } catch (SQLException ex) {
@@ -88,6 +89,20 @@ public class UserDAO {
             System.err.println("First name update failure");
         }
     }
+
+    public void changeTextPreference(User user, int newPreference)
+    {
+        user.SetTextPreference(newPreference);
+        String updateQuery = "UPDATE users SET textPreference = ? WHERE username = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
+            preparedStatement.setInt(1, newPreference);
+            preparedStatement.setString(2, user.GetUsername());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.err.println("Text preference update failure");
+        }
+    }
+
     public void deleteUser(User user)
     {
         String deleteQuery = "DELETE FROM users WHERE username = ?";
@@ -117,7 +132,8 @@ public class UserDAO {
                         rs.getString("password"),
                         rs.getString("fName"),
                         rs.getString("lName"),
-                        rs.getBoolean("isTeacher"));
+                        rs.getBoolean("isTeacher"),
+                        rs.getInt("textPreference"));
             }
         } catch (SQLException ex) {
             System.err.println("user get by user error");

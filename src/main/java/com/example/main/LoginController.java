@@ -31,7 +31,7 @@ public class LoginController {
             if (username.getText().equals(eUser.GetUsername()) && password.getText().equals(eUser.GetPassword())) {
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 720, 480);
+                Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
                 stage.setScene(scene);
             }
             else {
@@ -51,7 +51,7 @@ public class LoginController {
     protected void onRegisterButtonClick() throws IOException {
         Stage stage = (Stage) loginButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("register-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 720, 480);
+        Scene scene = new Scene(fxmlLoader.load(), 506, 501);
         stage.setScene(scene);
     }
 }

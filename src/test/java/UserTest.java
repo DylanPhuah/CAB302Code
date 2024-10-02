@@ -18,6 +18,7 @@ public class UserTest {
     String userPassword = getRandomString(5);
     String userFirstName = getRandomString(5);
     String userLastName = getRandomString(5);
+    int userTextPreference = 14;
     String textBookTitle = getRandomString(5);
     String textBookUnitCode = getRandomString(5);
     String textBookText = getRandomString(5);
@@ -37,7 +38,7 @@ public class UserTest {
     @BeforeEach
     void setUp()
     {
-        tUser = new User(userName, userPassword, userFirstName, userLastName, false);
+        tUser = new User(userName, userPassword, userFirstName, userLastName, false, userTextPreference);
         tTextbook = new Textbook(textBookTitle,textBookUnitCode,textBookText);
         tEnrolment = new Enrolment(enrolmentUserName,enrolmentUnitCode);
 
@@ -58,6 +59,7 @@ public class UserTest {
             assertEquals(tUser.GetPassword(),userPassword); //very secure
             assertEquals(tUser.GetLName(),userLastName);
             assertEquals(tUser.GetIsTeacher(),false);
+            assertEquals(tUser.GetTextPreference(), userTextPreference);
         }
     }
 
@@ -82,13 +84,14 @@ public class UserTest {
     {
         userDao.insert(tUser);
     }
+
     @Test
     @Order(1)
     void testTextBookInsert()
     {
         textbookDAO.insert(tTextbook);
-
     }
+
     @Test
     @Order(1)
     void testEnrolmentInsert()
@@ -107,7 +110,9 @@ public class UserTest {
         assertEquals(tUser.GetPassword(),retrieval.GetPassword()); //very secure
         assertEquals(tUser.GetLName(),retrieval.GetLName());
         assertEquals(tUser.GetIsTeacher(),retrieval.GetIsTeacher());
+        assertEquals(tUser.GetTextPreference(), retrieval.GetTextPreference());
     }
+
     @Test
     @Order(2)
     void testEnrolmentRetrieve()
@@ -168,7 +173,6 @@ public class UserTest {
         userDao.deleteUser(tUser);
         User retrieval = userDao.getByUser(tUser.GetUsername());
         assertNull(retrieval);
-
     }
 
     @Test
@@ -179,8 +183,6 @@ public class UserTest {
         List<Enrolment> retrieval = enrolmentDAO.getAllByUnit(enrolmentUnitCode);
         assertTrue(retrieval.isEmpty());
     }
-
-
 
     @Test
     @Order(4)
