@@ -7,12 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/FilePathPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfPathPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
-    </list>
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Minor structure change of pdfReader class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -229,7 +224,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727857973520</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed up the popup that inserts pdf files into the database.">
+      <option name="closed" value="true" />
+      <created>1727865162637</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1727865162638</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Minor structure change of pdfReader class">
+      <option name="closed" value="true" />
+      <created>1727865327179</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727865327179</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,7 +297,9 @@
     <MESSAGE value="Added unit tests for information class creation and field validation" />
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
     <MESSAGE value="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage." />
+    <MESSAGE value="Fixed up the popup that inserts pdf files into the database." />
+    <MESSAGE value="Minor structure change of pdfReader class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor structure change of pdfReader class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
