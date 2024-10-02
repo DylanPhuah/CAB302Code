@@ -26,7 +26,7 @@ public class PdfReader {
             }  else if (!IsFileTypeValid(filePath)){
                 throw new IOException("The file is not a PDF: " + filePath);
             }
-            if (!IsUnitCodeValid(unitCode)){
+            else if (!IsUnitCodeValid(unitCode)){
                 throw new IOException("Invalid unit code: " + unitCode);
             }
             // Loads a document from the chosen directory
