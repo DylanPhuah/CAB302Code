@@ -36,6 +36,9 @@ public class MainController {
     private AnchorPane homepageAnchorPane;
 
     @FXML
+    private Button nameBanner;
+
+    @FXML
     private VBox UnitList;
 
     @FXML
@@ -46,6 +49,7 @@ public class MainController {
 
     @FXML
     void initialize() {
+        nameBanner.setText(UserAcsessModel.getCurrentUser().GetUsername());
 
         HashMap<Enrolment,List<Textbook>> info = UserAcsessModel.getUnitTextBooks();
         Set<Enrolment> enrolmentKey = info.keySet();

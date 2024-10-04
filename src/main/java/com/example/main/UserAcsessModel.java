@@ -25,6 +25,8 @@ public class UserAcsessModel {
         return requested;
     }
 
+    public static User getCurrentUser(){return currentUser;}
+
     public static void setUser(User user)
     {
         currentUser = user;

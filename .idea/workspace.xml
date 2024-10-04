@@ -9,12 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added functionality to the back button in the pdf-reader-view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/TextBookButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/TextBookButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/UnitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/UnitButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
