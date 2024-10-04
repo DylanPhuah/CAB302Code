@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Minor structure change of pdfReader class" />
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added functionality to the back button in the pdf-reader-view">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,8 +40,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DylanPhuah/CAB302Code.git&quot;,
-    &quot;accountId&quot;: &quot;a49da498-e858-4931-862d-8314a822ba08&quot;
+    &quot;url&quot;: &quot;https://github.com/DylanPhuah/CAB302Code&quot;,
+    &quot;accountId&quot;: &quot;b87efb8b-2eb6-4313-9561-227eae59c7fc&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -48,6 +50,9 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -74,16 +79,19 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Pdf-Reading",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/zaneg/OneDrive/Documents/Uni Stuff/CAB302/UniPlus Assignment/src/logback-classic-1.2.3.jar",
+    "last_opened_file_path": "C:/Users/dylan/IdeaProjects/CAB302Code/src/main/java/com/example/main/Elements",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.29310346"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\java\com\example\main\Elements" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources\com\example\main" />
       <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources" />
@@ -216,31 +224,7 @@
       <option name="project" value="LOCAL" />
       <updated>1726819045355</updated>
     </task>
-    <task id="LOCAL-00015" summary="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage.">
-      <option name="closed" value="true" />
-      <created>1727857973520</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1727857973520</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Fixed up the popup that inserts pdf files into the database.">
-      <option name="closed" value="true" />
-      <created>1727865162637</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1727865162638</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Minor structure change of pdfReader class">
-      <option name="closed" value="true" />
-      <created>1727865327179</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1727865327179</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,7 +253,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Pdf-Reading" />
+                        <option value="origin/Login" />
                       </list>
                     </value>
                   </entry>
@@ -296,19 +280,6 @@
     <MESSAGE value="Refactored information class unit tests, added comments" />
     <MESSAGE value="Added unit tests for information class creation and field validation" />
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
-    <MESSAGE value="Merged with main and made a class for the filePath input popup. Just needs to be implemented into the button action of a stage." />
-    <MESSAGE value="Fixed up the popup that inserts pdf files into the database." />
-    <MESSAGE value="Minor structure change of pdfReader class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor structure change of pdfReader class" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to the back button in the pdf-reader-view" />
   </component>
 </project>

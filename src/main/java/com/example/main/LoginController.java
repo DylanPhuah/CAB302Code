@@ -29,6 +29,8 @@ public class LoginController {
         }
         else if (eUser != null) {
             if (username.getText().equals(eUser.GetUsername()) && password.getText().equals(eUser.GetPassword())) {
+                new UserAcsessModel(eUser);
+                System.out.println(eUser.GetPassword());
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 1201, 817);

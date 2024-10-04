@@ -15,52 +15,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.layout.FlowPane?>
 <AnchorPane fx:id="homepageAnchorPane" prefHeight="817.0" prefWidth="1031.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.MainController">
     <children>
         <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="1201.0">
             <left>
-                <VBox alignment="TOP_CENTER" prefHeight="726.0" prefWidth="264.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+                <VBox alignment="TOP_CENTER" fx:id = "UnitList" prefHeight="726.0" prefWidth="264.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 5;" BorderPane.alignment="CENTER">
                     <children>
-                        <Label prefHeight="18.0" prefWidth="302.0" text="Courses" textFill="WHITE">
-                            <font>
-                                <Font size="18.0" />
-                            </font>
-                            <VBox.margin>
-                                <Insets left="10.0" right="10.0" />
-                            </VBox.margin>
-                        </Label>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="286.0" stylesheets="@Styling.css" text="CAB302" textFill="WHITE">
-                            <font>
-                                <Font name="System Italic" size="15.0" />
-                            </font>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="292.0" stylesheets="@Styling.css" text="EGB242" textFill="WHITE">
-                            <font>
-                                <Font name="System Italic" size="15.0" />
-                            </font>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="363.0" stylesheets="@Styling.css" text="CAB202" textFill="WHITE">
-                            <font>
-                                <Font name="System Italic" size="15.0" />
-                            </font>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="340.0" stylesheets="@Styling.css" text="MZB221" textFill="WHITE">
-                            <font>
-                                <Font name="System Italic" size="15.0" />
-                            </font>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </Button>
                         <Label prefHeight="18.0" prefWidth="302.0" text="Account" textFill="WHITE">
                             <font>
                                 <Font size="18.0" />
@@ -77,6 +38,15 @@
                                 <Insets left="30.0" />
                             </padding>
                         </Button>
+                        <Label prefHeight="18.0" prefWidth="302.0" text="Courses" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <!-- Unit view buttons go here -->
                     </children>
                     <padding>
                         <Insets top="10.0" />
@@ -85,6 +55,7 @@
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                     </BorderPane.margin>
                 </VBox>
+
             </left>
             <center>
                 <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -99,7 +70,7 @@
                                                     <top>
                                                         <HBox prefHeight="48.0" prefWidth="615.0" BorderPane.alignment="CENTER">
                                                             <children>
-                                                                <Label prefHeight="49.0" prefWidth="599.0" text="MZB221, Electrical Engineering Mathematics" textFill="WHITE">
+                                                                <Label prefHeight="49.0" fx:id = "UnitBanner" prefWidth="599.0" text="" textFill="WHITE">
                                                                     <font>
                                                                         <Font name="System Italic" size="18.0" />
                                                                     </font>
@@ -111,63 +82,16 @@
                                                         </HBox>
                                                     </top>
                                                     <center>
-                                                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-spacing: 10;" BorderPane.alignment="CENTER">
+                                                        <FlowPane fx:id = "textbookholder" hgap="50" vgap="50" prefWrapLength="500" >
                                                             <children>
-                                                                <HBox prefHeight="20.0" prefWidth="616.0">
-                                                                    <children>
-                                                                        <Label opacity="0.5" text="Week 1" textFill="WHITE" />
-                                                                        <Line endX="498.0502624511719" endY="9.585786819458008" opacity="0.5" startX="30.757356643676758" startY="10.292893409729004" stroke="#fcfcfc">
-                                                                            <HBox.margin>
-                                                                                <Insets left="10.0" top="8.0" />
-                                                                            </HBox.margin>
-                                                                        </Line>
-                                                                    </children>
-                                                                    <padding>
-                                                                        <Insets left="20.0" />
-                                                                    </padding>
-                                                                </HBox>
-                                                                <HBox alignment="CENTER_LEFT" prefHeight="175.0" prefWidth="616.0" style="-fx-spacing: 20;">
-                                                                    <padding>
-                                                                        <Insets left="40.0" />
-                                                                    </padding>
-                                                                    <children>
-                                                                        <Button mnemonicParsing="false" onAction="#onContentSwitch" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" >
-                                                                            <graphic>
-                                                                                <ImageView fx:id="contentImageView" fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
-                                                                            </graphic></Button>
-                                                                        <Button mnemonicParsing="false" onAction="#onTextbookSwitch" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;">
-                                                                            <graphic>
-                                                                                <ImageView fx:id="textbookView"  fitHeight="105.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
-                                                                            </graphic></Button>
-                                                                    </children>
-                                                                </HBox>
-                                                                <HBox prefHeight="20.0" prefWidth="616.0">
-                                                                    <children>
-                                                                        <Label opacity="0.5" text="Week 2" textFill="WHITE" />
-                                                                        <Line endX="498.0502624511719" endY="9.585786819458008" opacity="0.5" startX="30.757356643676758" startY="10.292893409729004" stroke="WHITE">
-                                                                            <HBox.margin>
-                                                                                <Insets left="10.0" top="8.0" />
-                                                                            </HBox.margin>
-                                                                        </Line>
-                                                                    </children>
-                                                                    <padding>
-                                                                        <Insets left="20.0" />
-                                                                    </padding>
-                                                                </HBox>
-                                                                <HBox alignment="CENTER_LEFT" prefHeight="175.0" prefWidth="616.0" style="-fx-spacing: 20;">
-                                                                    <padding>
-                                                                        <Insets left="40.0" />
-                                                                    </padding>
-                                                                    <children>
-                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" />
-                                                                        <Button mnemonicParsing="false" prefHeight="161.0" prefWidth="161.0" style="-fx-background-radius: 10; -fx-background-color: #e9ecef;" />
-                                                                    </children>
-                                                                </HBox>
+                                                                <!-- Textbook elements go here -->
+
                                                             </children>
                                                             <padding>
                                                                 <Insets top="10.0" />
                                                             </padding>
-                                                        </VBox>
+                                                        </FlowPane>
+
                                                     </center>
                                                 </BorderPane>
                                             </children>

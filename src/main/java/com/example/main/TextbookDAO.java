@@ -53,7 +53,7 @@ public class TextbookDAO {
             insertTextbook.setString(3, textbook.GetText());
             insertTextbook.execute();
         } catch (SQLException ex) {
-            System.err.println("textbook insertion error");
+            System.err.println("textbook insertion error" + ex);
         }
     }
 

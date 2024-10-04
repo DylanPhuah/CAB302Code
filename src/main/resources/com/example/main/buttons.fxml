@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="286.0" stylesheets="@Styling.css" text="CAB302" textFill="WHITE">
+    <font>
+        <Font name="System Italic" size="15.0" />
+    </font>
+    <padding>
+        <Insets left="30.0" />
+    </padding>
+</Button>
+<Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="292.0" stylesheets="@Styling.css" text="EGB242" textFill="WHITE">
+<font>
+    <Font name="System Italic" size="15.0" />
+</font>
+<padding>
+    <Insets left="30.0" />
+</padding>
+</Button>
+<Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="363.0" stylesheets="@Styling.css" text="CAB202" textFill="WHITE">
+<font>
+    <Font name="System Italic" size="15.0" />
+</font>
+<padding>
+    <Insets left="30.0" />
+</padding>
+</Button>
+<Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="340.0" stylesheets="@Styling.css" text="MZB221" textFill="WHITE">
+<font>
+    <Font name="System Italic" size="15.0" />
+</font>
+<padding>
+    <Insets left="30.0" />
+</padding>
+</Button>

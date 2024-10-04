@@ -1,17 +1,25 @@
 package com.example.main;
 
+import com.example.main.Elements.CustomButton;
+import com.example.main.Elements.UnitButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+
 
 public class MainController {
 //    @FXML private Button backButton;
@@ -27,17 +35,27 @@ public class MainController {
     @FXML
     private AnchorPane homepageAnchorPane;
 
+    @FXML
+    private VBox UnitList;
 
     @FXML
-    private ImageView contentImageView;
+    private FlowPane textbookholder;
 
     @FXML
-    private ImageView textbookView;
+    private Label UnitBanner;
 
     @FXML
     void initialize() {
-        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/2.png")));
-        contentImageView.setImage(image);
+
+        HashMap<Enrolment,List<Textbook>> info = UserAcsessModel.getInstance().getUnitTextBooks();
+        Set<Enrolment> enrolmentKey = info.keySet();
+        List<Enrolment> enrolments = new ArrayList<>(enrolmentKey);
+        for(Enrolment enrolment : enrolments)
+        {
+            UnitButton button = new UnitButton(enrolment,textbookholder,UnitBanner);
+            UnitList.getChildren().add(button);
+        }
+
 
     }
 
@@ -48,12 +66,12 @@ public class MainController {
         homepageAnchorPane.getChildren().setAll(nextAnchorPane);
     }
 
-    @FXML
-    void onTextbookSwitch(ActionEvent event) throws IOException {
-        Stage stage = (Stage) textbookView.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
-        stage.setScene(scene);
-        }
+//    @FXML
+//    void onTextbookSwitch(ActionEvent event) throws IOException {
+//        Stage stage = (Stage) textbookView.getScene().getWindow();
+//        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
+//        Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+//        stage.setScene(scene);
+//    }
 }
 

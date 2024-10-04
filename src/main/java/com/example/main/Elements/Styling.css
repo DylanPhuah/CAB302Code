@@ -17,8 +17,6 @@
     -fx-border-width: 0px 0px 0px 3px;
 }
 
-
-
 .tab-pane .tab-header-area .tab-header-background {
     -fx-background-color: #282828;
 }
@@ -52,9 +50,4 @@
     -fx-alignment: CENTER;
     -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
-}
-
-.text-field{
-    -fx-text-fill: #ffffff !important;
-
 }

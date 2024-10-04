@@ -24,4 +24,9 @@ public class Enrolment {
         username = Username;
         unitCode = UnitCode;
     }
+
+    @Override
+    public String toString() {
+        return username + "In unit " + unitCode;
+    }
 }
