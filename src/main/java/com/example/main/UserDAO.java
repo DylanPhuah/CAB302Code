@@ -136,7 +136,7 @@ public class UserDAO {
                         rs.getInt("textPreference"));
             }
         } catch (SQLException ex) {
-            System.err.println("user get by user error");
+            System.err.println(ex);
         }
         return null;
     }
