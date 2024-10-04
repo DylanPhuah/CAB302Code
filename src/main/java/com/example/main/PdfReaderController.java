@@ -59,10 +59,8 @@ public class PdfReaderController {
         TextbookDAO textbookDAO = new TextbookDAO();
 
         // Placeholder unitCode used to select specific textbook
-        String unitCode = "302";
 
         // Retrieves textbooks from database
-        List<Textbook> textbooks = textbookDAO.getAllByUnit(unitCode);
         Textbook display = UserAcsessModel.getInstance().getRequested();
 
         if (display != null) {

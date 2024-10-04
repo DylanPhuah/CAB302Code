@@ -35,11 +35,6 @@ public class MainController {
     @FXML
     private AnchorPane homepageAnchorPane;
 
-
-
-
-
-
     @FXML
     private VBox UnitList;
 
@@ -59,33 +54,6 @@ public class MainController {
         {
             UnitButton button = new UnitButton(enrolment,textbookholder,UnitBanner);
             UnitList.getChildren().add(button);
-//                CustomButton button = new CustomButton(enrolment.GetUnitCode());
-//                button.setOnAction(event -> {
-//                    UnitBanner.setText(enrolment.GetUnitCode());
-//                    textbookholder.getChildren().clear();
-//                    List<Textbook> Books = info.get(enrolment);
-//                    for(Textbook textbook: Books)
-//                    {
-//                        Button bookButton = new Button(textbook.GetTitle());
-//                        bookButton.setOnAction(innerevent ->
-//                        {
-//                                UserAcsessModel.getInstance().RequestTextBookView(textbook);
-//                                Stage stage = (Stage) bookButton.getScene().getWindow();
-//                                FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
-//                                Scene scene = null;
-//                                try {
-//                                    scene = new Scene(fxmlLoader.load(), 1000, 800);
-//                                } catch (IOException e) {
-//                                    throw new RuntimeException(e);
-//                                }
-//                                stage.setScene(scene);
-//                        });
-//                        textbookholder.getChildren().add(bookButton);
-//                    }
-//
-//
-//                });
-//                UnitList.getChildren().add(button);
         }
 
 

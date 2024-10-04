@@ -43,6 +43,8 @@ public class UnitButton extends Button {
         this.setStyle("-fx-text-fill: white;");
         this.setFont(Font.font("System Italic", 15));
         this.setPadding(new Insets(0, 0, 0, 30));
+        this.setStyle("-fx-background-color: #1e1e1e;");
+        this.setStyle("-fx-background-radius: 0em;");
 
         // Optionally apply the stylesheet
         //this.getStylesheets().add(getClass().getResource("Styling.css").toExternalForm());
