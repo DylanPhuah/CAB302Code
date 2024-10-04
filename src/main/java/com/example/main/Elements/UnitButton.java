@@ -16,7 +16,6 @@ import java.util.List;
 
 public class UnitButton extends Button {
     private List<Textbook> books = new ArrayList<Textbook>();
-    private UserAcsessModel info;
     private List<TextBookButton> bookButtons = new ArrayList<TextBookButton>();
     private FlowPane TextBookEnvironment;
     private Label Banner;
@@ -27,8 +26,7 @@ public class UnitButton extends Button {
         Banner = banner;
         banner.setText(enrolment.GetUnitCode());
         TextBookEnvironment = BookEnvironment;
-        info = UserAcsessModel.getInstance();
-        HashMap<Enrolment,List<Textbook>> EnrolmentBooks = UserAcsessModel.getInstance().getUnitTextBooks();
+        HashMap<Enrolment,List<Textbook>> EnrolmentBooks = UserAcsessModel.getUnitTextBooks();
         books = EnrolmentBooks.get(enrolment);
         for(Textbook book: books)
         {

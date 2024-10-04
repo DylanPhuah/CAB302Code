@@ -40,7 +40,7 @@ public class TextBookButton extends Button {
     }
     @Override
     public void fire() {
-        UserAcsessModel.getInstance().RequestTextBookView(PointedBook);
+        UserAcsessModel.RequestTextBookView(PointedBook);
         Stage stage = (Stage) this.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
         Scene scene = null;

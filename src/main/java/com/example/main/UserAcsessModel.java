@@ -7,21 +7,27 @@ import java.util.HashMap;
 import java.util.List;
 
 public class UserAcsessModel {
-    private static UserAcsessModel instance = null;
 
-    public HashMap<Enrolment, List<Textbook>> getUnitTextBooks() {
+    private static HashMap<Enrolment,List<Textbook>> UnitTextBooks;
+    private static Textbook requested = null;
+    private static User currentUser = null;
+
+    public static HashMap<Enrolment, List<Textbook>> getUnitTextBooks() {
         return UnitTextBooks;
     }
 
-    private  HashMap<Enrolment,List<Textbook>> UnitTextBooks;
-    private Textbook requested = null;
+    public static void RequestTextBookView(Textbook textbook)
+    {
+        requested = textbook;
+    }
 
-    public UserAcsessModel(User user) {
-        if(instance != null)
-        {
-            System.err.println("User acsess model already initialised!");
-        }
-        instance = this;
+    public static Textbook getRequested() {
+        return requested;
+    }
+
+    public static void setUser(User user)
+    {
+        currentUser = user;
         UnitTextBooks = new HashMap<Enrolment,List<Textbook>>();
         UserDAO userDAO = new UserDAO();
         EnrolmentDAO enrolmentDAO = new EnrolmentDAO();
@@ -34,19 +40,6 @@ public class UserAcsessModel {
         }
     }
 
-    public void RequestTextBookView(Textbook textbook)
-    {
-        requested = textbook;
-    }
 
-    public Textbook getRequested() {
-        return requested;
-    }
 
-    public static UserAcsessModel getInstance() {
-        if (instance == null) {
-            System.err.println("User acsess model not initialised!");
-        }
-        return instance;
-    }
 }

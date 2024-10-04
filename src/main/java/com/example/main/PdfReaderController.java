@@ -63,7 +63,7 @@ public class PdfReaderController {
         // Placeholder unitCode used to select specific textbook
 
         // Retrieves textbooks from database
-        Textbook display = UserAcsessModel.getInstance().getRequested();
+        Textbook display = UserAcsessModel.getRequested();
 
         if (display != null) {
             // Sets Header and text of the stage

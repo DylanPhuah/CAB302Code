@@ -47,7 +47,7 @@ public class MainController {
     @FXML
     void initialize() {
 
-        HashMap<Enrolment,List<Textbook>> info = UserAcsessModel.getInstance().getUnitTextBooks();
+        HashMap<Enrolment,List<Textbook>> info = UserAcsessModel.getUnitTextBooks();
         Set<Enrolment> enrolmentKey = info.keySet();
         List<Enrolment> enrolments = new ArrayList<>(enrolmentKey);
         for(Enrolment enrolment : enrolments)
