@@ -53,3 +53,8 @@
     -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
 }
+
+.text-field{
+    -fx-text-fill: #ffffff !important;
+
+}

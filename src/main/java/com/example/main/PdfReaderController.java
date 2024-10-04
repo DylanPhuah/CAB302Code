@@ -15,6 +15,8 @@ import java.util.List;
 
 public class PdfReaderController {
 
+    private String result;
+
     private double fontSize = 14; // Default font size
 
     @FXML
@@ -75,10 +77,15 @@ public class PdfReaderController {
     }
 
     @FXML
-    private void adjustFontSize(double delta) {
+    private void adjustFontSize(int delta) {
         fontSize += delta;
         if (fontSize < 4) fontSize = 4; // Minimum font size
         textArea.setStyle("-fx-font-size: " + fontSize + "pt;");
+    }
+
+    @FXML
+    void onTextToSpeech() {
+        TextToSpeech text = new TextToSpeech(result);
     }
 }
 
