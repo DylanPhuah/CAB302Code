@@ -20,6 +20,7 @@ public class LoginController {
     @FXML
     protected void onLoginButtonClick() throws IOException {
         UserDAO userDAO = new UserDAO();
+        System.out.println(username.getText());
         User eUser = userDAO.getByUser(username.getText());
         if (username.getText() == null || username.getText().isEmpty()) {
             statusLabel.setText("please enter a username");
