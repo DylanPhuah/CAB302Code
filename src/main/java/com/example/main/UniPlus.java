@@ -12,7 +12,7 @@ public class UniPlus extends Application {
     // Initialise parameters for the login window
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 625, 353);
         stage.setTitle("Login Screen");
         stage.setScene(scene);
