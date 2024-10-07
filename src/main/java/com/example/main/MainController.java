@@ -45,11 +45,70 @@ public class MainController {
     private FlowPane textbookholder;
 
     @FXML
+    private Button Logout;
+
+    @FXML
+    private ChoiceBox studentTeacherDropdown;
+
+    @FXML
     private Label UnitBanner;
 
     @FXML
     void initialize() {
-        nameBanner.setText(UserAcsessModel.getCurrentUser().GetUsername());
+        User activeUser = UserAcsessModel.getCurrentUser();
+        nameBanner.setText(activeUser.GetUsername());
+
+
+
+        Boolean shouldDisplayTeacher = UserAcsessModel.getdisplayTeacher();
+
+
+        studentTeacherDropdown.getItems().add("Student View"); //Configure the dropdown menu to initially have student view, and set it to display that option
+
+        if(activeUser.GetIsTeacher()) //If the user is a teacher, add an option for a teacher view
+        {
+            studentTeacherDropdown.getItems().add("Teacher View");
+        }
+
+
+        if(shouldDisplayTeacher)
+        {
+            studentTeacherDropdown.setValue("Teacher View");
+        }
+        else
+        {
+            studentTeacherDropdown.setValue("Student View");
+        }
+        studentTeacherDropdown.setOnAction(event -> { //set the behaviour for the student view and teacher view button
+            String selectedOption = (String) studentTeacherDropdown.getValue();
+            if(selectedOption == "Teacher View")
+            {
+                UserAcsessModel.SetDisplayTeacher(true); //tell user acsess model to store this info
+                Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
+                Scene scene = null;
+                try {
+                    scene = new Scene(fxmlLoader.load(), 1000, 800);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage.setScene(scene); // reload the scene
+            } else if (selectedOption == "Student View")
+            {
+                UserAcsessModel.SetDisplayTeacher(false); //tell user acsess model to store this info
+                Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
+                Scene scene = null;
+                try {
+                    scene = new Scene(fxmlLoader.load(), 1000, 800);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage.setScene(scene); //reload the scene
+            }
+        });
+
+
 
         HashMap<Enrolment,List<Textbook>> info = UserAcsessModel.getUnitTextBooks();
         Set<Enrolment> enrolmentKey = info.keySet();
@@ -59,6 +118,18 @@ public class MainController {
             UnitButton button = new UnitButton(enrolment,textbookholder,UnitBanner);
             UnitList.getChildren().add(button);
         }
+
+        Logout.setOnAction(actionEvent -> {
+            Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
+            Scene scene = null;
+            try {
+                scene = new Scene(fxmlLoader.load(), 1000, 800);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.setScene(scene); //reload the scene
+        });
 
 
     }

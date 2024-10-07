@@ -1,6 +1,7 @@
 package com.example.main.Elements;
 
 import com.example.main.Enrolment;
+import com.example.main.PdfPathPopUp;
 import com.example.main.Textbook;
 import com.example.main.UserAcsessModel;
 import javafx.geometry.Insets;
@@ -49,6 +50,15 @@ public class UnitButton extends Button {
     }
     @Override
     public void fire() {
+        if(UserAcsessModel.getdisplayTeacher())
+        {
+            Button addTextbook = new Button("Add textbook");
+            addTextbook.setOnAction(event ->
+            {
+                PdfPathPopUp pdfPathPopUp = new PdfPathPopUp();
+                pdfPathPopUp.displayPopup();
+            });
+        }
         TextBookEnvironment.getChildren().clear();
         for(TextBookButton button : bookButtons)
         {

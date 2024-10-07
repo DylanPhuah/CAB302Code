@@ -12,6 +12,8 @@ public class UserAcsessModel {
     private static Textbook requested = null;
     private static User currentUser = null;
 
+    public static Boolean displayTeacher = false;
+
     public static HashMap<Enrolment, List<Textbook>> getUnitTextBooks() {
         return UnitTextBooks;
     }
@@ -20,6 +22,10 @@ public class UserAcsessModel {
     {
         requested = textbook;
     }
+
+    public static void SetDisplayTeacher(Boolean input){displayTeacher = input;}
+
+    public static boolean getdisplayTeacher(){return displayTeacher;}
 
     public static Textbook getRequested() {
         return requested;
