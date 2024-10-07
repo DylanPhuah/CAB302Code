@@ -7,6 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added functionality to the back button in the pdf-reader-view" />
+=======
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added functionality to the back button in the pdf-reader-view">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -16,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" afterDir="false" />
     </list>
+>>>>>>> 3de75f15993027f9801daa7b5eb5fec59d8ddecd
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +36,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
+        <entry key="$PROJECT_DIR$" value="Integration" />
+=======
         <entry key="$PROJECT_DIR$" value="main" />
+>>>>>>> 3de75f15993027f9801daa7b5eb5fec59d8ddecd
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,12 +52,29 @@
     &quot;assignee&quot;: &quot;zgennerz3&quot;
   }
 }</component>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6a2eaae4ab63c6af0d52818b847e5f34cf5f99cb
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/DylanPhuah/CAB302Code",
     "accountId": "49a9b830-c8e8-4559-a467-51c8b0d1ac57"
+<<<<<<< HEAD
   }
 }]]></component>
+=======
+  }
+}]]></component>
+=======
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DylanPhuah/CAB302Code&quot;,
+    &quot;accountId&quot;: &quot;b87efb8b-2eb6-4313-9561-227eae59c7fc&quot;
+  }
+}</component>
+>>>>>>> 3de75f15993027f9801daa7b5eb5fec59d8ddecd
+>>>>>>> 6a2eaae4ab63c6af0d52818b847e5f34cf5f99cb
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -69,6 +94,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.PdfReaderApplication.executor": "Run",
+    "Application.TextToSpeech.executor": "Run",
+    "Application.UniPlus.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.DBTest.executor": "Run",
+    "JUnit.UserTest.executor": "Run",
+    "Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor": "Run",
+    "Maven.main [package].executor": "Run",
+    "Maven.main [test].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dylan/IdeaProjects/CAB302Code/src/main/java/com/example/main/Elements",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.29310346"
+  }
+}]]></component>
+=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.PdfReaderApplication.executor&quot;: &quot;Run&quot;,
@@ -94,6 +146,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
   }
 }</component>
+>>>>>>> 3de75f15993027f9801daa7b5eb5fec59d8ddecd
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\java\com\example\main\Elements" />
