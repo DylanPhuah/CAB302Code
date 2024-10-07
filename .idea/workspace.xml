@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added functionality to the back button in the pdf-reader-view" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Integration" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zgennerz3&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DylanPhuah/CAB302Code",
+    "accountId": "49a9b830-c8e8-4559-a467-51c8b0d1ac57"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2lPh3LZjiIi0HT0zDoiM2oU1DhY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.PdfReaderApplication.executor": "Run",
+    "Application.TextToSpeech.executor": "Run",
+    "Application.UniPlus.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.DBTest.executor": "Run",
+    "JUnit.UserTest.executor": "Run",
+    "Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor": "Run",
+    "Maven.main [package].executor": "Run",
+    "Maven.main [test].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dylan/IdeaProjects/CAB302Code/src/main/java/com/example/main/Elements",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.29310346"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\java\com\example\main\Elements" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources\com\example\main" />
+      <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources" />
+      <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\src" />
+      <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus" />
+      <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.main" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="" />
+      <created>1725087419069</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725087419069</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added classes for app, login view, and login controller. Login view contains medium fidelity login screen">
+      <option name="closed" value="true" />
+      <created>1725090682490</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725090682490</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added DatabaseConnection, User, and UserDAO classes for modelling users and basic database integration">
+      <option name="closed" value="true" />
+      <created>1725091755468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725091755468</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implemented basic login and register checking, including a main-view placeholder with its own MainController class for a 'back' button">
+      <option name="closed" value="true" />
+      <created>1725102336335</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725102336335</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adjusted login logic to check for empty inputs, adjusted element spacing">
+      <option name="closed" value="true" />
+      <created>1725174508643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725174508643</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implemented new register screen with fName, lName, and option to create teacher/student account. Expanded user and userDAO classes for fName and lName details">
+      <option name="closed" value="true" />
+      <created>1725177903163</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725177903163</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins">
+      <option name="closed" value="true" />
+      <created>1725178463902</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725178463902</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implemented Textbook and Enrolment classes, and their database access objects">
+      <option name="closed" value="true" />
+      <created>1725783132380</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725783132380</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Reordered main method">
+      <option name="closed" value="true" />
+      <created>1725783278616</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725783278616</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added SQLite JDBC driver dependency via Maven">
+      <option name="closed" value="true" />
+      <created>1726113911768</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726113911768</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Turned TTS class from a test into a constructor and added a bunch of exception handling.">
+      <option name="closed" value="true" />
+      <created>1726620667741</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726620667741</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactored information classes and their DAOs">
+      <option name="closed" value="true" />
+      <created>1726729952957</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726729952957</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactored information class unit tests, added comments">
+      <option name="closed" value="true" />
+      <created>1726732205805</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726732205805</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added unit tests for information class creation and field validation">
+      <option name="closed" value="true" />
+      <created>1726732855821</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726732855821</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added functionality to the back button in the pdf-reader-view">
+      <option name="closed" value="true" />
+      <created>1726819045355</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726819045355</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Database" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Login" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added classes for app, login view, and login controller. Login view contains medium fidelity login screen" />
+    <MESSAGE value="Added DatabaseConnection, User, and UserDAO classes for modelling users and basic database integration" />
+    <MESSAGE value="Implemented basic login and register checking, including a main-view placeholder with its own MainController class for a 'back' button" />
+    <MESSAGE value="Adjusted login logic to check for empty inputs, adjusted element spacing" />
+    <MESSAGE value="Implemented new register screen with fName, lName, and option to create teacher/student account. Expanded user and userDAO classes for fName and lName details" />
+    <MESSAGE value="Expanded login functionality to check for student/teacher login. Changed placeholder screen to student placeholder, and added a new teacher placeholder screen for relevant logins" />
+    <MESSAGE value="Implemented Textbook and Enrolment classes, and their database access objects" />
+    <MESSAGE value="Reordered main method" />
+    <MESSAGE value="Added SQLite JDBC driver dependency via Maven" />
+    <MESSAGE value="Turned TTS class from a test into a constructor and added a bunch of exception handling." />
+    <MESSAGE value="Refactored information classes and their DAOs" />
+    <MESSAGE value="Refactored information class unit tests, added comments" />
+    <MESSAGE value="Added unit tests for information class creation and field validation" />
+    <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to the back button in the pdf-reader-view" />
+  </component>
+</project>
