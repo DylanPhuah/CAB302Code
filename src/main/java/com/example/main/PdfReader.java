@@ -79,6 +79,7 @@ public class PdfReader {
         //Inserts the textbook into the database
         textbookDAO.insert(textbook);
 
+
     }
 
     /** Boolean method that checks that a file path exists */
@@ -93,7 +94,8 @@ public class PdfReader {
 
     /** Boolean method that checks if the unit code is structurally correct */
     public Boolean IsUnitCodeValid(String unitCode){
-        return unitCode.length() == 3 && unitCode.matches("\\d{3}");
+        //return unitCode.length() == 3 && unitCode.matches("\\d{3}");
+        return true;
     }
 
     /** Boolean method that checks if a file is a pdf */

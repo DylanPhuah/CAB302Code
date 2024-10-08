@@ -50,6 +50,7 @@ public class UnitButton extends Button {
     }
     @Override
     public void fire() {
+        TextBookEnvironment.getChildren().clear();
         if(UserAcsessModel.getdisplayTeacher())
         {
             Button addTextbook = new Button("Add textbook");
@@ -57,9 +58,10 @@ public class UnitButton extends Button {
             {
                 PdfPathPopUp pdfPathPopUp = new PdfPathPopUp();
                 pdfPathPopUp.displayPopup();
+
             });
+            TextBookEnvironment.getChildren().add(addTextbook);
         }
-        TextBookEnvironment.getChildren().clear();
         for(TextBookButton button : bookButtons)
         {
             TextBookEnvironment.getChildren().add(button);
