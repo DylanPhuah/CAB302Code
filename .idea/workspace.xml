@@ -7,9 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Pdf-Reading" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +80,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Pdf-Reading",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/dylan/IdeaProjects/CAB302Code/src/main/java/com/example/main/Elements",
@@ -325,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728451456008</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class">
+      <option name="closed" value="true" />
+      <created>1728455429406</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1728455429406</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,7 +361,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Login" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -383,6 +390,7 @@
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
     <MESSAGE value="Fixed small errors after merging with main and removed the Prev/Next page buttons from the texbook view" />
     <MESSAGE value="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class" />
+    <MESSAGE value="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class" />
   </component>
 </project>

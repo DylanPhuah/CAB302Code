@@ -65,8 +65,6 @@ public class PdfReaderController {
 
         TextbookDAO textbookDAO = new TextbookDAO();
 
-        // Placeholder unitCode used to select specific textbook
-
         // Retrieves textbooks from database
         Textbook display = UserAcsessModel.getRequested();
 
@@ -81,6 +79,10 @@ public class PdfReaderController {
         }
     }
 
+    /**Adjust font size of the text inside the text area
+     * and the scrollbar.
+     * @param delta integer used to lower or increase text size
+     */
     @FXML
     private void adjustFontSize(int delta) {
         fontSize += delta;
