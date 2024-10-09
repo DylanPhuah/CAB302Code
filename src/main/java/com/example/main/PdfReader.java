@@ -16,7 +16,11 @@ public class PdfReader {
 
     TextbookDAO textbookDAO = new TextbookDAO();
 
-    /** Parses a pdf file from a file path into a string and then uploads it to the database with a title and unit code */
+    /** Parses a pdf file from a file path into a string and
+     *  then uploads it to the database with a title and unit code.
+     * @param filePath the file path to the pdf file
+     * @param unitCode unit code for the pdf file to be uploaded into
+     */
     public void readPdf(String filePath, String unitCode) throws IOException{
         String[] result = new String[2];
 
@@ -82,7 +86,10 @@ public class PdfReader {
 
     }
 
-    /** Boolean method that checks that a file path exists */
+    /** Boolean method that checks that a file path exists
+     * @param filePath file path to be validated
+     * @return true or false
+     */
     public Boolean IsFilePathValid(String filePath){
         try {
             Paths.get(filePath);
@@ -92,13 +99,19 @@ public class PdfReader {
         return true;
     }
 
-    /** Boolean method that checks if the unit code is structurally correct */
+    /** Boolean method that checks if the unit code is structurally correct
+     * @param unitCode Unit code to be validated
+     * @return true or false
+     */
     public Boolean IsUnitCodeValid(String unitCode){
         //return unitCode.length() == 3 && unitCode.matches("\\d{3}");
         return true;
     }
 
-    /** Boolean method that checks if a file is a pdf */
+    /** Boolean method that checks if a file is a pdf
+     * @param filePath file path to the file to be validated
+     * @return true or false
+     */
     public Boolean IsFileTypeValid(String filePath){
         return filePath.endsWith(".pdf");
     }

@@ -7,10 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Fixed small errors after merging with main and removed the Prev/Next page buttons from the texbook view">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfPathPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfPathPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728449498591</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class">
+      <option name="closed" value="true" />
+      <created>1728451456008</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728451456008</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,6 +382,7 @@
     <MESSAGE value="Added unit tests for information class creation and field validation" />
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
     <MESSAGE value="Fixed small errors after merging with main and removed the Prev/Next page buttons from the texbook view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed small errors after merging with main and removed the Prev/Next page buttons from the texbook view" />
+    <MESSAGE value="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class" />
   </component>
 </project>
