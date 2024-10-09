@@ -53,6 +53,11 @@ public class PdfReaderController {
     @FXML
     private Button zoomIn, zoomOut;
 
+    /* Initialises the textbook view, setting up the UI elements
+     * and retrieving the textbook data. Currently sets up the zoom
+     * buttons and pulls information from the database to be displayed
+     * on the header and text area.
+     */
     @FXML
     public void initialize() {
         zoomIn.setOnAction(event -> adjustFontSize(2)); // Increase font size by 2

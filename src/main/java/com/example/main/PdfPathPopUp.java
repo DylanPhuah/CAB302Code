@@ -9,6 +9,10 @@ import java.util.Optional;
 public class PdfPathPopUp {
     PdfReader pdfReader = new PdfReader();
 
+    /** Method to display two different popups,
+     * allowing users to insert a file path and a unit
+     * code to insert a pdf file into the database
+     */
     public void displayPopup() {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("File Path Input");
