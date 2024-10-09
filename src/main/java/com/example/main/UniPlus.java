@@ -18,9 +18,6 @@ public class UniPlus extends Application {
         stage.setScene(scene);
         stage.show();
 
-        PdfPathPopUp pdfPathPopUp = new PdfPathPopUp();
-        pdfPathPopUp.displayPopup();
-
     }
 
     public static void main(String[] args) throws IOException {

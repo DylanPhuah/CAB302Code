@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.PdfReaderController">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.PdfReaderController">
     <!-- Top section of stage -->
     <top>
         <HBox alignment="CENTER" spacing="20" style="-fx-padding: 20 10 20 10; -fx-background-color: #1e1e1e;">
@@ -20,7 +14,7 @@
                 <Label fx:id="headerText" alignment="CENTER" style="-fx-font-size: 28px;" text="Textbook" textFill="WHITE" VBox.vgrow="ALWAYS" />
             </VBox>
             <VBox alignment="CENTER_RIGHT" spacing="20" style="-fx-padding: 20 10 20 10;" BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS">
-                <Button fx:id="textToSpeech" onAction="#onTextToSpeech" alignment="CENTER" style="-fx-background-color: #165DDB;" text="Narrate" textFill="WHITE" VBox.vgrow="ALWAYS" />
+                <Button fx:id="textToSpeech" alignment="CENTER" onAction="#onTextToSpeech" style="-fx-background-color: #165DDB;" text="Narrate" textFill="WHITE" VBox.vgrow="ALWAYS" />
             </VBox>
         </HBox>
     </top>
@@ -39,7 +33,7 @@
 
             <HBox spacing="10.0" style="-fx-background-color: #1e1e1e;">
                 <Button fx:id="zoomOut" style="-fx-background-color: #165DDB;" text="-" textFill="WHITE" />
-                <Label text="Zoom" textFill="WHITE" />
+                <Label text="Zoom"  alignment="BOTTOM_CENTER" textFill="WHITE" />
                 <Button fx:id="zoomIn" style="-fx-background-color: #165DDB;" text="+" textFill="WHITE" />
             </HBox>
             <ScrollPane fitToHeight="true" fitToWidth="true" stylesheets="@styles.css" VBox.vgrow="ALWAYS">
@@ -54,11 +48,6 @@
 
     <!-- Bottom section of stage -->
     <bottom>
-        <HBox alignment="TOP_RIGHT" spacing="10.0" style="-fx-padding: 10 20 10 20; -fx-background-color: #1e1e1e;">
-            <Button style="-fx-background-color: #165DDB;" text="Prev" textFill="WHITE" HBox.hgrow="ALWAYS" />
-            <Label fx:id="pgNumber" alignment="CENTER" style="-fx-font-size: 16 px;" text="1" textFill="WHITE" />
-            <Button style="-fx-background-color: #165DDB;" text="Next" textFill="WHITE" HBox.hgrow="ALWAYS" />
-            <Label fx:id="maxPages" alignment="CENTER" style="-fx-font-size: 16 px;" text="of 1" textFill="WHITE" />
-        </HBox>
+        <HBox alignment="TOP_RIGHT" spacing="10.0" style="-fx-padding: 10 20 10 20; -fx-background-color: #1e1e1e;" />
     </bottom>
 </BorderPane>

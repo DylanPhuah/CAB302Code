@@ -9,6 +9,7 @@ public class PdfReaderTest {
 
     PdfReader pdfReader = new PdfReader();
     @Test
+    @Order(1)
     public void TestInvalidFilePath() {
 
         String filePath = "src/test/java/non_existing_dir/file.pdf";
@@ -22,6 +23,7 @@ public class PdfReaderTest {
     }
 
     @Test
+    @Order(2)
     public void TestInvalidFileType() {
         String filePath = "src/pdFile/invalid.txt";
 
@@ -36,6 +38,7 @@ public class PdfReaderTest {
     }
 
     @Test
+    @Order(3)
     public void TestInvalidUnitCode() {
         String filePath = "src/pdFile/test.pdf";
         String unitCode = "l12";
