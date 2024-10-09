@@ -51,10 +51,6 @@ public class PdfReader {
             // Close the document
             document.close();
 
-            // Experimental: split the text variable into different sections, example below is trying to split by paragraphs
-            String[] sections = text.split("\n\\s*\n");
-            System.out.print(sections.length);
-
             result[0] = fileName;
             result[1] = text;
 

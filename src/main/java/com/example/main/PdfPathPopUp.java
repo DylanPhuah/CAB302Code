@@ -22,7 +22,7 @@ public class PdfPathPopUp {
         // Capture the result off the dialog
         Optional<String> result = dialog.showAndWait();
 
-
+        // Sets field descriptions for the popup
         result.ifPresent(filePath -> {
             TextInputDialog numberDialog = new TextInputDialog();
             numberDialog.setTitle("Unit Input");
