@@ -55,23 +55,18 @@ public class MainController {
     void initialize() {
         User activeUser = UserAccessModel.getCurrentUser();
         UserAccessModel.setUser(activeUser);
-
-
-
-
         Boolean shouldDisplayTeacher = UserAccessModel.getdisplayTeacher();
-
 
         studentTeacherDropdown.getItems().add("Student View"); //Configure the dropdown menu to initially have student view, and set it to display that option
 
         if(activeUser.GetIsTeacher()) //If the user is a teacher, add an option for a teacher view
         {
-
             studentTeacherDropdown.getItems().add("Teacher View");
         }
         else
         {
-
+            studentTeacherDropdown.setVisible(false);
+            studentTeacherDropdown.setManaged(false);
         }
 
 
@@ -83,6 +78,7 @@ public class MainController {
         {
             studentTeacherDropdown.setValue("Student View");
         }
+
         studentTeacherDropdown.setOnAction(event -> { //set the behaviour for the student view and teacher view button
             String selectedOption = (String) studentTeacherDropdown.getValue();
             if(selectedOption.equals("Teacher View"))
@@ -113,7 +109,7 @@ public class MainController {
         });
 
 
-
+        /* Maps a unit to it's associated textbooks */
         HashMap<Enrolment,List<Textbook>> info = UserAccessModel.getUnitTextBooks();
         Set<Enrolment> enrolmentKey = info.keySet();
         List<Enrolment> enrolments = new ArrayList<>(enrolmentKey);
@@ -123,7 +119,7 @@ public class MainController {
             UnitList.getChildren().add(button);
         }
 
-        AddUnitButton addUnitButton = new AddUnitButton(textbookholder,homepageAnchorPane);
+        AddUnitButton addUnitButton = new AddUnitButton(textbookholder, activeUser.GetIsTeacher());
         UnitList.getChildren().add(addUnitButton);
 
         Logout.setOnAction(actionEvent -> {
@@ -153,19 +149,7 @@ public class MainController {
 
     }
 
-    @FXML
-    void onContentSwitch(ActionEvent event) throws IOException {
-        AnchorPane nextAnchorPane = FXMLLoader.load(Objects.requireNonNull(UniPlus.class.getResource("View/content-view.fxml")));
-        homepageAnchorPane.getChildren().removeAll();
-        homepageAnchorPane.getChildren().setAll(nextAnchorPane);
-    }
 
-//    @FXML
-//    void onTextbookSwitch(ActionEvent event) throws IOException {
-//        Stage stage = (Stage) textbookView.getScene().getWindow();
-//        FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("pdf-reader-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
-//        stage.setScene(scene);
-//    }
+
 }
 

@@ -12,12 +12,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class TextBookButton extends Button implements CustomButton {
+    /** The textbook that this button will display */
     private Textbook PointedBook;
-    private UserAccessModel info;
 
-
+    /**
+     * Creates a button that when clicked, will open a view of a given textbook
+     * @param Book The textbook this button is associated with
+     */
     public TextBookButton(Textbook Book) {
-        super(Book.GetTitle()); //Set the text
+        super(Book.GetTitle()); //Set the text to be the book's title
         PointedBook = Book;
 
         // Set button properties
@@ -29,12 +32,17 @@ public class TextBookButton extends Button implements CustomButton {
         this.setFont(Font.font("System Italic", 15));
         this.setPadding(new Insets(0, 0, 0, 30));
 
-        // Optionally apply the stylesheet
-        //this.getStylesheets().add(getClass().getResource("Styling.css").toExternalForm());
+
     }
+    /**
+     * Fire overide that will load the PDF reader scene for the button's textbook
+     */
     @Override
     public void fire() {
+        //Store a reference to the textbook to be displayed so that the textbook viewer can call it upon load
         UserAccessModel.RequestTextBookView(PointedBook);
+
+        //Initiate loading of the textbook viewer scene
         Stage stage = (Stage) this.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/pdf-reader-view.fxml"));
         Scene scene = null;
@@ -44,10 +52,8 @@ public class TextBookButton extends Button implements CustomButton {
             throw new RuntimeException(e);
         }
         stage.setScene(scene);
-        // Define custom behavior directly
 
-        // Optionally, call the parent class's fire() method to maintain the original behavior
-        super.fire();
+        super.fire(); //Call the parent fire method so the button will still behave as expected
     }
 
     @Override
