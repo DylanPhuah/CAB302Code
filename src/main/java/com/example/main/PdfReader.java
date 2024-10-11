@@ -100,8 +100,7 @@ public class PdfReader {
      * @return true or false
      */
     public Boolean IsUnitCodeValid(String unitCode){
-        //return unitCode.length() == 3 && unitCode.matches("\\d{3}");
-        return true;
+        return unitCode.length() == 6 && unitCode.matches("[A-Z]{3}\\d{3}");
     }
 
     /** Boolean method that checks if a file is a pdf

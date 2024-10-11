@@ -15,7 +15,7 @@ public class PdfReaderTest {
         String filePath = "src/test/java/non_existing_dir/file.pdf";
 
         try{
-            pdfReader.readPdf(filePath, "300");
+            pdfReader.readPdf(filePath, "EAS211");
             fail("Expected exception not thrown for invalid file path.");
         } catch (IOException e){
             assertEquals("File path does not exist: " + filePath, e.getMessage());
@@ -28,7 +28,7 @@ public class PdfReaderTest {
         String filePath = "src/pdFile/invalid.txt";
 
         try{
-            pdfReader.readPdf(filePath, "300");
+            pdfReader.readPdf(filePath, "AAA222");
             fail("Expected exception not thrown for invalid file type.");
         } catch (IOException e){
             assertEquals("The file is not a PDF: " + filePath, e.getMessage());
@@ -41,7 +41,7 @@ public class PdfReaderTest {
     @Order(3)
     public void TestInvalidUnitCode() {
         String filePath = "src/pdFile/test.pdf";
-        String unitCode = "l12";
+        String unitCode = "EEh220";
 
         try{
             pdfReader.readPdf(filePath,unitCode);
