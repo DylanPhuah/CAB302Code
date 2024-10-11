@@ -20,6 +20,16 @@ public class UniPlus extends Application {
 
     }
 
+    @Override
+    public void stop() {
+        if (UserAcsessModel.getCurrentUser() != null) {
+            UserDAO userDAO = new UserDAO();
+            userDAO.changeTextPreference(UserAcsessModel.getCurrentUser().GetUsername(),
+                    UserAcsessModel.getCurrentUser().GetTextPreference());
+            userDAO.close();
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         // Connect to the database by each table and initialise if any do not already exist
         UserDAO userDAO = new UserDAO();
@@ -28,10 +38,6 @@ public class UniPlus extends Application {
         enrolmentDAO.createTable();
         TextbookDAO textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
-        // Close the database connection
-        //userDAO.close();
-        //enrolmentDAO.close();
-        //textbookDAO.close();
 
         // Stores the name of pdf file and its content into the database -- to be polished later
         //PdfReader pdfReader = new PdfReader();

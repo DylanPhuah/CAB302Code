@@ -11,7 +11,6 @@ public class UserAcsessModel {
     private static HashMap<Enrolment,List<Textbook>> UnitTextBooks;
     private static Textbook requested = null;
     private static User currentUser = null;
-
     public static Boolean displayTeacher = false;
 
     public static HashMap<Enrolment, List<Textbook>> getUnitTextBooks() {
@@ -23,15 +22,22 @@ public class UserAcsessModel {
         requested = textbook;
     }
 
-    public static void SetDisplayTeacher(Boolean input){displayTeacher = input;}
+    public static void SetDisplayTeacher(Boolean input) {
+        displayTeacher = input;
+    }
 
-    public static boolean getdisplayTeacher(){return displayTeacher;}
+    public static boolean getdisplayTeacher() {
+        return displayTeacher;
+    }
 
-    public static Textbook getRequested() {
+    public static Textbook getRequested()
+    {
         return requested;
     }
 
-    public static User getCurrentUser(){return currentUser;}
+    public static User getCurrentUser() {
+        return currentUser;
+    }
 
     public static void setUser(User user)
     {
@@ -48,6 +54,7 @@ public class UserAcsessModel {
         }
     }
 
-
-
+    public static void setTextPreference(int newPreference) {
+        currentUser.SetTextPreference(newPreference);
+    }
 }

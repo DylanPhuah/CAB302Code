@@ -26,7 +26,7 @@ public class TextbookDAO {
             System.err.println("textbook table creation error");
         }
     }
-    public void deleteTextbook(Textbook textbook)
+    public void delete(Textbook textbook)
     {
         String deleteQuery = "DELETE FROM textbooks WHERE title = ? AND unitCode = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {

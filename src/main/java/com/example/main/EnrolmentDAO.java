@@ -67,7 +67,7 @@ public class EnrolmentDAO {
         return enrolments;
     }
 
-    public void deleteEnrolment(Enrolment enrolment)
+    public void delete(Enrolment enrolment)
     {
         String deleteQuery = "DELETE FROM enrolments WHERE username = ? AND unitCode = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {

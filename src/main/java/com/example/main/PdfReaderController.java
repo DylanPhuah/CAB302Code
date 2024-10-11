@@ -17,7 +17,7 @@ public class PdfReaderController {
 
     private String result;
 
-    private double fontSize = 14; // Default font size
+    private int fontSize = 14; // Default font size
 
     @FXML
     private Button backButton;
@@ -53,7 +53,7 @@ public class PdfReaderController {
     @FXML
     private Button zoomIn, zoomOut;
 
-    /* Initialises the textbook view, setting up the UI elements
+    /** Initialises the textbook view, setting up the UI elements
      * and retrieving the textbook data. Currently sets up the zoom
      * buttons and pulls information from the database to be displayed
      * on the header and text area.
@@ -62,6 +62,10 @@ public class PdfReaderController {
     public void initialize() {
         zoomIn.setOnAction(event -> adjustFontSize(2)); // Increase font size by 2
         zoomOut.setOnAction(event -> adjustFontSize(-2)); // Decrease font size by 2
+
+        UserDAO userDAO = new UserDAO();
+        fontSize = UserAcsessModel.getCurrentUser().GetTextPreference();
+        textArea.setStyle("-fx-font-size: " + fontSize + "pt;");
 
         TextbookDAO textbookDAO = new TextbookDAO();
 
@@ -88,6 +92,7 @@ public class PdfReaderController {
         fontSize += delta;
         if (fontSize < 4) fontSize = 4; // Minimum font size
         textArea.setStyle("-fx-font-size: " + fontSize + "pt;");
+        UserAcsessModel.setTextPreference(fontSize);
     }
 
     @FXML

@@ -90,20 +90,19 @@ public class UserDAO {
         }
     }
 
-    public void changeTextPreference(User user, int newPreference)
+    public void changeTextPreference(String username, int newPreference)
     {
-        user.SetTextPreference(newPreference);
         String updateQuery = "UPDATE users SET textPreference = ? WHERE username = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
             preparedStatement.setInt(1, newPreference);
-            preparedStatement.setString(2, user.GetUsername());
+            preparedStatement.setString(2, username);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             System.err.println("Text preference update failure");
         }
     }
 
-    public void deleteUser(User user)
+    public void delete(User user)
     {
         String deleteQuery = "DELETE FROM users WHERE username = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
