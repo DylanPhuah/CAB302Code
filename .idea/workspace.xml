@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Text to speech working on PDF Viewer page.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" afterDir="false" />
-    </list>
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Refactored various methods" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726819045355</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactored various methods">
+      <option name="closed" value="true" />
+      <created>1728623228661</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728623228661</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,6 +300,7 @@
     <MESSAGE value="Refactored information class unit tests, added comments" />
     <MESSAGE value="Added unit tests for information class creation and field validation" />
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to the back button in the pdf-reader-view" />
+    <MESSAGE value="Refactored various methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored various methods" />
   </component>
 </project>

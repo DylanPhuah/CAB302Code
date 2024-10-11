@@ -124,7 +124,7 @@ public class MainController {
             FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
             Scene scene = null;
             try {
-                scene = new Scene(fxmlLoader.load(), 1000, 800);
+                scene = new Scene(fxmlLoader.load(), 625, 353);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
