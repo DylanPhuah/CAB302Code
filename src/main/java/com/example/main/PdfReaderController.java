@@ -16,6 +16,7 @@ import java.util.List;
 public class PdfReaderController {
 
     private String result;
+    private TextToSpeech tts;
 
     private int fontSize = 14; // Default font size
 
@@ -43,6 +44,7 @@ public class PdfReaderController {
     public TextArea getTextArea(){
         return textArea;
     }
+
 
     @FXML
     private Label pgNumber;
@@ -76,6 +78,7 @@ public class PdfReaderController {
             // Sets Header and text of the stage
             getHeaderText().setText(display.GetTitle());
             getTextArea().setText(display.GetText());
+            result = display.GetText();
         } else {
             // Handle case where no textbooks are found
             getHeaderText().setText("No textbook found");

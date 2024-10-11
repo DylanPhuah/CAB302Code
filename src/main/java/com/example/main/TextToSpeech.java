@@ -16,6 +16,7 @@ public class TextToSpeech {
 
         // Start the speech in a separate thread
         startSpeechThread(text);
+
     }
 
     private void initializeVoice() {
