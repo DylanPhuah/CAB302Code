@@ -20,7 +20,6 @@ public class LoginController {
     @FXML
     protected void onLoginButtonClick() throws IOException {
         UserDAO userDAO = new UserDAO();
-        System.out.println(username.getText());
         User eUser = userDAO.getByUser(username.getText());
         if (username.getText() == null || username.getText().isEmpty()) {
             statusLabel.setText("please enter a username");
@@ -31,7 +30,6 @@ public class LoginController {
         else if (eUser != null) {
             if (username.getText().equals(eUser.GetUsername()) && password.getText().equals(eUser.GetPassword())) {
                 UserAcsessModel.setUser(eUser);
-                System.out.println(eUser.GetPassword());
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
