@@ -100,7 +100,11 @@ public class PdfReaderController {
 
     @FXML
     void onTextToSpeech() {
-        TextToSpeech text = new TextToSpeech(result);
+        TextToSpeech tts = null;
+        if (tts != null) {
+            tts.stopSpeaking();
+        }
+        tts = new TextToSpeech(result);
     }
 }
 

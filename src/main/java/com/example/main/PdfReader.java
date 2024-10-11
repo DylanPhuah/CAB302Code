@@ -22,10 +22,11 @@ public class PdfReader {
      * @param unitCode unit code for the pdf file to be uploaded into
      */
     public void readPdf(String filePath, String unitCode) throws IOException{
-        String[] result = new String[2];
+        String title;
+        String text;
 
         try {
-            //Checks that the file path is valid
+            //Checks that the file path and unit code are valid
             if (!IsFilePathValid(filePath)) {
                 throw new IOException("File path does not exist: " + filePath);
             }  else if (!IsFileTypeValid(filePath)){
@@ -38,21 +39,14 @@ public class PdfReader {
             File file = new File(filePath);
             PDDocument document = Loader.loadPDF(file);
 
-            // Pulls file name into a string
+            // Pulls file name into a string that is modified to create a title
             String fileName = file.getName();
             fileName = fileName.replace(".pdf", "");
 
-            // Instantiate a PDFTextStripper class to access the methods required to rip text from a pdf file
             PDFTextStripper pdfStripper = new PDFTextStripper();
-
-            // Retrieve text from the loaded document into a string variable "text" and print it to the console
-            String text = pdfStripper.getText(document);
-
-            // Close the document
+            title = fileName;
+            text = pdfStripper.getText(document);
             document.close();
-
-            result[0] = fileName;
-            result[1] = text;
 
             // Handles any exceptions thrown by the method
         } catch (IOException e) {
@@ -74,8 +68,7 @@ public class PdfReader {
             throw e;
         }
 
-        // Creates a new texbook with the provided details
-        Textbook textbook = new Textbook(result[0], unitCode, result[1]);
+        Textbook textbook = new Textbook(title, unitCode, text);
         //Inserts the textbook into the database
         textbookDAO.insert(textbook);
 
