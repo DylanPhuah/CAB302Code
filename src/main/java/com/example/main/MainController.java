@@ -59,7 +59,8 @@ public class MainController {
     @FXML
     void initialize() {
         User activeUser = UserAcsessModel.getCurrentUser();
-        nameBanner.setText(activeUser.GetUsername());
+        UserAcsessModel.setUser(activeUser);
+
 
 
 
@@ -139,7 +140,8 @@ public class MainController {
             stage.setScene(scene); //reload the scene
         });
         Refresh.setOnAction(actionEvent -> {
-            Stage stage = (Stage) Refresh.getScene().getWindow();
+            nameBanner.setText(activeUser.GetUsername()); //We do this to get the user acsess model to pull the latest data.
+            Stage stage = (Stage) homepageAnchorPane.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
             Scene scene = null;
             try {

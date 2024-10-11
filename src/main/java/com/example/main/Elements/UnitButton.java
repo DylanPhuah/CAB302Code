@@ -20,10 +20,12 @@ public class UnitButton extends Button {
     private List<TextBookButton> bookButtons = new ArrayList<TextBookButton>();
     private FlowPane TextBookEnvironment;
     private Label Banner;
+    private String UnitCode;
 
 
     public UnitButton(Enrolment enrolment, FlowPane BookEnvironment, Label banner) {
         super(enrolment.GetUnitCode()); //Set the text
+        UnitCode = enrolment.GetUnitCode();
         Banner = banner;
         banner.setText(enrolment.GetUnitCode());
         TextBookEnvironment = BookEnvironment;
@@ -57,7 +59,7 @@ public class UnitButton extends Button {
             addTextbook.setOnAction(event ->
             {
                 PdfPathPopUp pdfPathPopUp = new PdfPathPopUp();
-                pdfPathPopUp.displayPopup();
+                pdfPathPopUp.displayPopup(UnitCode);
 
             });
             TextBookEnvironment.getChildren().add(addTextbook);
