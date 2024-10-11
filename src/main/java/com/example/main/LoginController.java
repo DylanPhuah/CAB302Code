@@ -32,8 +32,11 @@ public class LoginController {
                 UserAcsessModel.setUser(eUser);
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
+
                 Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
+
                 stage.setScene(scene);
+                stage.setFullScreen(true);
             }
             else {
                 statusLabel.setText("username or password is incorrect");

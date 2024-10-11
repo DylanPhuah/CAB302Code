@@ -8,11 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/UnitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/UnitButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfPathPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfPathPopUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
