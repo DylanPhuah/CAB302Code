@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import java.io.IOException;
 import java.util.*;
+import com.example.main.Elements.AddUnitButton;
 
 
 public class MainController {
@@ -127,6 +128,9 @@ public class MainController {
             UnitButton button = new UnitButton(enrolment,textbookholder,UnitBanner);
             UnitList.getChildren().add(button);
         }
+
+        AddUnitButton addUnitButton = new AddUnitButton(textbookholder,homepageAnchorPane);
+        UnitList.getChildren().add(addUnitButton);
 
         Logout.setOnAction(actionEvent -> {
             Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
