@@ -14,10 +14,20 @@ public class UniPlus extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 625, 353);
-        stage.setTitle("Login Screen");
+        stage.setTitle("UniPlus");
         stage.setScene(scene);
         stage.show();
 
+    }
+
+    @Override
+    public void stop() {
+        if (UserAcsessModel.getCurrentUser() != null) {
+            UserDAO userDAO = new UserDAO();
+            userDAO.changeTextPreference(UserAcsessModel.getCurrentUser().GetUsername(),
+                    UserAcsessModel.getCurrentUser().GetTextPreference());
+            userDAO.close();
+        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -28,10 +38,6 @@ public class UniPlus extends Application {
         enrolmentDAO.createTable();
         TextbookDAO textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
-        // Close the database connection
-        //userDAO.close();
-        //enrolmentDAO.close();
-        //textbookDAO.close();
 
         // Stores the name of pdf file and its content into the database -- to be polished later
         //PdfReader pdfReader = new PdfReader();

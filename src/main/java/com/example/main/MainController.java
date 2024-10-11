@@ -89,9 +89,9 @@ public class MainController {
         }
         studentTeacherDropdown.setOnAction(event -> { //set the behaviour for the student view and teacher view button
             String selectedOption = (String) studentTeacherDropdown.getValue();
-            if(selectedOption == "Teacher View")
+            if(selectedOption.equals("Teacher View"))
             {
-                UserAcsessModel.SetDisplayTeacher(true); //tell user acsess model to store this info
+                UserAcsessModel.SetDisplayTeacher(true); //tell user access model to store this info
                 Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
                 Scene scene = null;
@@ -101,9 +101,9 @@ public class MainController {
                     throw new RuntimeException(e);
                 }
                 stage.setScene(scene); // reload the scene
-            } else if (selectedOption == "Student View")
+            } else if (selectedOption.equals("Student View"))
             {
-                UserAcsessModel.SetDisplayTeacher(false); //tell user acsess model to store this info
+                UserAcsessModel.SetDisplayTeacher(false); //tell user access model to store this info
                 Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
                 Scene scene = null;
@@ -132,7 +132,7 @@ public class MainController {
             FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
             Scene scene = null;
             try {
-                scene = new Scene(fxmlLoader.load(), 1000, 800);
+                scene = new Scene(fxmlLoader.load(), 625, 353);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

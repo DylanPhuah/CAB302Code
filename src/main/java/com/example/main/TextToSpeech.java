@@ -3,73 +3,74 @@ package com.example.main;
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import javax.speech.EngineStateError;
+import java.util.Scanner;
 
 public class TextToSpeech {
+    private Voice voice;
+    private Thread speechThread;
+    private volatile boolean isSpeaking;
+
     public TextToSpeech(String text) {
-        Voice voice = null;
+        // Initialize the voice in the constructor
+        initializeVoice();
+
+        // Start the speech in a separate thread
+        startSpeechThread(text);
+    }
+
+    private void initializeVoice() {
         try {
-            try {
-                System.setProperty("freetts.voices",
-                        "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
-            } catch (SecurityException e) {
-                System.out.println("SecurityException while setting system property: " + e.getMessage());
-                e.printStackTrace();
-            }
+            System.setProperty("freetts.voices",
+                    "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
 
-            VoiceManager vm = null;
-            try {
-                vm = VoiceManager.getInstance();
-            } catch (Exception e) {
-                System.out.println("Exception while getting VoiceManager instance: " + e.getMessage());
-                e.printStackTrace();
-                return;
-            }
-
+            VoiceManager vm = VoiceManager.getInstance();
             if (vm == null) {
                 throw new IllegalStateException("Cannot get VoiceManager instance.");
             }
-            try {
-                voice = vm.getVoice("kevin16");
-            } catch (Exception e) {
-                System.out.println("Exception while getting voice: " + e.getMessage());
-                e.printStackTrace();
-                return;
-            }
 
+            voice = vm.getVoice("kevin16");
             if (voice == null) {
                 throw new IllegalStateException("Voice 'kevin16' not found.");
             }
-            try {
-                voice.allocate();
-            } catch (EngineStateError e) {
-                System.out.println("EngineStateError during voice allocation: " + e.getMessage());
-                e.printStackTrace();
-                return;
-            }
-            // Speak the text
+
+            voice.allocate();
+        } catch (Exception e) {
+            System.out.println("Error initializing voice: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private void startSpeechThread(String text) {
+        isSpeaking = true;
+
+        speechThread = new Thread(() -> {
             try {
                 voice.speak(text);
             } catch (EngineStateError e) {
                 System.out.println("EngineStateError during speaking: " + e.getMessage());
                 e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred during speaking: " + e.getMessage());
+                e.printStackTrace();
+            } finally {
+                isSpeaking = false;
+                voice.deallocate();
             }
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid argument: " + e.getMessage());
-            e.printStackTrace();
-        } catch (IllegalStateException e) {
-            System.out.println("Illegal state: " + e.getMessage());
-            e.printStackTrace();
-        } catch (Exception e) {
-            System.out.println("An unexpected error occurred: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (voice != null) {
-                try {
-                    voice.deallocate();
-                } catch (EngineStateError e) {
-                    System.out.println("EngineStateError during deallocation: " + e.getMessage());
-                    e.printStackTrace();
-                }
+        });
+
+        speechThread.start();
+    }
+
+    // Method to stop speaking when leaving the scene
+    public void stopSpeaking() {
+        if (isSpeaking && voice != null) {
+            try {
+                // Deallocate the voice to stop speaking
+                voice.deallocate();
+                isSpeaking = false;
+            } catch (EngineStateError e) {
+                System.out.println("EngineStateError during deallocation: " + e.getMessage());
+                e.printStackTrace();
             }
         }
     }

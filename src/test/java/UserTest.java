@@ -170,7 +170,7 @@ public class UserTest {
     @Order(4)
     void testUserDelete()
     {
-        userDao.deleteUser(tUser);
+        userDao.delete(tUser);
         User retrieval = userDao.getByUser(tUser.GetUsername());
         assertNull(retrieval);
     }
@@ -179,7 +179,7 @@ public class UserTest {
     @Order(4)
     void testEnrolmentDelete()
     {
-        enrolmentDAO.deleteEnrolment(tEnrolment);
+        enrolmentDAO.delete(tEnrolment);
         List<Enrolment> retrieval = enrolmentDAO.getAllByUnit(enrolmentUnitCode);
         assertTrue(retrieval.isEmpty());
     }
@@ -188,7 +188,7 @@ public class UserTest {
     @Order(4)
     void testTextBookDelete()
     {
-        textbookDAO.deleteTextbook(tTextbook);
+        textbookDAO.delete(tTextbook);
         List<Textbook> retrieval = textbookDAO.getAllByUnit(textBookUnitCode);
         assertTrue(retrieval.isEmpty());
     }
