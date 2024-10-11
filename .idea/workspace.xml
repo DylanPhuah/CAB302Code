@@ -8,9 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Text to speech working on PDF Viewer page.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/TextToSpeech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/TextToSpeech.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +268,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Login" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>

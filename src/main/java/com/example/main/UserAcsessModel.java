@@ -11,7 +11,7 @@ public class UserAcsessModel {
     private static HashMap<Enrolment,List<Textbook>> UnitTextBooks;
     private static Textbook requested = null;
     private static User currentUser = null;
-    public static Boolean displayTeacher = false;
+    private static Boolean displayTeacher = false;
 
     public static HashMap<Enrolment, List<Textbook>> getUnitTextBooks() {
         return UnitTextBooks;
