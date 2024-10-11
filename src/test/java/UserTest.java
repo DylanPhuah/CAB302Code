@@ -1,4 +1,7 @@
-import com.example.main.*;
+import com.example.main.Model.*;
+import com.example.main.Model.DAO.EnrolmentDAO;
+import com.example.main.Model.DAO.TextbookDAO;
+import com.example.main.Model.DAO.UserDAO;
 import org.junit.jupiter.api.*;
 
 import java.util.List;

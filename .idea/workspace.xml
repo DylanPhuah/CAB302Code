@@ -8,8 +8,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/DatabaseConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/DatabaseConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/Enrolment.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/Enrolment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/EnrolmentDAO.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/EnrolmentDAO.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/LoginController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/LoginController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/MainController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/MainController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/RegisterController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/RegisterController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/Textbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/Textbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/TextbookDAO.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/TextbookDAO.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/UserDAO.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/JavaDoc/com.example.main/com/example/main/UserDAO.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/ContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/AddUnitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/AddUnitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/CustomButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/Styling.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/TextBookButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Elements/UnitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/UnitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Enrolment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/Enrolment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/EnrolmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/EnrolmentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/ExceptionPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/ExceptionPopUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfPathPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/PdfPathPopUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/PdfReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/PdfReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/RecognizeText.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/TextToSpeech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextToSpeech.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Textbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/Textbook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/TextbookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TextbookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserAcsessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/UserAccessModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/Styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/Styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/buttons.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/buttons.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/content-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/content-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/pdf-reader-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/pdf-reader-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/register-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/register-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tessdata/configs/api_config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tessdata/configs/digits" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tessdata/configs/hocr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tessdata/eng.traineddata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tessdata/osd.traineddata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tessdata/pdf.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tessdata/pdf.ttx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PdfReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PdfReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +76,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -32,6 +88,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {

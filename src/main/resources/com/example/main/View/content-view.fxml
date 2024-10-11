@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="contentAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.Controller.ContentController">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1031.0" style="-fx-background-color: #282828;">
+            <top>
+                <VBox prefHeight="32.0" prefWidth="1031.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onBackSwitch" prefHeight="71.0" prefWidth="134.0" style="-fx-background-color: #165DDB; -fx-background-radius: 5;" stylesheets="@Styling.css" text="Return to Homepage" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="30.0" top="20.0" />
+                            </VBox.margin></Button>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <ImageView fx:id="contentImageView" fitHeight="512.0" fitWidth="953.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="1031.0">
+                            <children>
+                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onTextToSpeech" style="-fx-background-color: #165DDB; -fx-background-radius: 5;" text="Play" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="40.0" right="40.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <TextArea fx:id="contentTextArea" prefHeight="200.0" prefWidth="979.0" style="-fx-background-color: #282828;">
+                            <padding>
+                                <Insets bottom="40.0" left="40.0" right="40.0" top="10.0" />
+                            </padding>
+                        </TextArea>
+                    </children>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>
