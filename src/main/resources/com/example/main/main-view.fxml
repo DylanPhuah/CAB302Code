@@ -185,6 +185,8 @@
                          <ChoiceBox fx:id="studentTeacherDropdown" prefHeight="30.0" prefWidth="124.0" style="-fx-background-radius: 5; -fx-background-color: #165DDB; -fx-text-fill: WHITE;" />
                          <Button fx:id = "Logout" mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" style="-fx-background-radius: 5; -fx-background-color: #165DDB;" text="Logout" textFill="WHITE" />
                         <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" style="-fx-background-radius: 5; -fx-background-color: #165DDB;" text="Settings" textFill="WHITE" />
+                         <Button fx:id = "Refresh" mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" style="-fx-background-radius: 5; -fx-background-color: #165DDB;" text="Refresh" textFill="WHITE" />
+
                      </children>
                   </HBox>
                </right>

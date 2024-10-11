@@ -36,6 +36,9 @@ public class MainController {
     private AnchorPane homepageAnchorPane;
 
     @FXML
+    private Button Refresh;
+
+    @FXML
     private Button nameBanner;
 
     @FXML
@@ -67,7 +70,12 @@ public class MainController {
 
         if(activeUser.GetIsTeacher()) //If the user is a teacher, add an option for a teacher view
         {
+
             studentTeacherDropdown.getItems().add("Teacher View");
+        }
+        else
+        {
+
         }
 
 
@@ -122,6 +130,17 @@ public class MainController {
         Logout.setOnAction(actionEvent -> {
             Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("login-view.fxml"));
+            Scene scene = null;
+            try {
+                scene = new Scene(fxmlLoader.load(), 1000, 800);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.setScene(scene); //reload the scene
+        });
+        Refresh.setOnAction(actionEvent -> {
+            Stage stage = (Stage) Refresh.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("main-view.fxml"));
             Scene scene = null;
             try {
                 scene = new Scene(fxmlLoader.load(), 1000, 800);
