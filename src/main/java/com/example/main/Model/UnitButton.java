@@ -52,6 +52,7 @@ public class UnitButton extends Button implements CustomButton {
         if(UserAccessModel.getdisplayTeacher())
         {
             Button addTextbook = new Button("Add textbook");
+            addTextbook.setStyle("-fx-text-fill: white; -fx-background-color: #2e2e2e; -fx-border-color: grey;");
             addTextbook.setOnAction(event ->
             {
                 PdfPathPopUp pdfPathPopUp = new PdfPathPopUp();

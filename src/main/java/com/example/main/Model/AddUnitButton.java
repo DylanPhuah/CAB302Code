@@ -43,6 +43,7 @@ public class AddUnitButton extends Button implements CustomButton {
 
         /* The button to trigger adding the unit */
         Button addUnit = new Button("Add Unit");
+        addUnit.setStyle(" -fx-background-color: #2e2e2e; -fx-border-color: grey;");
         addUnit.setTextFill(Color.WHITE);
         addUnit.setOnAction(event ->
         {

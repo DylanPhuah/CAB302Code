@@ -42,11 +42,6 @@ public class UniPlus extends Application {
         TextbookDAO textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
 
-        // Stores the name of pdf file and its content into the database -- to be polished later
-        //PdfReader pdfReader = new PdfReader();
-        //pdfReader.readPdf("src/pdFile/test.pdf");
-
-        // Launch the login window
         launch();
     }
 }

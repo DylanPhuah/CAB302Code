@@ -28,7 +28,7 @@ public class TextBookButton extends Button implements CustomButton {
         this.setGraphicTextGap(10.0);
         this.setMnemonicParsing(false);
         this.setPrefSize(340, 47);
-        this.setStyle("-fx-text-fill: white;");
+        this.setStyle("-fx-text-fill: white; -fx-border-color: grey;");
         this.setFont(Font.font("System Italic", 15));
         this.setPadding(new Insets(0, 0, 0, 30));
 
@@ -52,6 +52,7 @@ public class TextBookButton extends Button implements CustomButton {
             throw new RuntimeException(e);
         }
         stage.setScene(scene);
+        stage.setFullScreen(true);
 
         super.fire(); //Call the parent fire method so the button will still behave as expected
     }
