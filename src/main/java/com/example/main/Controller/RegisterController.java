@@ -1,5 +1,6 @@
 package com.example.main.Controller;
 
+import com.example.main.Model.ExceptionPopUp;
 import com.example.main.UniPlus;
 import com.example.main.Model.User;
 import com.example.main.Model.DAO.UserDAO;
@@ -9,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class RegisterController {
     @FXML private TextField username;
@@ -25,8 +27,10 @@ public class RegisterController {
      */
     @FXML
     protected void onRegisterButtonClick() throws IOException {
+        User eUser = null;
         UserDAO userDAO = new UserDAO();
-
+        // Inform the user if necessary info has not been entered, otherwise attempt to
+        // register the new user
         if (username.getText() == null || username.getText().isEmpty()) {
             statusLabel.setText("please enter a username");
         }
@@ -38,12 +42,23 @@ public class RegisterController {
             statusLabel.setText("please enter a full name");
         }
         else {
-            User eUser = userDAO.getByUser(username.getText());
+            // Attempt to retrieve the entered user from the db
+            boolean dbError = false;
+            try {
+                eUser = userDAO.getByUser(username.getText());
+            }
+            catch (SQLException e) {
+                dbError = true;
+                ExceptionPopUp.exceptionPopUp("An error occurred with the database. " +
+                                "It may be missing or corrupted.",
+                        "Database missing or corrupted");
+            }
+            // Inform the user if the username is taken, else register the new user and
+            // return to the login screen
             if (eUser != null) {
-                System.out.println("user already taken");
                 statusLabel.setText("username is already taken");
             }
-            else {
+            else if (!dbError) {
                 userDAO.insert(new User(username.getText(), password.getText(),
                         fName.getText(), lName.getText(), isTeacherCheck.isSelected(), 14));
                 Stage stage = (Stage) registerButton.getScene().getWindow();

@@ -1,5 +1,6 @@
 package com.example.main.Controller;
 
+import com.example.main.Model.ExceptionPopUp;
 import com.example.main.UniPlus;
 import com.example.main.Model.User;
 import com.example.main.Model.UserAccessModel;
@@ -23,31 +24,40 @@ public class LoginController {
      */
     @FXML
     protected void onLoginButtonClick() throws IOException {
+        User eUser = null;
         UserDAO userDAO = new UserDAO();
-        User eUser = userDAO.getByUser(username.getText());
+
+        // Inform the user if necessary info has not been entered, otherwise retrieve the
+        // entered user from the db
         if (username.getText() == null || username.getText().isEmpty()) {
             statusLabel.setText("please enter a username");
         }
         else if (password.getText() == null || password.getText().isEmpty()) {
             statusLabel.setText("please enter a password");
         }
-        else if (eUser != null) {
+        else {
+            try {
+                eUser = userDAO.getByUser(username.getText());
+            }
+            catch (Exception e) {
+                ExceptionPopUp.exceptionPopUp("An error occurred with the database. " +
+                                "It may be missing or corrupted.",
+                        "Database missing or corrupted");
+            }
+        }
+        // If a user was successfully retrieved, log them in
+        if (eUser != null) {
             if (username.getText().equals(eUser.GetUsername()) && password.getText().equals(eUser.GetPassword())) {
                 UserAccessModel.setUser(eUser);
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
-
                 Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
-
                 stage.setScene(scene);
                 stage.setFullScreen(true);
             }
             else {
                 statusLabel.setText("username or password is incorrect");
             }
-        }
-        else {
-            statusLabel.setText("username or password is incorrect");
         }
     }
 
