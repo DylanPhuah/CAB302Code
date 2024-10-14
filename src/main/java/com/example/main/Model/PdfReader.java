@@ -27,14 +27,11 @@ public class PdfReader {
         String text;
 
         try {
-            //Checks that the file path and unit code are valid
+            //Checks that the file path is valid and the file is a pdf
             if (!IsFilePathValid(filePath)) {
                 throw new IOException("File path does not exist: " + filePath);
             }  else if (!IsFileTypeValid(filePath)){
                 throw new IOException("The file is not a PDF: " + filePath);
-            }
-            else if (!IsUnitCodeValid(unitCode)){
-                throw new IOException("Invalid unit code: " + unitCode);
             }
             // Loads a document from the chosen directory
             File file = new File(filePath);
@@ -57,10 +54,6 @@ public class PdfReader {
             } else if (!IsFileTypeValid(filePath)) {
                 // Displays an error popup for an invalid file type
                 ExceptionPopUp.exceptionPopUp("The file is not a PDF: " + filePath, "Error");
-            }
-            else if (!IsUnitCodeValid(unitCode)){
-                // Displays an error popup for an invalid unit code
-                ExceptionPopUp.exceptionPopUp("The unit code is invalid: " + unitCode, "Error");
             }
             throw e;
         } catch (Exception e){
@@ -87,14 +80,6 @@ public class PdfReader {
             return false;
         }
         return true;
-    }
-
-    /** Boolean method that checks if the unit code is structurally correct
-     * @param unitCode Unit code to be validated
-     * @return true or false
-     */
-    public Boolean IsUnitCodeValid(String unitCode){
-        return unitCode.length() == 6 && unitCode.matches("[A-Z]{3}\\d{3}");
     }
 
     /** Boolean method that checks if a file is a pdf
