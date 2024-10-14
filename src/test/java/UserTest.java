@@ -4,6 +4,7 @@ import com.example.main.Model.DAO.TextbookDAO;
 import com.example.main.Model.DAO.UserDAO;
 import org.junit.jupiter.api.*;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -105,7 +106,7 @@ public class UserTest {
 
     @Test
     @Order(2)
-    void testUserRetrieve()
+    void testUserRetrieve() throws SQLException
     {
         User retrieval = userDao.getByUser(tUser.GetUsername());
         assertEquals(tUser.GetFName(),retrieval.GetFName());
@@ -142,7 +143,7 @@ public class UserTest {
 
     @Test
     @Order(3)
-    void testUserUpdate()
+    void testUserUpdate() throws SQLException
     {
         userDao.changeName(tUser,"Harvardson");
         User retrieval = userDao.getByUser(tUser.GetUsername());
@@ -171,7 +172,7 @@ public class UserTest {
 
     @Test
     @Order(4)
-    void testUserDelete()
+    void testUserDelete() throws SQLException
     {
         userDao.delete(tUser);
         User retrieval = userDao.getByUser(tUser.GetUsername());

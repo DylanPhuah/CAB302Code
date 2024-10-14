@@ -1,8 +1,6 @@
 package com.example.main.Controller;
 
 import com.example.main.Model.*;
-import com.example.main.Model.DAO.TextbookDAO;
-import com.example.main.Model.DAO.UserDAO;
 import com.example.main.UniPlus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -66,16 +64,10 @@ public class PdfReaderController {
     public void initialize() {
         zoomIn.setOnAction(event -> adjustFontSize(2)); // Increase font size by 2
         zoomOut.setOnAction(event -> adjustFontSize(-2)); // Decrease font size by 2
-
-        UserDAO userDAO = new UserDAO();
         fontSize = UserAccessModel.getCurrentUser().GetTextPreference();
         textArea.setStyle("-fx-font-size: " + fontSize + "pt;");
-
-        TextbookDAO textbookDAO = new TextbookDAO();
-
         // Retrieves textbooks from database
         Textbook display = UserAccessModel.getRequested();
-
         if (display != null) {
             // Sets Header and text of the stage
             getHeaderText().setText(display.GetTitle());

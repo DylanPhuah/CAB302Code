@@ -36,10 +36,6 @@ public class UserDAO {
      * @param user The user to be inserted
      */
     public void insert(User user) {
-        if(getByUser(user.GetUsername()) != null)
-        {
-            System.err.println("Username is already taken!");
-        }
         try {
             PreparedStatement insertUser = connection.prepareStatement(
                     "INSERT OR IGNORE INTO users VALUES (?, ?, ?, ?, ?, 14)" );
@@ -118,28 +114,25 @@ public class UserDAO {
     }
 
     /**
-     * Retrieves a user matching the given username
+     * Retrieves a user matching the given username, or null if it does not exist
      * @param user The username to be matched
-     * @return The user with the given username
+     * @return The user with the given username, or null if it does not exist
      */
-    public User getByUser(String user) {
-        try {
-            String sql = "SELECT * FROM users WHERE username = ?";
-            PreparedStatement getUser = connection.prepareStatement(sql);
-            getUser.setString(1, user);
-            ResultSet rs = getUser.executeQuery();
-            if (rs.next()) {
-                return new User(rs.getString("username"),
-                        rs.getString("password"),
-                        rs.getString("fName"),
-                        rs.getString("lName"),
-                        rs.getBoolean("isTeacher"),
-                        rs.getInt("textPreference"));
-            }
-        } catch (SQLException ex) {
-            System.err.println(ex);
+    public User getByUser(String user) throws SQLException {
+        User resultUser = null;
+        String sql = "SELECT username, password, fName, lName, isTeacher, textPreference FROM users WHERE username = ?";
+        PreparedStatement getUser = connection.prepareStatement(sql);
+        getUser.setString(1, user);
+        ResultSet rs = getUser.executeQuery();
+        if (rs.next()) {
+            resultUser = new User(rs.getString("username"),
+                    rs.getString("password"),
+                    rs.getString("fName"),
+                    rs.getString("lName"),
+                    rs.getBoolean("isTeacher"),
+                    rs.getInt("textPreference"));
         }
-        return null;
+        return resultUser;
     }
 
     /** Closes the database connection */
