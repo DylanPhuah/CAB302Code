@@ -56,7 +56,7 @@ public class MainController {
         User activeUser = UserAccessModel.getCurrentUser();
         UserAccessModel.setUser(activeUser);
         Boolean shouldDisplayTeacher = UserAccessModel.getdisplayTeacher();
-
+        nameBanner.setText(activeUser.GetUsername());
         studentTeacherDropdown.getItems().add("Student View"); //Configure the dropdown menu to initially have student view, and set it to display that option
 
         if(activeUser.GetIsTeacher()) //If the user is a teacher, add an option for a teacher view
