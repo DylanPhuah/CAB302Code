@@ -25,11 +25,12 @@ public class PdfReaderController {
 
     @FXML
     protected void onBackButtonClick() throws IOException {
+        tts.stopSpeaking();
         Stage stage = (Stage) backButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
         stage.setScene(scene);
-        stage.setFullScreen(true);
+        //stage.setFullScreen(true);
     }
 
     @FXML
