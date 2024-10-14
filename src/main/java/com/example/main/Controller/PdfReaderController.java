@@ -31,6 +31,7 @@ public class PdfReaderController {
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
 
     @FXML
@@ -46,13 +47,6 @@ public class PdfReaderController {
     public TextArea getTextArea(){
         return textArea;
     }
-
-
-    @FXML
-    private Label pgNumber;
-
-    @FXML
-    private Label maxPages;
 
     @FXML
     private Button zoomIn, zoomOut;

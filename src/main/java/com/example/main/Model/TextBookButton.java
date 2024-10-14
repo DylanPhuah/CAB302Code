@@ -52,6 +52,7 @@ public class TextBookButton extends Button implements CustomButton {
             throw new RuntimeException(e);
         }
         stage.setScene(scene);
+        stage.setFullScreen(true);
 
         super.fire(); //Call the parent fire method so the button will still behave as expected
     }

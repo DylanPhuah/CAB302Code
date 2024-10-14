@@ -93,6 +93,7 @@ public class MainController {
                     throw new RuntimeException(e);
                 }
                 stage.setScene(scene); // reload the scene
+                stage.setFullScreen(true);
             } else if (selectedOption.equals("Student View"))
             {
                 UserAccessModel.SetDisplayTeacher(false); //tell user access model to store this info
@@ -105,6 +106,7 @@ public class MainController {
                     throw new RuntimeException(e);
                 }
                 stage.setScene(scene); //reload the scene
+                stage.setFullScreen(true);
             }
         });
 
@@ -144,6 +146,7 @@ public class MainController {
                 throw new RuntimeException(e);
             }
             stage.setScene(scene); //reload the scene
+            stage.setFullScreen(true);
         });
 
 
