@@ -58,6 +58,8 @@ public class TextToSpeech {
             }
         });
 
+        speechThread.setDaemon(true);
+
         speechThread.start();
     }
 
