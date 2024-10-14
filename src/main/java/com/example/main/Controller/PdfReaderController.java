@@ -88,7 +88,6 @@ public class PdfReaderController {
 
     @FXML
     void onTextToSpeech() {
-        TextToSpeech tts = null;
         if (tts != null) {
             tts.stopSpeaking();
         }

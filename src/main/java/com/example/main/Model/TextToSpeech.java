@@ -65,11 +65,16 @@ public class TextToSpeech {
     public void stopSpeaking() {
         if (isSpeaking && voice != null) {
             try {
-                // Deallocate the voice to stop speaking
+                // Stop the speech
+                voice.getAudioPlayer().cancel();
+                // Deallocate the voice
                 voice.deallocate();
                 isSpeaking = false;
             } catch (EngineStateError e) {
                 System.out.println("EngineStateError during deallocation: " + e.getMessage());
+                e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred during stopSpeaking: " + e.getMessage());
                 e.printStackTrace();
             }
         }
