@@ -85,28 +85,38 @@ public class MainController {
             {
                 UserAccessModel.SetDisplayTeacher(true); //tell user access model to store this info
                 Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
+                WindowStateUtils.WindowState windowState = WindowStateUtils.captureWindowState(stage);
+                stage.setMinHeight(WindowStateUtils.minMainHeight);
+                stage.setMinWidth(WindowStateUtils.minMainWidth);
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
                 Scene scene = null;
                 try {
-                    scene = new Scene(fxmlLoader.load(), 1000, 800);
+                    //scene = new Scene(fxmlLoader.load(), 1201, 817);
+                    scene = new Scene(fxmlLoader.load());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
                 stage.setScene(scene); // reload the scene
-                stage.setFullScreen(true);
+                //stage.setFullScreen(true);
+                WindowStateUtils.restoreWindowState(stage, windowState);
             } else if (selectedOption.equals("Student View"))
             {
                 UserAccessModel.SetDisplayTeacher(false); //tell user access model to store this info
                 Stage stage = (Stage) studentTeacherDropdown.getScene().getWindow();
+                WindowStateUtils.WindowState windowState = WindowStateUtils.captureWindowState(stage);
+                stage.setMinHeight(WindowStateUtils.minMainHeight);
+                stage.setMinWidth(WindowStateUtils.minMainWidth);
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
                 Scene scene = null;
                 try {
-                    scene = new Scene(fxmlLoader.load(), 1000, 800);
+                    //scene = new Scene(fxmlLoader.load(), 1201, 817);
+                    scene = new Scene(fxmlLoader.load());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
                 stage.setScene(scene); //reload the scene
-                stage.setFullScreen(true);
+                //stage.setFullScreen(true);
+                WindowStateUtils.restoreWindowState(stage, windowState);
             }
         });
 
@@ -134,19 +144,29 @@ public class MainController {
                 throw new RuntimeException(e);
             }
             stage.setScene(scene); //reload the scene
+            stage.setHeight(WindowStateUtils.minLoginHeight);
+            stage.setWidth(WindowStateUtils.minLoginWidth);
+            stage.setMinWidth(WindowStateUtils.minLoginWidth);
+            stage.setMinHeight(WindowStateUtils.minLoginHeight);
+            stage.show();
         });
         Refresh.setOnAction(actionEvent -> {
             nameBanner.setText(activeUser.GetUsername()); //We do this to get the user acsess model to pull the latest data.
             Stage stage = (Stage) homepageAnchorPane.getScene().getWindow();
+            WindowStateUtils.WindowState windowState = WindowStateUtils.captureWindowState(stage);
+            stage.setMinHeight(WindowStateUtils.minMainHeight);
+            stage.setMinWidth(WindowStateUtils.minMainWidth);
             FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
             Scene scene = null;
             try {
-                scene = new Scene(fxmlLoader.load(), 1000, 800);
+                //scene = new Scene(fxmlLoader.load(), 1201, 817);
+                scene = new Scene(fxmlLoader.load());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
             stage.setScene(scene); //reload the scene
-            stage.setFullScreen(true);
+            //stage.setFullScreen(true);
+            WindowStateUtils.restoreWindowState(stage, windowState);
         });
 
 

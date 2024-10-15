@@ -7,10 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Text To Speech thread now stops on application close!">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Back button works if TTS isn't running.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/WindowStateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/PdfReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,7 @@
       <recent name="com.example.main" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.UniPlus">
     <configuration name="TextToSpeech" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.main.TextToSpeech" />
       <module name="main" />
@@ -113,8 +119,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UniPlus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.main.UniPlus" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UniPlus" />
         <item itemvalue="Application.TextToSpeech" />
       </list>
     </recent_temporary>
@@ -256,7 +276,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728941663844</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="TTS stops on back button press.">
+      <option name="closed" value="true" />
+      <created>1728945625393</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1728945625393</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Back button works if TTS isn't running.">
+      <option name="closed" value="true" />
+      <created>1728954016228</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1728954016228</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,6 +350,8 @@
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
     <MESSAGE value="Text to speech will now stop what it is currently saying and restart from the beginning when the narrate button is clicked." />
     <MESSAGE value="Text To Speech thread now stops on application close!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text To Speech thread now stops on application close!" />
+    <MESSAGE value="TTS stops on back button press." />
+    <MESSAGE value="Back button works if TTS isn't running." />
+    <option name="LAST_COMMIT_MESSAGE" value="Back button works if TTS isn't running." />
   </component>
 </project>

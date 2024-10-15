@@ -1,6 +1,7 @@
 package com.example.main.Controller;
 
 import com.example.main.Model.ExceptionPopUp;
+import com.example.main.Model.WindowStateUtils;
 import com.example.main.UniPlus;
 import com.example.main.Model.User;
 import com.example.main.Model.UserAccessModel;
@@ -53,7 +54,9 @@ public class LoginController {
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
                 stage.setScene(scene);
-                stage.setFullScreen(true);
+                stage.setMinHeight(WindowStateUtils.minMainHeight);
+                stage.setMinWidth(WindowStateUtils.minMainWidth);
+                //stage.setFullScreen(true);
             }
             else {
                 statusLabel.setText("username or password is incorrect");

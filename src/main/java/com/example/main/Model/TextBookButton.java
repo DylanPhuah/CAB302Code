@@ -44,15 +44,22 @@ public class TextBookButton extends Button implements CustomButton {
 
         //Initiate loading of the textbook viewer scene
         Stage stage = (Stage) this.getScene().getWindow();
+        WindowStateUtils.WindowState windowState = WindowStateUtils.captureWindowState(stage);
+        stage.setMinWidth(0);
+        stage.setMinHeight(0);
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/pdf-reader-view.fxml"));
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(), 1000, 800);
+            //scene = new Scene(fxmlLoader.load(), 1201, 817);
+            scene = new Scene(fxmlLoader.load());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         stage.setScene(scene);
-        stage.setFullScreen(true);
+
+        WindowStateUtils.restoreWindowState(stage, windowState);
+
+        //stage.setFullScreen(true);
 
         super.fire(); //Call the parent fire method so the button will still behave as expected
     }

@@ -63,7 +63,7 @@ public class RegisterController {
                         fName.getText(), lName.getText(), isTeacherCheck.isSelected(), 14));
                 Stage stage = (Stage) registerButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/login-view.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 720, 480);
+                Scene scene = new Scene(fxmlLoader.load(), 625, 353);
                 stage.setScene(scene);
             }
         }

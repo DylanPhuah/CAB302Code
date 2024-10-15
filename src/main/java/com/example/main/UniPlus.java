@@ -4,6 +4,7 @@ import com.example.main.Model.DAO.EnrolmentDAO;
 import com.example.main.Model.DAO.TextbookDAO;
 import com.example.main.Model.DAO.UserDAO;
 import com.example.main.Model.UserAccessModel;
+import com.example.main.Model.WindowStateUtils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,6 +20,8 @@ public class UniPlus extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 625, 353);
         stage.setTitle("UniPlus");
         stage.setScene(scene);
+        stage.setMinWidth(WindowStateUtils.minLoginWidth);
+        stage.setMinHeight(WindowStateUtils.minLoginHeight);
         stage.show();
 
     }
