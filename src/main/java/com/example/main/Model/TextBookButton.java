@@ -45,8 +45,8 @@ public class TextBookButton extends Button implements CustomButton {
         //Initiate loading of the textbook viewer scene
         Stage stage = (Stage) this.getScene().getWindow();
         WindowStateUtils.WindowState windowState = WindowStateUtils.captureWindowState(stage);
-        stage.setMinWidth(0);
-        stage.setMinHeight(0);
+        stage.setMinWidth(WindowStateUtils.minMainWidth);
+        stage.setMinHeight(WindowStateUtils.minMainHeight);
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/pdf-reader-view.fxml"));
         Scene scene = null;
         try {

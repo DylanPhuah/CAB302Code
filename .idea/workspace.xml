@@ -7,16 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Back button works if TTS isn't running.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/WindowStateUtils.java" afterDir="false" />
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Reading selection area on main-view now expands to fit the size of the window.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/PdfReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/PdfReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +286,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728954016228</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added remembering sizing of windows between scenes and added a minimum height and width to login and main views as to not lose information.">
+      <option name="closed" value="true" />
+      <created>1728956549467</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1728956549467</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Reading selection area on main-view now expands to fit the size of the window.">
+      <option name="closed" value="true" />
+      <created>1728958190687</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1728958190687</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,6 +362,8 @@
     <MESSAGE value="Text To Speech thread now stops on application close!" />
     <MESSAGE value="TTS stops on back button press." />
     <MESSAGE value="Back button works if TTS isn't running." />
-    <option name="LAST_COMMIT_MESSAGE" value="Back button works if TTS isn't running." />
+    <MESSAGE value="Added remembering sizing of windows between scenes and added a minimum height and width to login and main views as to not lose information." />
+    <MESSAGE value="Reading selection area on main-view now expands to fit the size of the window." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reading selection area on main-view now expands to fit the size of the window." />
   </component>
 </project>
