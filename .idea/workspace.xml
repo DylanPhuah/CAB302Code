@@ -7,11 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Reading selection area on main-view now expands to fit the size of the window.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/UserAccessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/UserAccessModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,6 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -44,8 +42,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/DylanPhuah/CAB302Code",
-    "accountId": "885732d3-7ea1-4a55-93d8-7ab560892342"
+    "url": "https://github.com/DylanPhuah/CAB302Code.git",
+    "accountId": "9185721a-7d30-4417-922a-e4acdfc08b33"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -55,12 +53,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 8
-    }</component>
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2lPh3LZjiIi0HT0zDoiM2oU1DhY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -74,7 +69,6 @@
     &quot;Application.UniPlus.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;JUnit.DBTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PdfReaderTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
     &quot;Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor&quot;: &quot;Run&quot;,
     &quot;Maven.main [package].executor&quot;: &quot;Run&quot;,
@@ -87,16 +81,13 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dylan/IdeaProjects/CAB302Code/src/main/java/com/example/main/Elements&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zaneg/OneDrive/Documents/Uni Stuff/CAB302/UniPlus Assignment/src/logback-classic-1.2.3.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\java\com\example\main\Elements" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources\com\example\main" />
       <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources" />
@@ -108,88 +99,39 @@
       <recent name="com.example.main" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="CAB302Code" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="CAB302Code" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Docutils task">
-      <module name="CAB302Code" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Sphinx task">
-      <module name="CAB302Code" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CAB302Code" />
+  <component name="RunManager" selected="Application.UniPlus">
+    <configuration name="TextToSpeech" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.main.TextToSpeech" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CAB302Code" />
-      <option name="filePath" />
+    <configuration name="UniPlus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.main.UniPlus" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UniPlus" />
+        <item itemvalue="Application.TextToSpeech" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -312,39 +254,55 @@
       <option name="project" value="LOCAL" />
       <updated>1726819045355</updated>
     </task>
-    <task id="LOCAL-00015" summary="Fixed small errors after merging with main and removed the Prev/Next page buttons from the texbook view">
+    <task id="LOCAL-00015" summary="Text to speech will now stop what it is currently saying and restart from the beginning when the narrate button is clicked.">
       <option name="closed" value="true" />
-      <created>1728449498591</created>
+      <created>1728941171329</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1728449498591</updated>
+      <updated>1728941171329</updated>
     </task>
-    <task id="LOCAL-00016" summary="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class">
+    <task id="LOCAL-00016" summary="Text To Speech thread now stops on application close!">
       <option name="closed" value="true" />
-      <created>1728451456008</created>
+      <created>1728941663844</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1728451456008</updated>
+      <updated>1728941663844</updated>
     </task>
-    <task id="LOCAL-00017" summary="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class">
+    <task id="LOCAL-00017" summary="TTS stops on back button press.">
       <option name="closed" value="true" />
-      <created>1728455429406</created>
+      <created>1728945625393</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1728455429406</updated>
+      <updated>1728945625393</updated>
     </task>
-    <task id="LOCAL-00018" summary="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController">
+    <task id="LOCAL-00018" summary="Back button works if TTS isn't running.">
       <option name="closed" value="true" />
-      <created>1728894146757</created>
+      <created>1728954016228</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1728894146757</updated>
+      <updated>1728954016228</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added remembering sizing of windows between scenes and added a minimum height and width to login and main views as to not lose information.">
+      <option name="closed" value="true" />
+      <created>1728956549467</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1728956549467</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Reading selection area on main-view now expands to fit the size of the window.">
+      <option name="closed" value="true" />
+      <created>1728958190687</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1728958190687</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -373,7 +331,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="origin/Login" />
                       </list>
                     </value>
                   </entry>
@@ -400,10 +358,12 @@
     <MESSAGE value="Refactored information class unit tests, added comments" />
     <MESSAGE value="Added unit tests for information class creation and field validation" />
     <MESSAGE value="Added functionality to the back button in the pdf-reader-view" />
-    <MESSAGE value="Fixed small errors after merging with main and removed the Prev/Next page buttons from the texbook view" />
-    <MESSAGE value="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class" />
-    <MESSAGE value="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class" />
-    <MESSAGE value="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController" />
+    <MESSAGE value="Text to speech will now stop what it is currently saying and restart from the beginning when the narrate button is clicked." />
+    <MESSAGE value="Text To Speech thread now stops on application close!" />
+    <MESSAGE value="TTS stops on back button press." />
+    <MESSAGE value="Back button works if TTS isn't running." />
+    <MESSAGE value="Added remembering sizing of windows between scenes and added a minimum height and width to login and main views as to not lose information." />
+    <MESSAGE value="Reading selection area on main-view now expands to fit the size of the window." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reading selection area on main-view now expands to fit the size of the window." />
   </component>
 </project>

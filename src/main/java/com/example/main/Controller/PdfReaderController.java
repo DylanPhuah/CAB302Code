@@ -25,11 +25,19 @@ public class PdfReaderController {
 
     @FXML
     protected void onBackButtonClick() throws IOException {
+        if (tts != null) {
+            tts.stopSpeaking();
+        }
         Stage stage = (Stage) backButton.getScene().getWindow();
+        WindowStateUtils.WindowState windowState = WindowStateUtils.captureWindowState(stage);
+        stage.setMinHeight(WindowStateUtils.minMainHeight);
+        stage.setMinWidth(WindowStateUtils.minMainWidth);
         FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
+        //Scene scene = new Scene(fxmlLoader.load(), 1201, 817);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
-        stage.setFullScreen(true);
+        //stage.setFullScreen(true);
+        WindowStateUtils.restoreWindowState(stage, windowState);
     }
 
     @FXML
@@ -88,7 +96,6 @@ public class PdfReaderController {
 
     @FXML
     void onTextToSpeech() {
-        TextToSpeech tts = null;
         if (tts != null) {
             tts.stopSpeaking();
         }

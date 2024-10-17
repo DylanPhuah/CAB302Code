@@ -3,6 +3,7 @@ package com.example.main.Model;
 import com.example.main.Model.DAO.EnrolmentDAO;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -37,9 +38,7 @@ public class AddUnitButton extends Button implements CustomButton {
 
         /* The field where users enter the unit code */
         TextField unitTextField = new TextField();
-        unitTextField.setStyle("-fx-text-fill: red;");
-        unitTextField.setStyle("-fx-text-inner-color: red;");
-        unitLabel.setTextFill(Color.WHITE);
+        unitTextField.setStyle("-fx-background-color: #383838;");
 
         /* The button to trigger adding the unit */
         Button addUnit = new Button("Add Unit");
