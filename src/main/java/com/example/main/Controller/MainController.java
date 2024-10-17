@@ -2,7 +2,6 @@ package com.example.main.Controller;
 
 import com.example.main.Model.*;
 import com.example.main.UniPlus;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -54,7 +53,7 @@ public class MainController {
     @FXML
     void initialize() {
         User activeUser = UserAccessModel.getCurrentUser();
-        UserAccessModel.setUser(activeUser);
+        UserAccessModel.updateUser(activeUser);
         Boolean shouldDisplayTeacher = UserAccessModel.getdisplayTeacher();
 
         studentTeacherDropdown.getItems().add("Student View"); //Configure the dropdown menu to initially have student view, and set it to display that option

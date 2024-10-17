@@ -7,14 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/ExceptionPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/ExceptionPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/UserAccessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/UserAccessModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -340,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728455429406</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController">
+      <option name="closed" value="true" />
+      <created>1728894146757</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1728894146757</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,6 +403,7 @@
     <MESSAGE value="Fixed small errors after merging with main and removed the Prev/Next page buttons from the texbook view" />
     <MESSAGE value="Added comments to methods in the PdfReaderController class and the PdfPathPopUp class" />
     <MESSAGE value="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the section splitting function from the pdfReader class and edited comments in PdfPathPopUp class" />
+    <MESSAGE value="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated UserDAO to throw exceptions, login and register scenes to handle database exceptions, refactored PdfReaderController" />
   </component>
 </project>

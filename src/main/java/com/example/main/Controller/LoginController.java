@@ -48,7 +48,7 @@ public class LoginController {
         // If a user was successfully retrieved, log them in
         if (eUser != null) {
             if (username.getText().equals(eUser.GetUsername()) && password.getText().equals(eUser.GetPassword())) {
-                UserAccessModel.setUser(eUser);
+                UserAccessModel.updateUser(eUser);
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(UniPlus.class.getResource("View/main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 1201, 817);

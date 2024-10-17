@@ -2,7 +2,6 @@ package com.example.main.Model;
 
 import com.example.main.Model.DAO.EnrolmentDAO;
 import com.example.main.Model.DAO.TextbookDAO;
-import com.example.main.Model.DAO.UserDAO;
 
 import java.util.HashMap;
 import java.util.List;
@@ -40,11 +39,10 @@ public class UserAccessModel {
         return currentUser;
     }
 
-    public static void setUser(User user)
+    public static void updateUser(User user)
     {
         currentUser = user;
         UnitTextBooks = new HashMap<Enrolment,List<Textbook>>();
-        UserDAO userDAO = new UserDAO();
         EnrolmentDAO enrolmentDAO = new EnrolmentDAO();
         TextbookDAO textbookDAO = new TextbookDAO();
         List<Enrolment> Enrolments = enrolmentDAO.getAllByUser(user.GetUsername());
