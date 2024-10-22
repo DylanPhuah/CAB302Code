@@ -29,7 +29,7 @@ public class LoginController {
         UserDAO userDAO = new UserDAO();
 
         // Inform the user if necessary info has not been entered, otherwise retrieve the
-        // entered user from the db
+        // entered user from the db and log them in
         if (username.getText() == null || username.getText().isEmpty()) {
             statusLabel.setText("please enter a username");
         }
@@ -37,6 +37,7 @@ public class LoginController {
             statusLabel.setText("please enter a password");
         }
         else {
+            // Give an error popup and stop login checking if the db encounters an error
             try {
                 eUser = userDAO.getByUser(username.getText());
             }
@@ -44,6 +45,7 @@ public class LoginController {
                 ExceptionPopUp.exceptionPopUp("An error occurred with the database. " +
                                 "It may be missing or corrupted.",
                         "Database missing or corrupted");
+                return;
             }
         }
         // If a user was successfully retrieved, log them in
@@ -56,12 +58,13 @@ public class LoginController {
                 stage.setScene(scene);
                 stage.setMinHeight(WindowStateUtils.minMainHeight);
                 stage.setMinWidth(WindowStateUtils.minMainWidth);
-                //stage.setFullScreen(true);
             }
             else {
                 statusLabel.setText("username or password is incorrect");
             }
         }
+        else {
+            statusLabel.setText("username or password is incorrect");        }
     }
 
     /**
