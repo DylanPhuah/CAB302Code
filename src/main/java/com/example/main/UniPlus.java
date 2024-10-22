@@ -3,6 +3,7 @@ package com.example.main;
 import com.example.main.Model.DAO.EnrolmentDAO;
 import com.example.main.Model.DAO.TextbookDAO;
 import com.example.main.Model.DAO.UserDAO;
+import com.example.main.Model.ExceptionPopUp;
 import com.example.main.Model.UserAccessModel;
 import com.example.main.Model.WindowStateUtils;
 import javafx.application.Application;
@@ -30,9 +31,19 @@ public class UniPlus extends Application {
     public void stop() {
         if (UserAccessModel.getCurrentUser() != null) {
             UserDAO userDAO = new UserDAO();
-            userDAO.changeTextPreference(UserAccessModel.getCurrentUser().GetUsername(),
-                    UserAccessModel.getCurrentUser().GetTextPreference());
-            userDAO.close();
+            try {
+                userDAO.changeTextPreference(UserAccessModel.getCurrentUser().GetUsername(),
+                        UserAccessModel.getCurrentUser().GetTextPreference());
+            }
+            catch (Exception e) {
+                ExceptionPopUp.exceptionPopUp("An error occurred with the database. " +
+                                "It may be missing or corrupted. Preferences updated in this session"
+                                + "could not be saved.",
+                        "Database missing or corrupted");;
+            }
+            finally {
+                userDAO.close();
+            }
         }
     }
 

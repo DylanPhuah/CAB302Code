@@ -2,6 +2,7 @@ package com.example.main.Controller;
 
 import com.example.main.Model.*;
 import com.example.main.UniPlus;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -53,7 +54,17 @@ public class MainController {
     @FXML
     void initialize() {
         User activeUser = UserAccessModel.getCurrentUser();
-        UserAccessModel.updateUser(activeUser);
+
+        try {
+            UserAccessModel.updateUser(activeUser);
+        }
+        catch (Exception e) {
+            ExceptionPopUp.exceptionPopUp("An error occurred with the database. " +
+                            "It may be missing or corrupted.",
+                    "Database missing or corrupted");
+            Platform.exit();
+        }
+
         Boolean shouldDisplayTeacher = UserAccessModel.getdisplayTeacher();
         nameBanner.setText(activeUser.GetUsername());
         studentTeacherDropdown.getItems().add("Student View"); //Configure the dropdown menu to initially have student view, and set it to display that option
@@ -150,7 +161,7 @@ public class MainController {
             stage.show();
         });
         Refresh.setOnAction(actionEvent -> {
-            nameBanner.setText(activeUser.GetUsername()); //We do this to get the user acsess model to pull the latest data.
+            nameBanner.setText(activeUser.GetUsername()); //We do this to get the user access model to pull the latest data.
             Stage stage = (Stage) homepageAnchorPane.getScene().getWindow();
             WindowStateUtils.WindowState windowState = WindowStateUtils.captureWindowState(stage);
             stage.setMinHeight(WindowStateUtils.minMainHeight);
