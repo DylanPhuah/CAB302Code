@@ -4,9 +4,12 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Font;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,6 +20,7 @@ public class UnitButton extends Button implements CustomButton {
     private FlowPane TextBookEnvironment;
     private Label Banner;
     private String UnitCode;
+    private ImageView icon;
 
 
     public UnitButton(Enrolment enrolment, FlowPane BookEnvironment, Label banner) {
@@ -25,6 +29,20 @@ public class UnitButton extends Button implements CustomButton {
         Banner = banner;
         banner.setText(enrolment.GetUnitCode());
         TextBookEnvironment = BookEnvironment;
+
+        URL iconUrl = getClass().getResource("/com/example/main/View/icons/bookicon.png");
+        if (iconUrl != null) {
+            Image image = new Image(iconUrl.toString());
+            icon = new ImageView(image);
+            icon.setFitHeight(20); // Set desired height
+            icon.setFitWidth(20);  // Set desired width
+            icon.setPreserveRatio(true); // Maintain aspect ratio
+            // Set the icon as the graphic for the button
+            this.setGraphic(icon);
+        } else {
+            System.out.println("Icon not found!");
+        }
+
         HashMap<Enrolment,List<Textbook>> EnrolmentBooks = UserAccessModel.getUnitTextBooks();
         books = EnrolmentBooks.get(enrolment);
         for(Textbook book: books)
@@ -32,19 +50,8 @@ public class UnitButton extends Button implements CustomButton {
             TextBookButton bookButton = new TextBookButton(book);
             bookButtons.add(bookButton);
         }
-        // Set button properties
-        this.setAlignment(Pos.BASELINE_LEFT);
-        this.setGraphicTextGap(10.0);
-        this.setMnemonicParsing(false);
-        this.setPrefSize(340, 47);
-        this.setStyle("-fx-text-fill: white;");
-        this.setFont(Font.font("System Italic", 15));
-        this.setPadding(new Insets(0, 0, 0, 30));
-        this.setStyle("-fx-background-color: #1e1e1e;");
-        this.setStyle("-fx-background-radius: 0em;");
-
-        // Optionally apply the stylesheet
-        //this.getStylesheets().add(getClass().getResource("Styling.css").toExternalForm());
+        properties();
+        styleCSS("/com/example/main/View/Styling.css");
     }
     @Override
     public void fire() {
@@ -71,11 +78,26 @@ public class UnitButton extends Button implements CustomButton {
 
     @Override
     public void styleCSS(String css) {
-
+        // Optionally apply the stylesheet
+        URL resource = getClass().getResource(css);
+        if (resource != null) {
+            this.getStylesheets().add(resource.toExternalForm());
+        } else {
+            System.out.println("Stylesheet not found!");
+        }
     }
 
     @Override
     public void properties() {
-        int a;
+        // Set button properties
+        this.setAlignment(Pos.BASELINE_LEFT);
+        this.setGraphicTextGap(10.0);
+        this.setMnemonicParsing(false);
+        this.setPrefSize(340, 47);
+        this.setStyle("-fx-text-fill: white;");
+        this.setFont(Font.font("System Italic", 15));
+        this.setPadding(new Insets(0, 0, 0, 30));
+        this.setStyle("-fx-background-color: #1e1e1e;");
+        this.setStyle("-fx-background-radius: 0em;");
     }
 }

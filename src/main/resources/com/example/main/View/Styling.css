@@ -1,22 +1,25 @@
 .button{
     -fx-background-color: #1e1e1e;
+    -fx-text-fill: #ffffff;
     -fx-background-radius: 0em;
 }
 
 .button:hover{
     -fx-background-color: #6393E7;
+    -fx-text-fill: #ffffff;
 }
 
 .button:pressed{
     -fx-background-color: #165DDB;
+    -fx-text-fill: #ffffff;
 }
 
 .button:focused{
     -fx-background-color: #165DDB;
     -fx-border-color: #165DDB;
+    -fx-text-fill: #ffffff;
     -fx-border-width: 0px 0px 0px 3px;
 }
-
 
 
 .tab-pane .tab-header-area .tab-header-background {

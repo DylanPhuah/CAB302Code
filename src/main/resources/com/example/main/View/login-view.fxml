@@ -5,20 +5,29 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="353.0" prefWidth="625.0" spacing="20.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.Controller.LoginController">
+<VBox alignment="TOP_CENTER" prefHeight="353.0" prefWidth="625.0" spacing="20.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.Controller.LoginController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1020.0">
       <children>
-         <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="53.0" style="-fx-background-color: #282828;">
+         <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="53.0" style="-fx-background-color: #1e1e1e;">
             <HBox.margin>
                <Insets right="20.0" />
             </HBox.margin>
+            <graphic>
+               <ImageView fitHeight="61.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@icons/uniicon.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
             <children>

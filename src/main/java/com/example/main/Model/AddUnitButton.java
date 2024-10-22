@@ -7,14 +7,20 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
+import java.net.URL;
+import java.util.Objects;
+
 public class AddUnitButton extends Button implements CustomButton {
     private FlowPane environment;
     private boolean teacherMode;
+    private ImageView icon;
 
     /**
      * Instantiates an AddUnitButton. When clicked, this will clear the workspace and set an interface for users to add units.
@@ -25,7 +31,22 @@ public class AddUnitButton extends Button implements CustomButton {
         super("Add Unit");
         this.environment = environment;
         this.teacherMode = teacherMode;
+
+        URL iconUrl = getClass().getResource("/com/example/main/View/icons/plusicon.png");
+        if (iconUrl != null) {
+            Image image = new Image(iconUrl.toString());
+            icon = new ImageView(image);
+            icon.setFitHeight(20); // Set desired height
+            icon.setFitWidth(20);  // Set desired width
+            icon.setPreserveRatio(true); // Maintain aspect ratio
+            // Set the icon as the graphic for the button
+            this.setGraphic(icon);
+        } else {
+            System.out.println("Icon not found!");
+        }
+
         properties();
+        styleCSS("/com/example/main/View/Styling.css");
     }
 
     @Override
@@ -70,8 +91,12 @@ public class AddUnitButton extends Button implements CustomButton {
     @Override
     public void styleCSS(String css) {
     // Optionally apply the stylesheet
-        this.getStylesheets().add("src/main/resources/com/example/main/Styling.css");
-       // C:\Users\Lachlan\IdeaProjects\CAB302Code\src\main\resources\com\example\main\Styling.css
+        URL resource = getClass().getResource(css);
+        if (resource != null) {
+            this.getStylesheets().add(resource.toExternalForm());
+        } else {
+            System.out.println("Stylesheet not found!");
+        }
     }
 
     @Override
@@ -81,7 +106,7 @@ public class AddUnitButton extends Button implements CustomButton {
         this.setGraphicTextGap(10.0);
         this.setMnemonicParsing(false);
         this.setPrefSize(340, 47);
-        this.setStyle("-fx-text-fill: black;");
+        this.setStyle("-fx-text-fill: white;");
         this.setFont(Font.font("System Italic", 15));
         this.setPadding(new Insets(0, 0, 0, 30));
     }
