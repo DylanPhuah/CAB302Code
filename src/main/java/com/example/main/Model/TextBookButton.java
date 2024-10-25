@@ -6,14 +6,18 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class TextBookButton extends Button implements CustomButton {
     /** The textbook that this button will display */
     private Textbook PointedBook;
+    private ImageView icon;
 
     /**
      * Creates a button that when clicked, will open a view of a given textbook
@@ -25,12 +29,28 @@ public class TextBookButton extends Button implements CustomButton {
 
         // Set button properties
         this.setAlignment(Pos.BASELINE_LEFT);
-        this.setGraphicTextGap(10.0);
+        //this.setGraphicTextGap(10.0);
         this.setMnemonicParsing(false);
         this.setPrefSize(340, 47);
-        this.setStyle("-fx-text-fill: white; -fx-border-color: grey;");
+        this.setStyle("-fx-text-fill: white; -fx-background-color: #6393E7;");
+
+        this.getStyleClass().add("textbook-button");
+
         this.setFont(Font.font("System Italic", 15));
-        this.setPadding(new Insets(0, 0, 0, 30));
+        this.setPadding(new Insets(10, 10, 10, 10));
+
+        URL iconUrl = getClass().getResource("/com/example/main/View/icons/arrowicon.png");
+        if (iconUrl != null) {
+            Image image = new Image(iconUrl.toString());
+            icon = new ImageView(image);
+            icon.setFitHeight(20); // Set desired height
+            icon.setFitWidth(20);  // Set desired width
+            icon.setPreserveRatio(true); // Maintain aspect ratio
+            // Set the icon as the graphic for the button
+            this.setGraphic(icon);
+        } else {
+            System.out.println("Icon not found!");
+        }
 
 
     }

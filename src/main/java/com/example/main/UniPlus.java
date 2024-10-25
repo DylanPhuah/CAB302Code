@@ -1,6 +1,7 @@
 package com.example.main;
 
 import com.example.main.Model.DAO.EnrolmentDAO;
+import com.example.main.Model.DAO.TaskDAO;
 import com.example.main.Model.DAO.TextbookDAO;
 import com.example.main.Model.DAO.UserDAO;
 import com.example.main.Model.ExceptionPopUp;
@@ -55,6 +56,8 @@ public class UniPlus extends Application {
         enrolmentDAO.createTable();
         TextbookDAO textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
+        TaskDAO taskDAO = new TaskDAO(); // Initialize TaskDAO
+        taskDAO.createTable();
 
         launch();
     }

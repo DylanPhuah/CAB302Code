@@ -61,3 +61,59 @@
     -fx-text-fill: #ffffff !important;
 
 }
+
+/* outer combo-box text */
+.combo-box .list-cell {
+    -fx-text-fill: white;
+}
+
+/* combo-box list view text, not hovered or focused */
+.combo-box .list-view .list-cell {
+    -fx-text-fill: black;
+}
+
+/* combo-box selected text */
+.combo-box .list-view .list-cell:focused {
+    -fx-text-fill: white;
+}
+
+/* combo-box hover text */
+.combo-box .list-view .list-cell:hover {
+    -fx-text-fill: white;
+}
+.textbook-button {
+    -fx-background-color: #3A3A3A; /* Darker background */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 15px; /* Font size */
+    -fx-padding: 10 15 10 15; /* Padding */
+    -fx-background-radius: 5; /* Rounded corners */
+    -fx-border-radius: 5; /* Rounded corners for border */
+    -fx-border-color: #165DDB; /* Border color */
+    -fx-border-width: 2; /* Border width */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 1); /* Shadow effect */
+}
+
+.textbook-button:hover {
+    -fx-background-color: #4A4A4A; /* Lighter on hover */
+    -fx-cursor: hand; /* Change cursor */
+}
+
+.textarea {
+    -fx-background-color: #2E2E2E; /* Dark background */
+    -fx-text-fill: #FFFFFF; /* White text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-border-color: #4A4A4A; /* Optional border color */
+    -fx-border-width: 1px; /* Optional border width */
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-padding: 5; /* Padding inside the TextArea */
+}
+
+.text-area {
+    text-area-background: #282828 ;
+    -fx-background-color: #282828; /* Dark background */
+    -fx-text-fill: #FFFFFF; /* White text color */
+    -fx-padding: 5; /* Padding inside the TextArea */
+}
+.text-area .content {
+    -fx-background-color: text-area-background ;
+}

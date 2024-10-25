@@ -8,9 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Reading selection area on main-view now expands to fit the size of the window.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/TaskViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TaskDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskSavedCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/icons/arrowicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TextBookButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/View/Styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/Styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/View/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/View/pdf-reader-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/pdf-reader-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +35,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -40,12 +54,12 @@
     &quot;assignee&quot;: &quot;zgennerz3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DylanPhuah/CAB302Code.git",
-    "accountId": "9185721a-7d30-4417-922a-e4acdfc08b33"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DylanPhuah/CAB302Code.git&quot;,
+    &quot;accountId&quot;: &quot;9185721a-7d30-4417-922a-e4acdfc08b33&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -62,38 +76,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.PdfReaderApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TextToSpeech.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UniPlus.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.DBTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.main [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.main [test].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zaneg/OneDrive/Documents/Uni Stuff/CAB302/UniPlus Assignment/src/logback-classic-1.2.3.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.PdfReaderApplication.executor": "Run",
+    "Application.TextToSpeech.executor": "Run",
+    "Application.UniPlus.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.DBTest.executor": "Run",
+    "JUnit.UserTest.executor": "Run",
+    "Maven.main [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor": "Run",
+    "Maven.main [package].executor": "Run",
+    "Maven.main [test].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/zaneg/OneDrive/Documents/Uni Stuff/CAB302/UniPlus Assignment/src/logback-classic-1.2.3.jar",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.29310346"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lachlan\IdeaProjects\CAB302Code\src\main\resources\com\example\main\View\icons" />
       <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources\com\example\main" />
       <recent name="C:\Users\dylan\IdeaProjects\CAB302Code\src\main\resources" />
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\src" />
       <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus" />
-      <recent name="C:\Users\zaneg\OneDrive\Documents\Uni Stuff\CAB302\UniPlus Assignment\UniPlus\src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.main" />

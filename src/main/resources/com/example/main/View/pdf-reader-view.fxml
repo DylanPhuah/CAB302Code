@@ -48,7 +48,7 @@
             </HBox>
             <ScrollPane fitToHeight="true" fitToWidth="true" stylesheets="@styles.css" VBox.vgrow="ALWAYS">
                 <StackPane VBox.vgrow="ALWAYS">
-                    <TextArea fx:id="textArea" editable="false" style="-fx-background-color: #282828;" styleClass="text-area" wrapText="true" VBox.vgrow="ALWAYS" />
+                    <TextArea fx:id="textArea" editable="false" style="-fx-background-color: #282828;" styleClass="text-area" stylesheets="@Styling.css" wrapText="true" VBox.vgrow="ALWAYS" />
                 </StackPane>
             </ScrollPane>
 
