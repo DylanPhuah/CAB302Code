@@ -31,10 +31,20 @@ public class TaskManager {
     }
 
     public void addTask(Task task) {
-        tasks.add(task);
         TaskDAO taskDAO = new TaskDAO();
-        taskDAO.insert(task);
+        List<Task> allTasks = taskDAO.getAllTasks();
         notifyObservers(task, true);
+        tasks.add(task);
+        // Check for uniqueness
+        boolean found = allTasks.stream().anyMatch(t ->
+                t.getDescription().equals(task.getDescription()) &&
+                        t.getDate().equals(task.getDate()) &&
+                        t.getPriority().equals(task.getPriority())
+        );
+
+        if (!found) {
+            taskDAO.insert(task);
+        }
     }
 
     public void removeTask(String description) {
@@ -42,6 +52,8 @@ public class TaskManager {
         for (Task task : tasks) {
             if (task.getDescription().equals(description)) {
                 taskToRemove = task;
+                TaskDAO taskDAO = new TaskDAO();
+                taskDAO.delete(task);
                 break;
             }
         }

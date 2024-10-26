@@ -190,7 +190,7 @@ public class MainController {
     void accountPress() {
         // Clear existing children
         textbookholder.getChildren().clear();
-
+        taskManager.getTasks().clear();
         // URL for styling
         URL resource = getClass().getResource("/com/example/main/View/Styling.css");
 
