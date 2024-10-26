@@ -10,9 +10,10 @@
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="New Task feature for OOD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TaskDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/View/Styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/Styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/View/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +160,7 @@
       <updated>1725087419069</updated>
       <workItem from="1729842610979" duration="2060000" />
       <workItem from="1729922863995" duration="2358000" />
+      <workItem from="1729931093482" duration="2597000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for app, login view, and login controller. Login view contains medium fidelity login screen">
       <option name="closed" value="true" />

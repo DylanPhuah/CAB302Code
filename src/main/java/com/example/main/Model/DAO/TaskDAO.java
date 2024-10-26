@@ -43,13 +43,15 @@ public class TaskDAO {
     public void insert(Task task) {
         try {
             PreparedStatement insertTask = connection.prepareStatement(
-                    "INSERT INTO tasks (description, date, priority) VALUES (?, ?, ?)");
+                    "INSERT OR IGNORE INTO tasks (description, date, priority) VALUES (?, ?, ?)");
 
 
             insertTask.setString(1, task.getDescription());
             insertTask.setDate(2, Date.valueOf(task.getDate()));
             insertTask.setString(3, task.getPriority());
             insertTask.executeUpdate(); // Use executeUpdate() for INSERT
+
+            System.out.println("Task added successfully" + task.getDescription() + task.getDate() + task.getPriority());
         } catch (SQLException ex) {
             System.err.println("Task insertion error: " + ex.getMessage());
         }
@@ -77,17 +79,21 @@ public class TaskDAO {
     public List<Task> getTasksByUser(User user) {
         List<Task> tasks = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM enrolments WHERE username = ?";
-            PreparedStatement getAllByUnit = connection.prepareStatement(sql);
-            getAllByUnit.setString(1, user.GetUsername());
-            ResultSet rs = getAllByUnit.executeQuery();
+            String sql = "SELECT * FROM tasks WHERE username = ?";
+            PreparedStatement getAllByUsername = connection.prepareStatement(sql);
+            getAllByUsername.setString(1, user.GetUsername());
+            ResultSet rs = getAllByUsername.executeQuery();
             while (rs.next()) {
-                tasks.add(new Task(rs.getString("description"),
-                        rs.getDate("date").toLocalDate(), rs.getString("priority"))
+                tasks.add(new Task(
+                        rs.getString("description"),
+                        rs.getDate("date").toLocalDate(),
+                        rs.getString("priority"))
                 );
             }
+            System.out.println("Tasks found: " + tasks.size());
+            System.out.println("User found: " + user.GetUsername());
         } catch (SQLException ex) {
-            System.err.println("enrolment get all by user error");
+            System.err.println("tasks get all by user error");
         }
         return tasks;
     }

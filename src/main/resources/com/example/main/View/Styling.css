@@ -117,3 +117,8 @@
 .text-area .content {
     -fx-background-color: text-area-background ;
 }
+
+
+.choice-box .label {
+    -fx-text-fill: white; /* Text color for the label */
+}

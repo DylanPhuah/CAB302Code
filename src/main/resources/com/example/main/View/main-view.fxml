@@ -131,7 +131,7 @@
                <right>
                   <HBox alignment="CENTER" prefHeight="49.0" prefWidth="296.0" style="-fx-spacing: 10;" BorderPane.alignment="CENTER">
                      <children>
-                         <ChoiceBox fx:id="studentTeacherDropdown" prefHeight="30.0" prefWidth="124.0" style="-fx-background-radius: 5; -fx-background-color: #165DDB; -fx-text-fill: WHITE;" />
+                         <ChoiceBox fx:id="studentTeacherDropdown" prefHeight="30.0" prefWidth="124.0" style="-fx-background-radius: 5; -fx-background-color: #165DDB; -fx-text-fill: WHITE;" stylesheets="@Styling.css" />
                          <Button fx:id="Logout" mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" style="-fx-background-radius: 5; -fx-background-color: #165DDB;" text="Sign out" textFill="WHITE" wrapText="true" />
                          <Button fx:id="Refresh" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #282828;" textFill="WHITE" wrapText="true">
                            <graphic>

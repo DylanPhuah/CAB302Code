@@ -45,6 +45,7 @@ public class TaskManager {
 
         if (!found) {
             taskDAO.insert(task);
+            System.out.println("Added Task: " + task.getDescription());
         }
     }
 
