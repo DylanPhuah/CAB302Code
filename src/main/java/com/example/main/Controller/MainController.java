@@ -1,10 +1,8 @@
 package com.example.main.Controller;
 
 import com.example.main.Model.*;
-import com.example.main.Model.DAO.EnrolmentDAO;
 import com.example.main.Model.DAO.TaskDAO;
 import com.example.main.Model.TaskManager.Task;
-import com.example.main.Model.TaskManager.TaskFactory;
 import com.example.main.Model.TaskManager.TaskManager;
 import com.example.main.UniPlus;
 import javafx.application.Platform;
@@ -15,12 +13,10 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.*;
 
 
@@ -202,7 +198,7 @@ public class MainController {
         TaskDAO taskDAO = new TaskDAO(); // Initialize TaskDAO
 
         // Load tasks from the database and add them to the TaskManager
-        List<Task> loadedTasks = taskDAO.getAllTasks();
+        List<Task> loadedTasks = taskDAO.getTasksByUser(UserAccessModel.getCurrentUser());
         for (Task task : loadedTasks) {
             System.out.println("Loaded task: " + task.getDescription());
             taskManager.addTask(task);

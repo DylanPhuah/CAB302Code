@@ -1,6 +1,7 @@
 package com.example.main.Model.TaskManager;
 
 import com.example.main.Model.DAO.TaskDAO;
+import com.example.main.Model.UserAccessModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ public class TaskManager {
 
     public void addTask(Task task) {
         TaskDAO taskDAO = new TaskDAO();
-        List<Task> allTasks = taskDAO.getAllTasks();
+        List<Task> allTasks = taskDAO.getTasksByUser(UserAccessModel.getCurrentUser());
         notifyObservers(task, true);
         tasks.add(task);
         // Check for uniqueness

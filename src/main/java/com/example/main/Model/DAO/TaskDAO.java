@@ -2,10 +2,12 @@ package com.example.main.Model.DAO;
 
 
 
+import com.example.main.Model.Enrolment;
 import com.example.main.Model.TaskManager.Task;
-import com.example.main.Model.UserAccessModel;
+import com.example.main.Model.User;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,10 +25,12 @@ public class TaskDAO {
         try {
             Statement createTable = connection.createStatement();
             createTable.execute("CREATE TABLE IF NOT EXISTS tasks ("
+                    + "username VARCHAR, "
                     + "description VARCHAR NOT NULL, "
                     + "date DATE NOT NULL, "
                     + "priority VARCHAR NOT NULL,"
-                    + "PRIMARY KEY (username, description))");
+                    + "PRIMARY KEY (username, description), "
+                    + "FOREIGN KEY (username) REFERENCES users)");
         } catch (SQLException ex) {
             System.err.println("Task table creation error: " + ex.getMessage());
         }
@@ -52,31 +56,6 @@ public class TaskDAO {
     }
 
     /**
-     * Retrieves all tasks with a specific priority from the database
-     * @param priority The priority to be matched
-     * @return A list of all tasks with the given priority
-     */
-    public List<Task> getAllByPriority(String priority) {
-        List<Task> tasks = new ArrayList<>();
-        try {
-            String sql = "SELECT * FROM tasks WHERE priority = ?";
-            PreparedStatement getAllByPriority = connection.prepareStatement(sql);
-            getAllByPriority.setString(1, priority);
-            ResultSet rs = getAllByPriority.executeQuery();
-            while (rs.next()) {
-                tasks.add(new Task(
-                        rs.getString("description"),
-                        rs.getDate("date").toLocalDate(),
-                        rs.getString("priority")
-                ));
-            }
-        } catch (SQLException ex) {
-            System.err.println("Task get all by priority error: " + ex.getMessage());
-        }
-        return tasks;
-    }
-
-    /**
      * Deletes a task from the database
      * @param task The task to be deleted
      */
@@ -95,21 +74,20 @@ public class TaskDAO {
      * Retrieves all tasks from the database
      * @return A list of all tasks
      */
-    public List<Task> getAllTasks() {
+    public List<Task> getTasksByUser(User user) {
         List<Task> tasks = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM tasks";
-            PreparedStatement getAllTasks = connection.prepareStatement(sql);
-            ResultSet rs = getAllTasks.executeQuery();
+            String sql = "SELECT * FROM enrolments WHERE username = ?";
+            PreparedStatement getAllByUnit = connection.prepareStatement(sql);
+            getAllByUnit.setString(1, user.GetUsername());
+            ResultSet rs = getAllByUnit.executeQuery();
             while (rs.next()) {
-                tasks.add(new Task(
-                        rs.getString("description"),
-                        rs.getDate("date").toLocalDate(),
-                        rs.getString("priority")
-                ));
+                tasks.add(new Task(rs.getString("description"),
+                        rs.getDate("date").toLocalDate(), rs.getString("priority"))
+                );
             }
         } catch (SQLException ex) {
-            System.err.println("Task get all tasks error: " + ex.getMessage());
+            System.err.println("enrolment get all by user error");
         }
         return tasks;
     }
