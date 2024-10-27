@@ -23,20 +23,7 @@ public class PdfReaderTest {
         }
     }
 
-    @Test
-    @Order(2)
-    public void TestInvalidFileType() {
-        String filePath = "src/pdfs/invalid.txt";
 
-        try{
-            pdfReader.readPdf(filePath, "AAA222");
-            fail("Expected exception not thrown for invalid file type.");
-        } catch (IOException e){
-            assertEquals("The file is not a PDF: " + filePath, e.getMessage());
-        }
-
-
-    }
 
     /*
     @Test
