@@ -63,7 +63,7 @@ public class TaskViewController implements TaskObserver {
             String selectedPriority = priorityComboBox.getValue();
 
             if (!taskText.isEmpty() && selectedDate != null && selectedPriority != null) {
-                Task task = TaskFactory.createTask(taskText, selectedDate, selectedPriority);
+                Task task = TaskFactory.createTask(UserAccessModel.getCurrentUser().GetUsername(), taskText, selectedDate, selectedPriority);
                 taskManager.addTask(task);
                 unitTextField.clear();
                 datePicker.setValue(null);

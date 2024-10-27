@@ -85,6 +85,7 @@ public class TaskDAO {
             ResultSet rs = getAllByUsername.executeQuery();
             while (rs.next()) {
                 tasks.add(new Task(
+                        rs.getString("username"),
                         rs.getString("description"),
                         rs.getDate("date").toLocalDate(),
                         rs.getString("priority"))

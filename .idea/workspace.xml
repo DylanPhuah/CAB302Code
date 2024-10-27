@@ -10,10 +10,11 @@
     <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="New Task feature for OOD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/TaskViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/TaskViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TaskDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/View/Styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/Styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/main/View/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/main/View/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskObserver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +363,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Login" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
