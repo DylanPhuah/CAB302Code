@@ -200,7 +200,6 @@ public class MainController {
         // Load tasks from the database and add them to the TaskManager
         List<Task> loadedTasks = taskDAO.getTasksByUser(UserAccessModel.getCurrentUser());
         for (Task task : loadedTasks) {
-            System.out.println("Loaded task: " + task.getDescription());
             taskManager.addTask(task);
         }
 

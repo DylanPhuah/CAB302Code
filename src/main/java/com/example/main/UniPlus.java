@@ -56,7 +56,7 @@ public class UniPlus extends Application {
         enrolmentDAO.createTable();
         TextbookDAO textbookDAO = new TextbookDAO();
         textbookDAO.createTable();
-        TaskDAO taskDAO = new TaskDAO(); // Initialize TaskDAO
+        TaskDAO taskDAO = new TaskDAO();
         taskDAO.createTable();
 
         launch();
