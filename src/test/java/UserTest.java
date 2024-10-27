@@ -108,6 +108,7 @@ public class UserTest {
     @Order(2)
     void testUserRetrieve() throws SQLException
     {
+        userDao.insert(tUser);
         User retrieval = userDao.getByUser(tUser.GetUsername());
         assertEquals(tUser.GetFName(),retrieval.GetFName());
         assertEquals(tUser.GetUsername(),retrieval.GetUsername());
@@ -121,6 +122,7 @@ public class UserTest {
     @Order(2)
     void testEnrolmentRetrieve()
     {
+        enrolmentDAO.insert(tEnrolment);
         List<Enrolment> retrieval = enrolmentDAO.getAllByUnit(enrolmentUnitCode);
         assertEquals(retrieval.size(),1);
         Enrolment RetrievedEnrolment = retrieval.getFirst();
@@ -132,6 +134,7 @@ public class UserTest {
     @Order(2)
     void testTextBookRetrieve()
     {
+        textbookDAO.insert(tTextbook);
         List<Textbook> retrieval = textbookDAO.getAllByUnit(textBookUnitCode);
         assertEquals(retrieval.size(),1);
         Textbook RetrievedTextBook = retrieval.getFirst();
@@ -145,6 +148,7 @@ public class UserTest {
     @Order(3)
     void testUserUpdate() throws SQLException
     {
+        userDao.insert(tUser);
         userDao.changeName(tUser,"Harvardson");
         User retrieval = userDao.getByUser(tUser.GetUsername());
         assertEquals(retrieval.GetFName(),"Harvardson");

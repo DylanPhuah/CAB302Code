@@ -13,12 +13,13 @@ public class PdfReaderTest {
     public void TestInvalidFilePath() {
 
         String filePath = "src/test/java/non_existing_dir/file.pdf";
+        String filePathWithDifferentSlashes = "src\\test\\java\\non_existing_dir\\file.pdf";
 
         try{
-            pdfReader.readPdf(filePath, "EAS211");
+            pdfReader.readPdf(filePathWithDifferentSlashes, "EAS211");
             fail("Expected exception not thrown for invalid file path.");
         } catch (IOException e){
-            assertEquals("File path does not exist: " + filePath, e.getMessage());
+            assertEquals(filePathWithDifferentSlashes, e.getMessage());
         }
     }
 

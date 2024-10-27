@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+/** Customised button used on the {@link com.example.main.Controller.MainController } to open a link to a {@link com.example.main.Controller.ContentController} for a given {@link Textbook}*/
 
 public class TextBookButton extends Button implements CustomButton {
     /** The textbook that this button will display */

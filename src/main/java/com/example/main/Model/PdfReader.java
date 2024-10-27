@@ -12,6 +12,7 @@ import java.nio.file.Paths;
 import java.io.File;
 import java.io.IOException;
 
+/** A class used to take a filepath to a PDF file, strip it's text content, and then save it as a new {@link Textbook} in a given {@link Enrolment} */
 
 public class PdfReader {
 

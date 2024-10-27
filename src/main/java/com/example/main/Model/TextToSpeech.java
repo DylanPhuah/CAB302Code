@@ -3,8 +3,10 @@ package com.example.main.Model;
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import javax.speech.EngineStateError;
+/** Class used to read out {@link Textbook} content */
 
 public class TextToSpeech {
+
     private Voice voice;
     private Thread speechThread;
     private volatile boolean isSpeaking;

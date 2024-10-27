@@ -5,6 +5,7 @@ import javafx.scene.control.TextInputDialog;
 import java.io.IOException;
 import java.util.Optional;
 
+/** A pop-up menu to prompt the user to input a filepath for the {@link PdfReader} class when adding a new {@link Textbook} */
 
 public class PdfPathPopUp {
     PdfReader pdfReader = new PdfReader();

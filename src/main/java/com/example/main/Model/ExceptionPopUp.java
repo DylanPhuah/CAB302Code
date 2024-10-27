@@ -1,6 +1,7 @@
 package com.example.main.Model;
 
 import javax.swing.JOptionPane;
+/** Used by controllers to display error messages*/
 
 public class ExceptionPopUp
 {
