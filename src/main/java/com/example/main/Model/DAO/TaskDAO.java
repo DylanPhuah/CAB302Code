@@ -25,7 +25,7 @@ public class TaskDAO {
         try {
             Statement createTable = connection.createStatement();
             createTable.execute("CREATE TABLE IF NOT EXISTS tasks ("
-                    + "username VARCHAR, "
+                    + "username VARCHAR NOT NULL, "
                     + "description VARCHAR NOT NULL, "
                     + "date DATE NOT NULL, "
                     + "priority VARCHAR NOT NULL,"
@@ -43,15 +43,12 @@ public class TaskDAO {
     public void insert(Task task) {
         try {
             PreparedStatement insertTask = connection.prepareStatement(
-                    "INSERT OR IGNORE INTO tasks (description, date, priority) VALUES (?, ?, ?)");
-
-
-            insertTask.setString(1, task.getDescription());
-            insertTask.setDate(2, Date.valueOf(task.getDate()));
-            insertTask.setString(3, task.getPriority());
+                    "INSERT OR IGNORE INTO tasks (username, description, date, priority) VALUES (?, ?, ?, ?)");
+            insertTask.setString(1, task.getUsername());
+            insertTask.setString(2, task.getDescription());
+            insertTask.setDate(3, Date.valueOf(task.getDate()));
+            insertTask.setString(4, task.getPriority());
             insertTask.executeUpdate(); // Use executeUpdate() for INSERT
-
-            System.out.println("Task added successfully" + task.getDescription() + task.getDate() + task.getPriority());
         } catch (SQLException ex) {
             System.err.println("Task insertion error: " + ex.getMessage());
         }
@@ -62,11 +59,10 @@ public class TaskDAO {
      * @param task The task to be deleted
      */
     public void delete(Task task) {
-        String deleteQuery = "DELETE FROM tasks WHERE description = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM tasks WHERE description = ? AND username = ?")) {
             preparedStatement.setString(1, task.getDescription());
-            int rowsDeleted = preparedStatement.executeUpdate();
-            System.out.println("Rows deleted: " + rowsDeleted);
+            preparedStatement.setString(2, task.getUsername());
+            preparedStatement.execute();
         } catch (SQLException e) {
             System.err.println("Task delete failure: " + e.getMessage());
         }
@@ -91,8 +87,6 @@ public class TaskDAO {
                         rs.getString("priority"))
                 );
             }
-            System.out.println("Tasks found: " + tasks.size());
-            System.out.println("User found: " + user.GetUsername());
         } catch (SQLException ex) {
             System.err.println("tasks get all by user error");
         }

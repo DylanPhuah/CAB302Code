@@ -1,5 +1,6 @@
 package com.example.main.Controller;
 
+import com.example.main.Model.DAO.TaskDAO;
 import com.example.main.Model.TaskManager.*;
 import com.example.main.Model.UserAccessModel;
 import javafx.fxml.FXML;
@@ -68,6 +69,8 @@ public class TaskViewController implements TaskObserver {
                 unitTextField.clear();
                 datePicker.setValue(null);
                 priorityComboBox.setValue(null);
+                TaskDAO taskDAO = new TaskDAO();
+                taskDAO.insert(task);
             }
         });
 
@@ -101,6 +104,8 @@ public class TaskViewController implements TaskObserver {
         deleteButton.setOnAction(event -> {
             taskManager.removeTask(task.getDescription());
             taskListBox.getChildren().remove(taskBox);
+            TaskDAO taskDAO = new TaskDAO();
+            taskDAO.delete(task);
         });
 
         taskBox.getChildren().addAll(taskLabel, deleteButton);

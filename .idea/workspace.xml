@@ -7,14 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="New Task feature for OOD">
+    <list default="true" id="59551d2e-3ffc-4fa9-b47e-c15c50cfccfd" name="Changes" comment="Fixed various task functionalities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniPlus.db" beforeDir="false" afterPath="$PROJECT_DIR$/UniPlus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/TaskViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Controller/TaskViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/DAO/TaskDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Model/TaskManager/TaskObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/main/UniPlus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729842800504</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixed various task functionalities">
+      <option name="closed" value="true" />
+      <created>1729991558948</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1729991558948</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +404,7 @@
     <MESSAGE value="Added remembering sizing of windows between scenes and added a minimum height and width to login and main views as to not lose information." />
     <MESSAGE value="Reading selection area on main-view now expands to fit the size of the window." />
     <MESSAGE value="New Task feature for OOD" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Task feature for OOD" />
+    <MESSAGE value="Fixed various task functionalities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed various task functionalities" />
   </component>
 </project>
