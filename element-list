@@ -1,2 +1,5 @@
 module:com.example.main
 com.example.main
+com.example.main.Controller
+com.example.main.Model
+com.example.main.Model.DAO
